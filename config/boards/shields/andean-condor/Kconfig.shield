@@ -1,0 +1,6 @@
+# Copyright (c) 2023 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_ANDEAN_CONDOR
+    def_bool $(shields_list_contains,andean-condor)
+    
