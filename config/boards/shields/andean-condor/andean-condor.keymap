@@ -10,12 +10,6 @@
 
 / {
   macros {
-
-    ZMK_MACRO(Bu0, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp 0>, <&macro_release &kp LCTRL>;)
-    ZMK_MACRO(Bu1, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp 1>, <&macro_release &kp LCTRL>;)
-    ZMK_MACRO(Bu2, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp 2>, <&macro_release &kp LCTRL>;)
-    ZMK_MACRO(Bu3, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp 3>, <&macro_release &kp LCTRL>;)
-    ZMK_MACRO(Bu4, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp 4>, <&macro_release &kp LCTRL>;)
     ZMK_MACRO(KIL, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X>, <&macro_release &kp LCTRL>, <&macro_tap &kp X>;)
     ZMK_MACRO(SAV, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp S>, <&macro_release &kp LCTRL>;)
   };
@@ -66,7 +60,7 @@
     4_layer {
       bindings = <
       &none    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5      &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &KIL  
-      &none    &kp LS(LC(LA(C)))   &kp LS(LC(LA(D)))   &kp LS(LC(LA(S)))   &kp LS(LC(LA(E)))   &kp LS(LC(LA(P)))      &Bu0  &Bu1  &Bu2  &Bu3  &Bu4  &SAV  
+      &none    &kp LS(LC(LA(C)))   &kp LS(LC(LA(D)))   &kp LS(LC(LA(S)))   &kp LS(LC(LA(E)))   &kp LS(LC(LA(P)))      &kp LC(LG(0))  &kp LC(LG(1))  &kp LC(LG(2))  &kp LC(LG(3))   &none   &SAV  
       &none    &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
       &trans    &none        &none    &none                       
       &kp RALT  &kp LCMD   &none   &tog 6       &none    &none    &none    &none              
