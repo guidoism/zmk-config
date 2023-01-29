@@ -10,6 +10,7 @@
 
 / {
   macros {
+
     ZMK_MACRO(Bu0, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp 0>, <&macro_release &kp LCTRL>;)
     ZMK_MACRO(Bu1, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp 1>, <&macro_release &kp LCTRL>;)
     ZMK_MACRO(Bu2, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp 2>, <&macro_release &kp LCTRL>;)
@@ -19,7 +20,6 @@
     ZMK_MACRO(SAV, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp S>, <&macro_release &kp LCTRL>;)
   };
 };
-
 / {
   keymap {
     compatible = "zmk,keymap"; 
