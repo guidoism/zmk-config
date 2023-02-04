@@ -176,9 +176,6 @@ f = open('zmk/zmk-config-condor-nicenano/config/boards/shields/andean-condor/and
 f.write(layout)
 #+end_src
 
-
-
-
 * Layer Status Viewer
 
 This is what discotool json returns for each device:
@@ -202,38 +199,16 @@ from pprint import pprint as pp
 from more_itertools import chunked
 layers = list(chunked(open('layout.txt').read().split('\n'), 7))
 layers = ['\n'.join(l) for l in layers]
+layers = [re.sub(r'([│╰╯─╭╮]+)', r'[bold turquoise2]\1[/]', layer) for layer in layers]
+layers = [re.sub(r'([◉◌])', r'[dim]\1[/]', layer) for layer in layers]
 
-#col_color = {
-#    0: '[cyan]',
-#    1: '[bold cyan]',
-#    2: '[bold magenta1]',
-#    3: '[bold green1]',
-#    4: '[bold turquoise2]',
-#    5: '[turquoise2]',
-#    6: '[turquoise2]',
-#    7: '[bold turquoise2]',
-#    8: '[bold green1]',
-#    9: '[bold magenta1]',
-#    10: '[bold cyan]',
-#    11: '[cyan]',
-#}
-#
-#layers = []
-#for l in layers_in:
-#    rows = []
-#    for r in l.split('\n'):
-#        row = []
-#        for i, m in enumerate(re.findall(r'(\s*\S+\s*)', r)):
-#            if '◌' in m:
-#                row.append('[dim]')
-#                row.append(m)
-#                row.append('[/]')
-#            else:
-#                row.append(col_color[i])
-#                row.append(m)
-#                row.append('[/]')
-#        rows.append(''.join(row))
-#    layers.append('\n'.join(rows))
+# Cool colors:
+#    [cyan]
+#    [bold cyan]
+#    [bold magenta1]
+#    [bold green1]
+#    [bold turquoise2]
+#    [turquoise2]
 
 def msb(n):
     "What is the most significant bit set (also, what is the highest layer set)"
@@ -249,8 +224,8 @@ p = subprocess.run(['/Users/guido/miniforge3/bin/discotool', 'json'], capture_ou
 devs = json.loads(p.stdout)
 path = [d['ports'][0]['dev'] for d in devs if '23C7B91420F266DF' == d['serial_num']][0]
 ser = serial.Serial(path)
+con = rich.console.Console(highlight=False)
 
-con = rich.console.Console()
 while s := ser.readline():
     # zmk: set_layer_state: layer_changed: layer 3 state 0
     # GUIDO: layer 4, new state set: 16
@@ -259,10 +234,12 @@ while s := ser.readline():
         n = msb(state)
         con.clear()
         con.print(layers[n])
-        #print(f"Layer: {n}")
 
         if os.stat('layout.txt').st_mtime > updated:
             updated = os.stat('layout.txt').st_mtime
             layers = json.load(open('layout.txt'))
 
 #+end_src
+
+
+
