@@ -1,0 +1,268 @@
+* Layout
+
+#+name: layout
+#+begin_src keymap :tangle layout.txt
+ ╭────────────────────────────────────────────────────────────────╮
+ │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
+ │CTL   a    s    d    f    g        h    j    k    l    :;   RET │
+0│SFT   z    x    c    v    b        n    m    ,    .    /    ◌   │
+ │                    M₄   M₅        3   CTL                      │
+ │          OPT  CMD  M₁   M₃       SFT   ␣   M₂    ◌             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ ~    !    @    #    $    %        ^    7    8    9    ◌    ◌   │
+ │ ◌    "    &    *    _    ◌        +    4    5    6    '    |   │
+1│ ◌    ◌    ◌    ◌    ◌    .        0    1    2    3    /    ◌   │
+ │                     ◌    ◌        ◌    ◌                       │
+ │          OPT  CMD   ◉    ◌        ◌    ␣    ◌    ◌             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ `    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    BS  │
+ │ ◌    [    ]    (    )    ◌        ◌    -    =    ◌    ◌    \   │
+2│ ◌    <    >    {    }    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
+ │                     ◌    ◌        ◌    ◌                       │
+ │          OPT  CMD   ◌    ◌        ◌    ◌    ◉    ◌             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ESC  λ←   λ→   ¶←   ¶→    ◌        ◌   P↑    ↑   P↓    ◌   UND  │
+ │ ◌   S←   S→   W←   W→   BEG       ◌    ←    ↓    →    ◌    ◌   │
+3│ ◌    ◌    ◌    ◌    ◌    ◌        ◌   HME   ◌   END   ◌    ◌   │
+ │                     ◌    ◌        ◌    ◌                       │
+ │          OPT  CMD  M₁    ◉        ◌    ◌    ◌    ◌             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ ◌    F1   F2   F3   F4   F5      F6   F7   F8   F9   F10  KIL  │
+ │ ◌    ∫C   ∫D   ∫S   ∫E   ∫P      Bu0  Bu1  Bu2  Bu3   ◌   SAV  │
+4│ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
+ │                     ◉    ◌        ◌    ◌                       │
+ │          OPT  CMD   ◌   M₆!       ◌    ◌    ◌    ◌             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
+ │ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
+5│ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
+ │                     ◌    ◌        ◌    ◌                       │
+ │          OPT  CMD   ◌    ◌        ◌    ◌    ◌    ◌             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
+ │ ◌   BT4  BT3  BT2  BT1  BTC       ◌    ◌    ◌    ◌    ◌    ◌   │
+6│ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
+ │                     ◌    ◌        ◌    ◌                       │
+ │          OPT  CMD   ◌    ◉        ◌    ◌    ◌    ◌             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │TAB   q    w    f    p    g        j    l    u    y    :;   BS  │
+ │CTL   a    r    s    t    d        h    n    e    i    o    RET │
+7│SFT   z    x    c    v    b        k    m    ,    .    /    ◌   │
+ │                     ◌    ◌        ◌    ◌                       │
+ │          OPT  CMD   M₁   M₃      SFT   ␣   M₂   M₄             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
+ │ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
+8│ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
+ │                     ◌    ◌        ◌    ◌                       │
+ │          OPT  CMD   ◌    ◌        ◌    ◌    ◌    ◌             │
+ ╰────────────────────────────────────────────────────────────────╯
+#+end_src
+
+* Generate Keymap File
+#+name: parse_layout
+#+begin_src python :var layout=layout :results output
+import re
+from more_itertools import chunked
+# Remove boxes
+lines = [s for s in re.findall(r'\n.│([^│]+)│', layout)]
+layers = list(chunked(lines, 5))
+layers = ['\n'.join(l) for l in layers]
+
+identity = {'ESC', 'TAB', 'RET', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10'}
+leftover = []
+kp = {
+    'CTL': 'LCTRL', 'SFT': 'LSHFT', 'OPT': 'RALT', 'CMD': 'LCMD', ',': 'COMMA', '.': 'DOT',
+    '␣': 'SPACE', 'BS': 'BSPC', '/': 'SLASH', '~': 'TILDE', '^': 'CARET', "'": 'SQT',
+    '%': 'PERCENT', '|': 'PIPE', '_': 'UNDER', '+': 'PLUS', '"': 'DQT', '$': 'DLLR',
+    '&': 'AMPS', '*': 'STAR', '@': 'AT', '!': 'EXCL', '#': 'HASH', ')': 'RPAR',
+    '\\': 'BACKSLASH', '=': 'EQUAL', '}': 'RBRC', '`': 'GRAVE', '[': 'LBKT', '>': 'GT',
+    '(': 'LPAR', '-': 'MINUS', ']': 'RBKT', '<': 'LT', '{': 'LBRC',
+    '→':   'RIGHT',    '←':   'LEFT',     '↓':  'DOWN',      '↑':  'UP',
+    'HME': 'HOME',     'END': 'END',      'P↑': 'PGUP',      'P↓': 'PGDN',
+    'W←':  'LG(B)',    'W→':  'LG(F)',    'λ←': 'LC(LG(B))', 'λ→': 'LC(LG(F))',
+    '¶←':  'LG(LBRC)', '¶→':  'LG(RBRC)', 'S←': 'LG(A)',     'S→': 'LG(E)',
+    'UND': 'LC(SLASH)',
+    'BEG': 'LG(M)',
+    'Bu0': 'LC(LG(N0))',
+    'Bu1': 'LC(LG(N1))',
+    'Bu2': 'LC(LG(N2))',
+    'Bu3': 'LC(LG(N3))',
+    ':;': 'COLON', # TODO: change to work with shift (Mod-Morph?)
+}
+changed = {
+    '◌': '&none',
+    '◉': '&trans',
+    'M₁': '&mo 1',
+    'M₂': '&mo 2',
+    'M₃': '&mo 3',
+    'M₄': '&mo 4',
+    'M₅': '&mo 5',
+    'M₆!': '&tog 6',
+    'BTC': '&bt BT_CLR',
+    'BT1': '&bt BT_SEL 0',
+    'BT2': '&bt BT_SEL 1',
+    'BT3': '&bt BT_SEL 2',
+    'BT4': '&bt BT_SEL 3',
+}
+
+macros = {
+    'KIL': ' <&macro_press &kp LCTRL>, <&macro_tap &kp X>, <&macro_release &kp LCTRL>, <&macro_tap &kp X>',
+    'SAV': ' <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp S>, <&macro_release &kp LCTRL>',
+}
+
+def f(m):
+    k = m.group(1)
+    if k in macros: return f'&{k}'
+    if k in identity: return f'&kp {k}'
+    if k in kp: return f'&kp {kp[k]}'
+    if k in changed: return f'{changed[k]}'
+    if k in 'abcdefghijklmnopqkrstuvwxyz': return f'&kp {k.upper()}'
+    if k in '0123456789': return f'&kp N{k}'
+    if k in identity: return f'&kp {k}'
+    if k[0] == '∫': return f'&kp LS(LC(LA({k[1]})))' # Meh key
+    leftover.append(k)
+    return f'&none'
+
+sub = lambda s: re.sub(r'(\S+)', f, s)
+
+
+print("""
+/* -*- mode: dts; tab-width: 2; -*-
+ * Copyright (c) 2021 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+ #include <behaviors.dtsi>
+ #include <dt-bindings/zmk/keys.h>
+ #include <dt-bindings/zmk/bt.h>
+
+""")
+
+parts = [
+    '/ {\nmacros {',
+    '\n'.join(f'ZMK_MACRO({k}, wait-ms = <30>; tap-ms = <40>; bindings = {v};)' for k, v in macros.items()),
+    '};\n};',
+]
+print('\n'.join(parts))
+
+parts = [
+    '/ {\nkeymap {\ncompatible = "zmk,keymap"; ',
+    '\n\n'.join(f'{i}_layer {{\n bindings = <\n {sub(s)} \n>;\n}};' for i, s in enumerate(layers)),
+    '};\n};',
+]
+print('\n'.join(parts))
+
+
+#print()
+if leftover:
+    print(list(leftover))
+
+#+end_src
+
+
+#+name: generate_zmk_config
+#+begin_src python :var layout=parse_layout()
+f = open('zmk/zmk-config-condor-nicenano/config/boards/shields/andean-condor/andean-condor.keymap', 'w')
+f.write(layout)
+#+end_src
+
+
+
+
+* Layer Status Viewer
+
+This is what discotool json returns for each device:
+
+{'manufacturer': 'ZMK Project',
+  'name': 'Andean Condor',
+  'ports': [{'dev': '/dev/cu.usbmodem2301', 'iface': ''}],
+  'product_id': 24926,
+  'serial_num': '23C7B91420F266DF',
+  'usb_location': '0x02300000',
+  'vendor_id': 7504,
+  'version': '',
+  'volumes': []}]
+
+
+#+name: status.py
+#+begin_src python :tangle status.py :results value pp
+import json, subprocess, serial, re, rich, rich.console, os
+updated = os.stat('layout.txt').st_mtime
+from pprint import pprint as pp
+from more_itertools import chunked
+layers = list(chunked(open('layout.txt').read().split('\n'), 7))
+layers = ['\n'.join(l) for l in layers]
+
+#col_color = {
+#    0: '[cyan]',
+#    1: '[bold cyan]',
+#    2: '[bold magenta1]',
+#    3: '[bold green1]',
+#    4: '[bold turquoise2]',
+#    5: '[turquoise2]',
+#    6: '[turquoise2]',
+#    7: '[bold turquoise2]',
+#    8: '[bold green1]',
+#    9: '[bold magenta1]',
+#    10: '[bold cyan]',
+#    11: '[cyan]',
+#}
+#
+#layers = []
+#for l in layers_in:
+#    rows = []
+#    for r in l.split('\n'):
+#        row = []
+#        for i, m in enumerate(re.findall(r'(\s*\S+\s*)', r)):
+#            if '◌' in m:
+#                row.append('[dim]')
+#                row.append(m)
+#                row.append('[/]')
+#            else:
+#                row.append(col_color[i])
+#                row.append(m)
+#                row.append('[/]')
+#        rows.append(''.join(row))
+#    layers.append('\n'.join(rows))
+
+def msb(n):
+    "What is the most significant bit set (also, what is the highest layer set)"
+    if not n:
+        return 0
+    i = 0
+    while n:
+        n = n >> 1
+        i += 1
+    return i - 1
+
+p = subprocess.run(['/Users/guido/miniforge3/bin/discotool', 'json'], capture_output=True)
+devs = json.loads(p.stdout)
+path = [d['ports'][0]['dev'] for d in devs if '23C7B91420F266DF' == d['serial_num']][0]
+ser = serial.Serial(path)
+
+con = rich.console.Console()
+while s := ser.readline():
+    # zmk: set_layer_state: layer_changed: layer 3 state 0
+    # GUIDO: layer 4, new state set: 16
+    if m := re.search(r'GUIDO: layer (\d+), new state set: (\d+)', s.decode()):
+        state = int(m.group(2))
+        n = msb(state)
+        con.clear()
+        con.print(layers[n])
+        #print(f"Layer: {n}")
+
+        if os.stat('layout.txt').st_mtime > updated:
+            updated = os.stat('layout.txt').st_mtime
+            layers = json.load(open('layout.txt'))
+
+#+end_src
