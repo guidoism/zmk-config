@@ -252,31 +252,40 @@ while s := ser.readline():
             updated = os.stat('layout.txt').st_mtime
             layers = json.load(open('layout.txt'))
 
-    # GUIDO: Modifiers set to
     if m := re.search(r'GUIDO: Modifiers set to 0x(\d\d)', s.decode()):
         mods = int(m.group(1), 16)
 
         modified = copy(layer)
+        modline = []
         
         if mods & 0x01:
             modifiers['control']
+            modline.append('^')
         if mods &0x02:
             for a, b in modifiers['shift'].items():
                 modified = re.sub(a, b, modified)
-        if mods &  0x04:
+            modline.append('⇧')
+        if mods & 0x04:
             modifiers['option']
+            modline.append('⌥')
         if mods & 0x08:
             modifiers['command']
+            modline.append('⌘')
         if mods & 0x10:
             modifiers['control']
+            modline.append('^')
         if mods &0x20:
             modifiers['shift']
-        if mods &  0x40:
+            modline.append('⇧')
+        if mods & 0x40:
             modifiers['option']
+            modline.append('⌥')
         if mods & 0x80:
             modifiers['command']
+            modline.append('⌘')
         con.clear()
         con.print(modified)
+        con.print(''.join(modline), justify="center")
 
 #+end_src
 
