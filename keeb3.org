@@ -170,7 +170,7 @@ print("""
       };
    };
 };
-"""
+""")
 
 parts = [
     '/ {\nkeymap {\ncompatible = "zmk,keymap"; ',
