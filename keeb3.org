@@ -98,7 +98,7 @@ kp = {
     'Bu2': 'LC(LG(N2))',
     'Bu3': 'LC(LG(N3))',
     'OTH': 'LG(O)', # Other buffer (cycle buffers)
-    'FLP': 'LC(O)', # Flip buffer
+    'FLP': 'LS(LG(O))', # Flip buffer
 }
 changed = {
     '◌': '&none',
