@@ -1,7 +1,7 @@
 * Layout
 
 #+name: layout
-#+begin_example keymap :tangle layout.txt
+#+begin_src keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
  │CTL   a    s    d    f    g        h    j    k    l    :;   RET │
@@ -65,11 +65,14 @@
  │                     ◌    ◌        ◌    ◌                       │
  │          OPT  CMD   ◌    ◌        ◌    ◌    ◌    ◌             │
  ╰────────────────────────────────────────────────────────────────╯
-#+end_example
+#+end_src
 
 * Generate Keymap File
 #+name: parse_layout
-#+begin_src python :var layout=layout :results output
+#+begin_src python :results output :noweb yes
+
+layout = """<<layout>>"""
+
 import re
 from more_itertools import chunked
 # Remove boxes
@@ -96,7 +99,6 @@ kp = {
     'Bu1': 'LC(LG(N1))',
     'Bu2': 'LC(LG(N2))',
     'Bu3': 'LC(LG(N3))',
-    ':;': 'COLON', # TODO: change to work with shift (Mod-Morph?)
 }
 changed = {
     '◌': '&none',
@@ -112,6 +114,7 @@ changed = {
     'BT2': '&bt BT_SEL 1',
     'BT3': '&bt BT_SEL 2',
     'BT4': '&bt BT_SEL 3',
+    ':;': '&colonsemi',
 }
 
 macros = {
@@ -137,10 +140,10 @@ sub = lambda s: re.sub(r'(\S+)', f, s)
 
 print("""
 /* -*- mode: dts; tab-width: 2; -*-
- * Copyright (c) 2021 The ZMK Contributors
- *
- * SPDX-License-Identifier: MIT
- */
+ ,* Copyright (c) 2021 The ZMK Contributors
+ ,*
+ ,* SPDX-License-Identifier: MIT
+ ,*/
 
  #include <behaviors.dtsi>
  #include <dt-bindings/zmk/keys.h>
@@ -154,6 +157,20 @@ parts = [
     '};\n};',
 ]
 print('\n'.join(parts))
+
+print("""
+/ {
+    behaviors {
+      colonsemi: colonsemi {
+        compatible = "zmk,behavior-mod-morph";
+        label = "COLONSEMI";
+        #binding-cells = <0>;
+        bindings = <&kp COLON>, <&kp SEMI>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+      };
+   };
+};
+"""
 
 parts = [
     '/ {\nkeymap {\ncompatible = "zmk,keymap"; ',
