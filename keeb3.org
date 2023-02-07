@@ -86,7 +86,7 @@ kp = {
     '%': 'PERCENT', '|': 'PIPE', '_': 'UNDER', '+': 'PLUS', '"': 'DQT', '$': 'DLLR',
     '&': 'AMPS', '*': 'STAR', '@': 'AT', '!': 'EXCL', '#': 'HASH', ')': 'RPAR',
     '\\': 'BACKSLASH', '=': 'EQUAL', '}': 'RBRC', '`': 'GRAVE', '[': 'LBKT', '>': 'GT',
-    '(': 'LPAR', '-': 'MINUS', ']': 'RBKT', '<': 'LT', '{': 'LBRC',
+    '(': 'LPAR', '-': 'MINUS', ']': 'RBKT', '<': 'LT', '{': 'LBRC', ';': 'SEMI',
     '→':   'RIGHT',    '←':   'LEFT',     '↓':  'DOWN',      '↑':  'UP',
     'HME': 'HOME',     'END': 'END',      'P↑': 'PGUP',      'P↓': 'PGDN',
     'W←':  'LG(B)',    'W→':  'LG(F)',    'λ←': 'LC(LG(B))', 'λ→': 'LC(LG(F))',
