@@ -1,7 +1,7 @@
 * Layout
 
 #+name: layout
-#+begin_src keymap :tangle layout.txt
+#+begin_example keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
  │CTL   a    s    d    f    g        h    j    k    l    :;   RET │
@@ -65,7 +65,7 @@
  │                     ◌    ◌        ◌    ◌                       │
  │          OPT  CMD   ◌    ◌        ◌    ◌    ◌    ◌             │
  ╰────────────────────────────────────────────────────────────────╯
-#+end_src
+#+end_example
 
 * Generate Keymap File
 #+name: parse_layout
@@ -172,9 +172,12 @@ if leftover:
 
 #+name: generate_zmk_config
 #+begin_src python :var layout=parse_layout()
-f = open('zmk/zmk-config-condor-nicenano/config/boards/shields/andean-condor/andean-condor.keymap', 'w')
+f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-config-condor-nicenano/config/boards/shields/andean-condor/andean-condor.keymap', 'w')
 f.write(layout)
 #+end_src
+
+#+RESULTS: generate_zmk_config
+: None
 
 * Layer Status Viewer
 
