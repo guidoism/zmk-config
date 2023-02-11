@@ -12,8 +12,9 @@
 
 / {
 macros {
-ZMK_MACRO(KIL, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X>, <&macro_release &kp LCTRL>, <&macro_tap &kp X>;)
+ZMK_MACRO(KIL, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X>, <&macro_release &kp LCTRL>, <&macro_tap &kp K>;)
 ZMK_MACRO(SAV, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp S>, <&macro_release &kp LCTRL>;)
+ZMK_MACRO(BFS, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp B>, <&macro_release &kp LCTRL>;)
 };
 };
 
@@ -46,7 +47,7 @@ compatible = "zmk,keymap";
  bindings = <
   &kp TILDE    &kp EXCL    &kp AT    &kp HASH    &kp DLLR    &kp PERCENT        &kp CARET    &kp N7    &kp N8    &kp N9    &none    &kp BSPC  
  &none    &kp DQT    &kp AMPS    &kp STAR    &kp UNDER    &kp N0        &kp PLUS    &kp N4    &kp N5    &kp N6    &kp SQT    &kp PIPE   
- &none    &none    &none    &kp EQUAL    &kp MINUS    &kp DOT        &kp N0    &kp N1    &kp N2    &kp N3    &kp SLASH    &none   
+ &none    &none    &none    &kp EQUAL    &kp MINUS    &kp DOT        &none    &kp N1    &kp N2    &kp N3    &kp SLASH    &none   
                      &none    &none        &none    &none                       
           &kp RALT  &kp LCMD   &trans    &none        &none    &kp SPACE    &none    &none              
 >;
@@ -76,7 +77,7 @@ compatible = "zmk,keymap";
  bindings = <
   &none    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5      &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &KIL  
  &none    &kp LS(LC(LA(C)))   &kp LS(LC(LA(D)))   &kp LS(LC(LA(S)))   &kp LS(LC(LA(E)))   &kp LS(LC(LA(P)))      &kp LC(LG(N0))  &kp LC(LG(N1))  &kp LC(LG(N2))  &kp LC(LG(N3))   &none   &SAV  
- &none    &none    &none    &none    &none    &none        &none    &none   &kp LS(LG(O))  &kp LG(O)   &none    &none   
+ &none    &none    &none    &none    &none    &none        &none   &BFS  &kp LS(LG(O))  &kp LG(O)   &none    &none   
                      &trans    &none        &none    &none                       
           &kp RALT  &kp LCMD   &none   &tog 6       &none    &none    &none    &none              
 >;

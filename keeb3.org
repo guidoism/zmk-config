@@ -1,3 +1,9 @@
+#+name: generate_zmk_config
+#+begin_src python :var layout=parse_layout() :results none
+f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-config-condor-nicenano/config/boards/shields/andean-condor/andean-condor.keymap', 'w')
+f.write(layout)
+#+end_src
+
 * Layout
 
 #+name: layout
@@ -12,7 +18,7 @@
  ╭────────────────────────────────────────────────────────────────╮
  │ ~    !    @    #    $    %        ^    7    8    9    ◌    BS  │
  │ ◌    "    &    *    _    0        +    4    5    6    '    |   │
-1│ ◌    ◌    ◌    =    -    .        0    1    2    3    /    ◌   │
+1│ ◌    ◌    ◌    =    -    .        ◌    1    2    3    /    ◌   │
  │                     ◌    ◌        ◌    ◌                       │
  │          OPT  CMD   ◉    ◌        ◌    ␣    ◌    ◌             │
  ╰────────────────────────────────────────────────────────────────╯
@@ -33,7 +39,7 @@
  ╭────────────────────────────────────────────────────────────────╮
  │ ◌    F1   F2   F3   F4   F5      F6   F7   F8   F9   F10  KIL  │
  │ ◌    ∫C   ∫D   ∫S   ∫E   ∫P      Bu0  Bu1  Bu2  Bu3   ◌   SAV  │
-4│ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌   FLP  OTH   ◌    ◌   │
+4│ ◌    ◌    ◌    ◌    ◌    ◌        ◌   BFS  FLP  OTH   ◌    ◌   │
  │                     ◉    ◌        ◌    ◌                       │
  │          OPT  CMD   ◌   M₆!       ◌    ◌    ◌    ◌             │
  ╰────────────────────────────────────────────────────────────────╯
@@ -118,8 +124,9 @@ changed = {
 }
 
 macros = {
-    'KIL': ' <&macro_press &kp LCTRL>, <&macro_tap &kp X>, <&macro_release &kp LCTRL>, <&macro_tap &kp X>',
+    'KIL': ' <&macro_press &kp LCTRL>, <&macro_tap &kp X>, <&macro_release &kp LCTRL>, <&macro_tap &kp K>',
     'SAV': ' <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp S>, <&macro_release &kp LCTRL>',
+    'BFS': ' <&macro_press &kp LCTRL>, <&macro_tap &kp X &kp B>, <&macro_release &kp LCTRL>',
 }
 
 def f(m):
@@ -185,15 +192,6 @@ if leftover:
     print(list(leftover))
 
 #+end_src
-
-#+name: generate_zmk_config
-#+begin_src python :var layout=parse_layout()
-f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-config-condor-nicenano/config/boards/shields/andean-condor/andean-condor.keymap', 'w')
-f.write(layout)
-#+end_src
-
-#+RESULTS: generate_zmk_config
-: None
 
 * Layer Status Viewer
 
