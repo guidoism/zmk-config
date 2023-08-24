@@ -32,11 +32,11 @@
         diode-direction = "col2row";
 /*
        1   .
-       0   .
+ CS    0   .
        .   .
        .   .
-       2   21 row1r
-       3   20 row2r
+ SCK   2   21 row1r
+ MOSI  3   20 row2r
  col4  4   19 row1
  col5  5   18 row2
  col3  6   15 col1
