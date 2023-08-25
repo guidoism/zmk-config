@@ -4,8 +4,8 @@ name: Andean Condor
 type: shield
 url: https://github.com/guidoism/andean-condor/
 requires: [pro_micro]
-#exposes:
-#  - nice_view_spi (I think?)
+exposes:
+  - nice_view_spi
 features:
   - keys
   - display
