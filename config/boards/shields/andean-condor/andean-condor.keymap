@@ -129,7 +129,7 @@ compatible = "zmk,keymap";
     group1 {
         psels = <NRF_PSEL(SPIM_SCK,  0, 2)>
               , <NRF_PSEL(SPIM_MOSI, 0, 3)>
-              , <NRF_PSEL(SPIM_MISO, 0, 25)>
+              , <NRF_PSEL(SPIM_MISO, 0, 1)>
               ;
     };
 };
@@ -137,7 +137,7 @@ compatible = "zmk,keymap";
     group1 {
         psels = <NRF_PSEL(SPIM_SCK,  0, 2)>
               , <NRF_PSEL(SPIM_MOSI, 0, 3)>
-              , <NRF_PSEL(SPIM_MISO, 0, 25)>
+              , <NRF_PSEL(SPIM_MISO, 0, 1)>
               ;
         low-power-enable;
     };
