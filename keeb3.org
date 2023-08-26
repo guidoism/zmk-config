@@ -1,6 +1,12 @@
+For some reason I have two keymap files: 
+ - config/andean-condor.keymap
+ - config/boards/shields/andean-condor/andean-condor.keymap
+
 #+name: generate_zmk_config
 #+begin_src python :var layout=parse_layout() :results none
 f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-config-condor-nicenano/config/boards/shields/andean-condor/andean-condor.keymap', 'w')
+f.write(layout)
+f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-config-condor-nicenano/config/andean-condor.keymap', 'w')
 f.write(layout)
 #+end_src
 
