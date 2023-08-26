@@ -13,7 +13,7 @@ f.write(layout)
  │CTL   a    s    d    f    g        h    j    k    l    :;   RET │
 0│SFT   z    x    c    v    b        n    m    ,    .    /    ;   │
  │                    M₄   M₅        3   CTL                      │
- │          OPT  CMD  M₁   M₃       SFT   ␣   M₂    ◌             │
+ │          OPT  CMD  M₁   M₃       SFT   ␣   M₂   F24            │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ ~    !    @    #    $    %        ^    7    8    9    ◌    BS  │
@@ -84,7 +84,9 @@ lines = [s for s in re.findall(r'\n.│([^│]+)│', layout)]
 layers = list(chunked(lines, 5))
 layers = ['\n'.join(l) for l in layers]
 
-identity = {'ESC', 'TAB', 'RET', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10'}
+identity = {'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'F9', 'F10',
+            'F11', 'F12', 'F13', 'F14', 'F15', 'F16', 'F17', 'F18', 'F19', 'F20',
+            'F21', 'F22', 'F23', 'F24', 'ESC', 'TAB', 'RET', }
 leftover = []
 kp = {
     'CTL': 'LCTRL', 'SFT': 'LSHFT', 'OPT': 'RALT', 'CMD': 'LCMD', ',': 'COMMA', '.': 'DOT',
