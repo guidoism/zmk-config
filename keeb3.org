@@ -20,7 +20,7 @@ f.write(layout)
  │ ◌    "    &    *    _    0        +    4    5    6    '    |   │
 1│ ◌    ◌    ◌    =    -    .        ◌    1    2    3    /    ◌   │
  │                     ◌    ◌        ◌    ◌                       │
- │          Opt  CMD   ◉    ◌        ◌    ␣    ◌    ◌             │
+ │          OPT  CMD   ◉    ◌        ◌    ␣    ◌    ◌             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ `    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    BS  │
@@ -307,4 +307,30 @@ while s := ser.readline():
 #+end_src
 
 
+** Nice!View
+
+Consider adding this:
+
+#+begin_src dts
+&spi0_default {
+    group1 {
+        psels = <NRF_PSEL(SPIM_SCK,  0, 2)>
+              , <NRF_PSEL(SPIM_MOSI, 0, 3)>
+              , <NRF_PSEL(SPIM_MISO, 0, 1)>
+              ;
+    };
+};
+&spi0_sleep {
+    group1 {
+        psels = <NRF_PSEL(SPIM_SCK,  0, 2)>
+              , <NRF_PSEL(SPIM_MOSI, 0, 3)>
+              , <NRF_PSEL(SPIM_MISO, 0, 1)>
+              ;
+        low-power-enable;
+    };
+};
+&nice_view_spi {
+    cs-gpios = <&gpio0 0 GPIO_ACTIVE_HIGH>;
+};
+#+end_src
 
