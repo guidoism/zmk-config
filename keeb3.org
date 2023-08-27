@@ -8,6 +8,15 @@ f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-con
 f.write(layout)
 f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-config-condor-nicenano/config/andean-condor.keymap', 'w')
 f.write(layout)
+
+# {"row":0,"col":1,"x":1,"y":0},
+import json, itertools
+layout = [{'col': x, 'row': y, 'x': x, 'y': y} for y,x in itertools.product(range(4), range(12))]
+json.dump(layout, open('flat-layout.json', 'w'))
+
+#keymap -c keymap_drawer.config.yaml parse -c 12 -z config/andean-condor.keymap > /tmp/foo.yaml
+#keymap -c keymap_drawer.config.yaml draw --qmk-info-json=flat-layout.json /tmp/foo.yaml > /tmp/foo.svg 
+
 #+end_src
 
 * Layout
