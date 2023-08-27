@@ -199,6 +199,18 @@ parse_config:
     QUESTION: '?'
     QUES: '?'
   zmk_keycode_map:
+    # Emacs shortcuts
+    LC(SLASH): UNDO
+    LC(LG(B)): BACK PARA
+    LC(LG(F)): FWD PARA
+    LG(LBRC): BACK FOO
+    LG(RBRC): FWD FOO
+    LG(A): BACK FOO
+    LG(E): FWD FOO
+    LG(B): BACK FOO
+    LG(F): FWD FOO
+    LG(M): BEGIN LINE
+    
     # Modifiers
     LCTRL: $$mdi:apple-keyboard-control$$
     LALT: $$mdi:apple-keyboard-option$$
