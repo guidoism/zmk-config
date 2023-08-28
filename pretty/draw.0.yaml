@@ -37,15 +37,15 @@ layers:
     - .
     - /
     - ;
-  - - 4_layer
-    - 5_layer
+  - - $$mdi:numeric-4-circle$$
+    - $$mdi:numeric-5-circle$$
     - '3'
     - $$mdi:apple-keyboard-control$$
     - $$mdi:apple-keyboard-option$$
     - $$mdi:apple-keyboard-command$$
-    - 1_layer
-    - 3_layer
+    - $$mdi:numeric-1-circle$$
+    - $$mdi:numeric-3-circle$$
     - $$mdi:apple-keyboard-shift$$
     - $$mdi:keyboard-space$$
-    - 2_layer
-    - '4'
+    - $$mdi:numeric-2-circle$$
+    - LS(LC(LA(4)))

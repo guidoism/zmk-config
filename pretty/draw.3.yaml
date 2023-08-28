@@ -42,7 +42,7 @@ layers:
     - ''
     - $$mdi:apple-keyboard-option$$
     - $$mdi:apple-keyboard-command$$
-    - 1_layer
+    - $$mdi:numeric-1-circle$$
     - type: held
     - ''
     - ''

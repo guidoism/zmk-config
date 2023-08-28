@@ -1,5 +1,8 @@
 <svg width="732.0" height="392.0" viewBox="0 0 732.0 392.0" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
+<svg id="mdi:numeric-6-circle">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-numeric-6-circle" viewBox="0 0 24 24"><path d="M11,7A2,2 0 0,0 9,9V15A2,2 0 0,0 11,17H13A2,2 0 0,0 15,15V13A2,2 0 0,0 13,11H11V9H15V7H11M11,13H13V15H11V13M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z" /></svg>
+</svg>
 <svg id="mdi:apple-keyboard-option">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-option" viewBox="0 0 24 24"><path d="M3,4H9.11L16.15,18H21V20H14.88L7.84,6H3V4M14,4H21V6H14V4Z" /></svg>
 </svg>
@@ -158,7 +161,7 @@ path.combo {
 <use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="219.0" y="301.0" height="14" width="14.0" class="tap glyph mdi:apple-keyboard-command"/>
 <rect rx="6.0" ry="6.0" x="256.0" y="282.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="312.0" y="282.0" width="52.0" height="52.0" class="key"/>
-<text x="338.0" y="308.0" class="tap">6_layer</text>
+<use href="#mdi:numeric-6-circle" xlink:href="#mdi:numeric-6-circle" x="331.0" y="301.0" height="14" width="14.0" class="tap glyph mdi:numeric-6-circle"/>
 <rect rx="6.0" ry="6.0" x="368.0" y="282.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="424.0" y="282.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="480.0" y="282.0" width="52.0" height="52.0" class="key"/>

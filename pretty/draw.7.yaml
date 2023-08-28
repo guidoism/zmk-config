@@ -43,9 +43,9 @@ layers:
     - ''
     - $$mdi:apple-keyboard-option$$
     - $$mdi:apple-keyboard-command$$
-    - 1_layer
-    - 3_layer
+    - $$mdi:numeric-1-circle$$
+    - $$mdi:numeric-3-circle$$
     - $$mdi:apple-keyboard-shift$$
     - $$mdi:keyboard-space$$
-    - 2_layer
-    - 4_layer
+    - $$mdi:numeric-2-circle$$
+    - $$mdi:numeric-4-circle$$
