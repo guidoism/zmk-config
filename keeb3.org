@@ -8,15 +8,26 @@ f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-con
 f.write(layout)
 f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-config-condor-nicenano/config/andean-condor.keymap', 'w')
 f.write(layout)
-
-#import json, itertools
-#layout = [{'col': x, 'row': y, 'x': x, 'y': y} for y,x in itertools.product(range(4), range(12))]
-#json.dump(layout, open('flat-layout.json', 'w'))
-
 #+end_src
 
 * Run this
-keymap -c keymap_drawer.config.yaml parse -c 12 -z config/andean-condor.keymap > /tmp/foo.yaml && keymap -c keymap_drawer.config.yaml draw --qmk-info-json=flat-layout.json /tmp/foo.yaml > /tmp/foo.svg 
+#+begin_src sh
+alias keymap='/Users/guido/homebrew/bin/keymap'
+keymap -c pretty/keymap_drawer.config.yaml parse -c 12 -z config/andean-condor.keymap > pretty/draw.yaml
+python pretty/seperate_layers.py
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.0.yaml > pretty/layer.0.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.1.yaml > pretty/layer.1.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.2.yaml > pretty/layer.2.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.3.yaml > pretty/layer.3.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.4.yaml > pretty/layer.4.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.5.yaml > pretty/layer.5.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.6.yaml > pretty/layer.6.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.7.yaml > pretty/layer.7.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.8.yaml > pretty/layer.8.svg
+open pretty/layer.0.svg
+#+end_src
+
+#+RESULTS:
 
 
 

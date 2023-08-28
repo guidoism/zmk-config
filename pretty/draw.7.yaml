@@ -1,0 +1,51 @@
+layers:
+  '7':
+  - - $$mdi:keyboard-tab$$
+    - Q
+    - W
+    - F
+    - P
+    - G
+    - J
+    - L
+    - U
+    - Y
+    - ':'
+    - t: $$mdi:backspace$$
+      type: backspace
+  - - $$mdi:apple-keyboard-control$$
+    - A
+    - R
+    - S
+    - T
+    - D
+    - H
+    - N
+    - E
+    - I
+    - O
+    - RET
+  - - $$mdi:apple-keyboard-shift$$
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - K
+    - M
+    - ','
+    - .
+    - /
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-command$$
+    - 1_layer
+    - 3_layer
+    - $$mdi:apple-keyboard-shift$$
+    - $$mdi:keyboard-space$$
+    - 2_layer
+    - 4_layer

@@ -1,0 +1,50 @@
+layers:
+  '3':
+  - - $$mdi:keyboard-esc$$
+    - BACK PARA
+    - FWD PARA
+    - BACK FOO
+    - FWD FOO
+    - ''
+    - ''
+    - PGUP
+    - $$mdi:arrow-up-bold$$
+    - PGDN
+    - ''
+    - UNDO
+  - - ''
+    - BACK FOO
+    - FWD FOO
+    - BACK FOO
+    - FWD FOO
+    - BEGIN LINE
+    - ''
+    - $$mdi:arrow-left-bold$$
+    - $$mdi:arrow-down-bold$$
+    - $$mdi:arrow-right-bold$$
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - HOME
+    - ''
+    - END
+    - ''
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-command$$
+    - 1_layer
+    - type: held
+    - ''
+    - ''
+    - ''
+    - ''
