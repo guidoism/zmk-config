@@ -43,7 +43,7 @@ compatible = "zmk,keymap";
 &kp LCTRL   &kp A    &kp S    &kp D    &kp F    &kp G        &kp H    &kp J    &kp K    &kp L    &colonsemi   &kp RET 
 &kp LSHFT   &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M    &kp COMMA    &kp DOT    &kp SLASH    &kp SEMI   
                     &mo 4   &mo 5        &kp N3   &kp LCTRL                      
-          &kp RALT  &kp LCMD  &mo 1   &mo 3       &kp LSHFT   &kp SPACE   &mo 2    &kp N4              
+          &kp RALT  &kp LCMD  &mo 1   &mo 3       &kp LSHFT   &kp SPACE   &mo 2    &kp LS(LC(LA(N)))            
 >;
 };
 
