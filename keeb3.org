@@ -167,7 +167,7 @@ def f(m):
     if k in 'abcdefghijklmnopqkrstuvwxyz': return f'&kp {k.upper()}'
     if k in '0123456789': return f'&kp N{k}'
     if k in identity: return f'&kp {k}'
-    if k[0] == '∫': return f'&kp LS(LC(LA({k[1]})))' # Meh key
+    if k[0] == '∫': return f'&kp LS(LC(LA({k[1:]})))' # Meh key
     leftover.append(k)
     return f'&none'
 

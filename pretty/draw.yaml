@@ -15,7 +15,7 @@ layers:
   - ['$$mdi:apple-keyboard-control$$', A, S, D, F, G, H, J, K, L, ':', RET]
   - ['$$mdi:apple-keyboard-shift$$', Z, X, C, V, B, N, M, ',', ., /, ;]
   - [4_layer, 5_layer, '3', '$$mdi:apple-keyboard-control$$', '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-command$$', 1_layer, 3_layer, '$$mdi:apple-keyboard-shift$$',
-    '$$mdi:keyboard-space$$', 2_layer, LS(LC(LA(N)))]
+    '$$mdi:keyboard-space$$', 2_layer, LS(LC(LA(4)))]
   1_layer:
   - - '~'
     - '!'
