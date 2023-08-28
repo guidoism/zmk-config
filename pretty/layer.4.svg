@@ -1,13 +1,13 @@
-<svg width="732.0" height="392.0" viewBox="0 0 732.0 392.0" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1012.0" height="364.0" viewBox="0 0 1012.0 364.0" class="keymap" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <defs>/* start glyphs */
-<svg id="mdi:apple-keyboard-option">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-option" viewBox="0 0 24 24"><path d="M3,4H9.11L16.15,18H21V20H14.88L7.84,6H3V4M14,4H21V6H14V4Z" /></svg>
-</svg>
 <svg id="mdi:apple-keyboard-command">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-command" viewBox="0 0 24 24"><path d="M6,2A4,4 0 0,1 10,6V8H14V6A4,4 0 0,1 18,2A4,4 0 0,1 22,6A4,4 0 0,1 18,10H16V14H18A4,4 0 0,1 22,18A4,4 0 0,1 18,22A4,4 0 0,1 14,18V16H10V18A4,4 0 0,1 6,22A4,4 0 0,1 2,18A4,4 0 0,1 6,14H8V10H6A4,4 0 0,1 2,6A4,4 0 0,1 6,2M16,18A2,2 0 0,0 18,20A2,2 0 0,0 20,18A2,2 0 0,0 18,16H16V18M14,10H10V14H14V10M6,16A2,2 0 0,0 4,18A2,2 0 0,0 6,20A2,2 0 0,0 8,18V16H6M8,6A2,2 0 0,0 6,4A2,2 0 0,0 4,6A2,2 0 0,0 6,8H8V6M18,8A2,2 0 0,0 20,6A2,2 0 0,0 18,4A2,2 0 0,0 16,6V8H18Z" /></svg>
 </svg>
 <svg id="mdi:numeric-6-circle">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-numeric-6-circle" viewBox="0 0 24 24"><path d="M11,7A2,2 0 0,0 9,9V15A2,2 0 0,0 11,17H13A2,2 0 0,0 15,15V13A2,2 0 0,0 13,11H11V9H15V7H11M11,13H13V15H11V13M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2Z" /></svg>
+</svg>
+<svg id="mdi:apple-keyboard-option">
+<svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-option" viewBox="0 0 24 24"><path d="M3,4H9.11L16.15,18H21V20H14.88L7.84,6H3V4M14,4H21V6H14V4Z" /></svg>
 </svg>
 </defs>/* end glyphs */
 <style>/* inherit to force styles through use tags*/
@@ -116,18 +116,18 @@ path.combo {
 <text x="282.0" y="84.0" class="tap">F4</text>
 <rect rx="6.0" ry="6.0" x="312.0" y="58.0" width="52.0" height="52.0" class="key"/>
 <text x="338.0" y="84.0" class="tap">F5</text>
-<rect rx="6.0" ry="6.0" x="368.0" y="58.0" width="52.0" height="52.0" class="key"/>
-<text x="394.0" y="84.0" class="tap">F6</text>
-<rect rx="6.0" ry="6.0" x="424.0" y="58.0" width="52.0" height="52.0" class="key"/>
-<text x="450.0" y="84.0" class="tap">F7</text>
-<rect rx="6.0" ry="6.0" x="480.0" y="58.0" width="52.0" height="52.0" class="key"/>
-<text x="506.0" y="84.0" class="tap">F8</text>
-<rect rx="6.0" ry="6.0" x="536.0" y="58.0" width="52.0" height="52.0" class="key"/>
-<text x="562.0" y="84.0" class="tap">F9</text>
-<rect rx="6.0" ry="6.0" x="592.0" y="58.0" width="52.0" height="52.0" class="key"/>
-<text x="618.0" y="84.0" class="tap">F10</text>
 <rect rx="6.0" ry="6.0" x="648.0" y="58.0" width="52.0" height="52.0" class="key"/>
-<text x="674.0" y="84.0" class="tap">&amp;KIL</text>
+<text x="674.0" y="84.0" class="tap">F6</text>
+<rect rx="6.0" ry="6.0" x="704.0" y="58.0" width="52.0" height="52.0" class="key"/>
+<text x="730.0" y="84.0" class="tap">F7</text>
+<rect rx="6.0" ry="6.0" x="760.0" y="58.0" width="52.0" height="52.0" class="key"/>
+<text x="786.0" y="84.0" class="tap">F8</text>
+<rect rx="6.0" ry="6.0" x="816.0" y="58.0" width="52.0" height="52.0" class="key"/>
+<text x="842.0" y="84.0" class="tap">F9</text>
+<rect rx="6.0" ry="6.0" x="872.0" y="58.0" width="52.0" height="52.0" class="key"/>
+<text x="898.0" y="84.0" class="tap">F10</text>
+<rect rx="6.0" ry="6.0" x="928.0" y="58.0" width="52.0" height="52.0" class="key"/>
+<text x="954.0" y="84.0" class="tap">&amp;KIL</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="114.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="88.0" y="114.0" width="52.0" height="52.0" class="key"/>
 <text x="114.0" y="140.0" class="tap">LS(LC(LA(C)))</text>
@@ -139,46 +139,46 @@ path.combo {
 <text x="282.0" y="140.0" class="tap">LS(LC(LA(E)))</text>
 <rect rx="6.0" ry="6.0" x="312.0" y="114.0" width="52.0" height="52.0" class="key"/>
 <text x="338.0" y="140.0" class="tap">LS(LC(LA(P)))</text>
-<rect rx="6.0" ry="6.0" x="368.0" y="114.0" width="52.0" height="52.0" class="key"/>
-<text x="394.0" y="140.0" class="tap">LC(LG(0))</text>
-<rect rx="6.0" ry="6.0" x="424.0" y="114.0" width="52.0" height="52.0" class="key"/>
-<text x="450.0" y="140.0" class="tap">LC(LG(1))</text>
-<rect rx="6.0" ry="6.0" x="480.0" y="114.0" width="52.0" height="52.0" class="key"/>
-<text x="506.0" y="140.0" class="tap">LC(LG(2))</text>
-<rect rx="6.0" ry="6.0" x="536.0" y="114.0" width="52.0" height="52.0" class="key"/>
-<text x="562.0" y="140.0" class="tap">LC(LG(3))</text>
-<rect rx="6.0" ry="6.0" x="592.0" y="114.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="648.0" y="114.0" width="52.0" height="52.0" class="key"/>
-<text x="674.0" y="140.0" class="tap">&amp;SAV</text>
+<text x="674.0" y="140.0" class="tap">LC(LG(0))</text>
+<rect rx="6.0" ry="6.0" x="704.0" y="114.0" width="52.0" height="52.0" class="key"/>
+<text x="730.0" y="140.0" class="tap">LC(LG(1))</text>
+<rect rx="6.0" ry="6.0" x="760.0" y="114.0" width="52.0" height="52.0" class="key"/>
+<text x="786.0" y="140.0" class="tap">LC(LG(2))</text>
+<rect rx="6.0" ry="6.0" x="816.0" y="114.0" width="52.0" height="52.0" class="key"/>
+<text x="842.0" y="140.0" class="tap">LC(LG(3))</text>
+<rect rx="6.0" ry="6.0" x="872.0" y="114.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="928.0" y="114.0" width="52.0" height="52.0" class="key"/>
+<text x="954.0" y="140.0" class="tap">&amp;SAV</text>
 <rect rx="6.0" ry="6.0" x="32.0" y="170.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="88.0" y="170.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="144.0" y="170.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="200.0" y="170.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="256.0" y="170.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="312.0" y="170.0" width="52.0" height="52.0" class="key"/>
-<rect rx="6.0" ry="6.0" x="368.0" y="170.0" width="52.0" height="52.0" class="key"/>
-<rect rx="6.0" ry="6.0" x="424.0" y="170.0" width="52.0" height="52.0" class="key"/>
-<text x="450.0" y="196.0" class="tap">&amp;BFS</text>
-<rect rx="6.0" ry="6.0" x="480.0" y="170.0" width="52.0" height="52.0" class="key"/>
-<text x="506.0" y="196.0" class="tap">LS(LG(O))</text>
-<rect rx="6.0" ry="6.0" x="536.0" y="170.0" width="52.0" height="52.0" class="key"/>
-<text x="562.0" y="196.0" class="tap">LG(O)</text>
-<rect rx="6.0" ry="6.0" x="592.0" y="170.0" width="52.0" height="52.0" class="key"/>
 <rect rx="6.0" ry="6.0" x="648.0" y="170.0" width="52.0" height="52.0" class="key"/>
-<rect rx="6.0" ry="6.0" x="256.0" y="226.0" width="52.0" height="52.0" class="held key"/>
-<rect rx="6.0" ry="6.0" x="312.0" y="226.0" width="52.0" height="52.0" class="key"/>
-<rect rx="6.0" ry="6.0" x="368.0" y="226.0" width="52.0" height="52.0" class="key"/>
-<rect rx="6.0" ry="6.0" x="424.0" y="226.0" width="52.0" height="52.0" class="key"/>
-<rect rx="6.0" ry="6.0" x="144.0" y="282.0" width="52.0" height="52.0" class="key"/>
-<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="163.0" y="301.0" height="14" width="14.0" class="tap glyph mdi:apple-keyboard-option"/>
-<rect rx="6.0" ry="6.0" x="200.0" y="282.0" width="52.0" height="52.0" class="key"/>
-<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="219.0" y="301.0" height="14" width="14.0" class="tap glyph mdi:apple-keyboard-command"/>
-<rect rx="6.0" ry="6.0" x="256.0" y="282.0" width="52.0" height="52.0" class="key"/>
-<rect rx="6.0" ry="6.0" x="312.0" y="282.0" width="52.0" height="52.0" class="key"/>
-<use href="#mdi:numeric-6-circle" xlink:href="#mdi:numeric-6-circle" x="331.0" y="301.0" height="14" width="14.0" class="tap glyph mdi:numeric-6-circle"/>
-<rect rx="6.0" ry="6.0" x="368.0" y="282.0" width="52.0" height="52.0" class="key"/>
-<rect rx="6.0" ry="6.0" x="424.0" y="282.0" width="52.0" height="52.0" class="key"/>
-<rect rx="6.0" ry="6.0" x="480.0" y="282.0" width="52.0" height="52.0" class="key"/>
-<rect rx="6.0" ry="6.0" x="536.0" y="282.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="704.0" y="170.0" width="52.0" height="52.0" class="key"/>
+<text x="730.0" y="196.0" class="tap">&amp;BFS</text>
+<rect rx="6.0" ry="6.0" x="760.0" y="170.0" width="52.0" height="52.0" class="key"/>
+<text x="786.0" y="196.0" class="tap">LS(LG(O))</text>
+<rect rx="6.0" ry="6.0" x="816.0" y="170.0" width="52.0" height="52.0" class="key"/>
+<text x="842.0" y="196.0" class="tap">LG(O)</text>
+<rect rx="6.0" ry="6.0" x="872.0" y="170.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="928.0" y="170.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="368.0" y="198.0" width="52.0" height="52.0" class="held key"/>
+<rect rx="6.0" ry="6.0" x="424.0" y="198.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="536.0" y="198.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="592.0" y="198.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="256.0" y="254.0" width="52.0" height="52.0" class="key"/>
+<use href="#mdi:apple-keyboard-option" xlink:href="#mdi:apple-keyboard-option" x="275.0" y="273.0" height="14" width="14.0" class="tap glyph mdi:apple-keyboard-option"/>
+<rect rx="6.0" ry="6.0" x="312.0" y="254.0" width="52.0" height="52.0" class="key"/>
+<use href="#mdi:apple-keyboard-command" xlink:href="#mdi:apple-keyboard-command" x="331.0" y="273.0" height="14" width="14.0" class="tap glyph mdi:apple-keyboard-command"/>
+<rect rx="6.0" ry="6.0" x="368.0" y="254.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="424.0" y="254.0" width="52.0" height="52.0" class="key"/>
+<use href="#mdi:numeric-6-circle" xlink:href="#mdi:numeric-6-circle" x="443.0" y="273.0" height="14" width="14.0" class="tap glyph mdi:numeric-6-circle"/>
+<rect rx="6.0" ry="6.0" x="536.0" y="254.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="592.0" y="254.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="648.0" y="254.0" width="52.0" height="52.0" class="key"/>
+<rect rx="6.0" ry="6.0" x="704.0" y="254.0" width="52.0" height="52.0" class="key"/>
 </g>
 </svg>

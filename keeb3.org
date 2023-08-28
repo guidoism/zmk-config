@@ -16,15 +16,15 @@ alias keymap='/Users/guido/homebrew/bin/keymap'
 alias cairosvg='/Users/guido/homebrew/bin/cairosvg'
 keymap -c pretty/keymap_drawer.config.yaml parse -c 12 -z config/andean-condor.keymap > pretty/draw.yaml
 python pretty/seperate_layers.py
-keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.0.yaml > pretty/layer.0.svg
-keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.1.yaml > pretty/layer.1.svg
-keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.2.yaml > pretty/layer.2.svg
-keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.3.yaml > pretty/layer.3.svg
-keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.4.yaml > pretty/layer.4.svg
-keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.5.yaml > pretty/layer.5.svg
-keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.6.yaml > pretty/layer.6.svg
-keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.7.yaml > pretty/layer.7.svg
-keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout.json pretty/draw.8.yaml > pretty/layer.8.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout-divided.json pretty/draw.0.yaml > pretty/layer.0.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout-divided.json pretty/draw.1.yaml > pretty/layer.1.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout-divided.json pretty/draw.2.yaml > pretty/layer.2.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout-divided.json pretty/draw.3.yaml > pretty/layer.3.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout-divided.json pretty/draw.4.yaml > pretty/layer.4.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout-divided.json pretty/draw.5.yaml > pretty/layer.5.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout-divided.json pretty/draw.6.yaml > pretty/layer.6.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout-divided.json pretty/draw.7.yaml > pretty/layer.7.svg
+keymap -c pretty/keymap_drawer.config.yaml draw --qmk-info-json=pretty/flat-layout-divided.json pretty/draw.8.yaml > pretty/layer.8.svg
 cairosvg pretty/layer.0.svg -b white -o pretty/layer.0.png
 cairosvg pretty/layer.1.svg -b white -o pretty/layer.1.png
 cairosvg pretty/layer.2.svg -b white -o pretty/layer.2.png
