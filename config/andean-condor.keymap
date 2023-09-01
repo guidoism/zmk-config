@@ -87,7 +87,7 @@ compatible = "zmk,keymap";
 &kp LCTRL   &kp A    &kp S    &kp D    &kp F    &kp G        &kp H    &kp J    &kp K    &kp L    &colonsemi   &kp RET 
 &kp LSHFT   &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M    &kp COMMA    &kp DOT    &kp SLASH    &kp SEMI   
                     &mo 4   &mo 5        &kp N3   &kp LCTRL                      
-          &kp RALT  &kp LCMD  &mo 1   &mo 3       &kp LSHFT   &kp SPACE   &mo 2   &kp LS(LC(LA(N4)))             
+          &kp RALT  &kp LCMD  &mo 1   &mo 3       &kp LSHFT   &kp SPACE   &mo 2   &mo 8              
 >;
 };
 
@@ -133,9 +133,9 @@ compatible = "zmk,keymap";
 
 5_layer {
  bindings = <
-  &none    &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
- &none    &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
- &none    &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
+  &none    &none    &none    &box_upperleft    &box_upperright    &none        &none    &none    &none    &none    &none    &none   
+ &none    &box_horizontal    
+ &none    &box_middle    &box_middlebottom    &box_middletop    &box_middleright    &box_middleleft        &none    &none    &none    &none    &none    &none   
                      &none    &none        &none    &none                       
           &kp RALT  &kp LCMD   &none    &none        &none    &none    &none    &none              
 >;
@@ -163,11 +163,11 @@ compatible = "zmk,keymap";
 
 8_layer {
  bindings = <
-  &none    &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
- &none    &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
+  &none    &none    &kp Q    &kp W    &kp E    &kp R        &none    &none    &none    &none    &none    &none   
+ &none    &none    &kp A    &kp S    &kp D    &kp F        &none    &none    &none    &none    &none    &none   
  &none    &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
                      &none    &none        &none    &none                       
-          &kp RALT  &kp LCMD   &none    &none        &none    &none    &none    &none              
+          &kp RALT  &kp LCMD   &kp SPACE    &none        &none    &none    &none    &none              
 >;
 };
 };
