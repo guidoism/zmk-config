@@ -48,7 +48,7 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
  │CTL   a    s    d    f    g        h    j    k    l    :;   RET │
 0│SFT   z    x    c    v    b        n    m    ,    .    /    ;   │
  │                    M₄   M₅        3   CTL                      │
- │          OPT  CMD  M₁   M₃       SFT   ␣   M₂    ∫N4           │
+ │          OPT  CMD  M₁   M₃       SFT   ␣   M₂   ∫N4            │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ ~    !    @    #    $    %        ^    7    8    9    ◌    BS  │
@@ -459,3 +459,81 @@ Consider adding this:
 };
 #+end_src
 
+** Pretty text-mode
+
+#+name: pretty_text_mode_layout
+#+begin_src python :var layout=layout :results output
+import re
+print(list(re.findall(r'( ╭─.+?─╯)', layout, re.DOTALL))[0])
+#+end_src
+
+#+RESULTS: pretty_text_mode_layout
+:  ╭────────────────────────────────────────────────────────────────╮
+:  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
+:  │CTL   a    s    d    f    g        h    j    k    l    :;   RET │
+: 0│SFT   z    x    c    v    b        n    m    ,    .    /    ;   │
+:  │                    M₄   M₅        3   CTL                      │
+:  │          OPT  CMD  M₁   M₃       SFT   ␣   M₂   ∫N4            │
+:  ╰────────────────────────────────────────────────────────────────╯
+
+** Urob Git Stuff
+
+#+begin_example
+∇ git fetch urob
+git fetch urob
+remote: Enumerating objects: 4196, done.        
+remote: Counting objects: 100% (2380/2380), done.        
+remote: Compressing objects: 100% (44/44), done.        
+remote: Total 4196 (delta 2341), reused 2357 (delta 2335), pack-reused 1816        
+Receiving objects: 100% (4196/4196), 2.51 MiB | 13.06 MiB/s, done.
+Resolving deltas: 100% (3305/3305), completed with 520 local objects.
+From https://github.com/urob/zmk
+ * [new branch]        adv360                         -> urob/adv360
+ * [new branch]        adv360-led                     -> urob/adv360-led
+ * [new branch]        build-with-submodules          -> urob/build-with-submodules
+ * [new branch]        fix-mod-morph                  -> urob/fix-mod-morph
+ * [new branch]        ignore-mods-for-capsword       -> urob/ignore-mods-for-capsword
+ * [new branch]        improve-caps-word              -> urob/improve-caps-word
+ * [new branch]        main                           -> urob/main
+ * [new branch]        main-3.0                       -> urob/main-3.0
+ * [new branch]        main-3.2                       -> urob/main-3.2
+ * [new branch]        masked-mods                    -> urob/masked-mods
+ * [new branch]        masked-mods-pr                 -> urob/masked-mods-pr
+ * [new branch]        mouse-3.2                      -> urob/mouse-3.2
+ * [new branch]        positional-hold-tap-on-release -> urob/positional-hold-tap-on-release
+ * [new branch]        testing                        -> urob/testing
+ * [new branch]        zen-tweaks                     -> urob/zen-tweaks
+
+ ∇ git checkout -b urob-main urob/main
+git checkout -b urob-main urob/main
+branch 'urob-main' set up to track 'urob/main'.
+Switched to a new branch 'urob-main'
+
+∇ git ls-remote --get-url 
+git ls-remote --get-url 
+https://github.com/urob/zmk
+
+∇ git checkout -b urob-guidoism
+git checkout -b urob-guidoism
+Switched to a new branch 'urob-guidoism'
+
+∇ git remote set-url origin https://github.com/guidoism/zmk
+git remote set-url origin https://github.com/guidoism/zmk
+
+∇ git push origin urob-guidoism
+git push origin urob-guidoism
+Enumerating objects: 3892, done.
+Counting objects: 100% (3891/3891), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (1050/1050), done.
+Writing objects: 100% (3178/3178), 836.34 KiB | 6.48 MiB/s, done.
+Total 3178 (delta 2545), reused 2696 (delta 2113), pack-reused 0
+remote: Resolving deltas: 100% (2545/2545), completed with 413 local objects.        
+remote: 
+remote: Create a pull request for 'urob-guidoism' on GitHub by visiting:        
+remote:      https://github.com/guidoism/zmk/pull/new/urob-guidoism        
+remote: 
+To https://github.com/guidoism/zmk
+ * [new branch]        urob-guidoism -> urob-guidoism
+
+#+end_example
