@@ -8,15 +8,53 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#define HOST_OS 2
 #include "../zmk-nodefree-config/helper.h"
+
 
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOLS 2
 
 ZMK_UNICODE_SINGLE(euro_sign,           N2, N0, A, C)  // €
+
+// M A T H
 ZMK_UNICODE_SINGLE(multiplication_sign, N0, N0, D, N7) // × 
 ZMK_UNICODE_SINGLE(division_sign,       N0, N0, F, N7) // ÷ 
+// 00B0	° degree_symbol
+// 2200 ∀ for_all
+// 2203 ∃ there_exists
+// 2205 ∅ empty_set
+// 2208 ∈ element_of
+// 2209 ∉ not_element_of
+// 220E ∎ qed_motherfucker
+// 220F ∏ product
+// 2211 ∑ sum
+// 2218 ∘ ring
+// 221D ∝ proportional
+// 221E ∞ infinity
+// 2227 ∧ logical_and
+// 2228 ∨ logical_or
+// 2229 ∩ intersection
+// 222A ∪ union
+// 2248 ≈ almost_equal
+// 2264 ≤ less_than_or_equal
+// 2265 ≥ greater_than_or_equal
+// 2261 ≡ identical_to
+// 2262 ≢ not_identical_to
+
+// B O X  D R A W I N G
+// 256D ╭ box_upperleft
+// 256E ╮ box_upperright
+// 256F ╯ box_lowerright
+// 2570 ╰ box_lowerleft
+// 2500 ─ box_horizontal
+// 2502 │ box_vertical
+// 253C ┼ box_middle
+// 2534 ┴ box_middlebottom
+// 252C ┬ box_middletop
+// 2524 ┤ box_middleright
+// 251C ├ box_middleleft
 
 
 
@@ -105,8 +143,8 @@ compatible = "zmk,keymap";
 
 6_layer {
  bindings = <
- &tog 0   &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
- &none   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR       &none    &none    &none    &none    &none    &none   
+ &tog 0   &none    &none    &none    &none    &none        &none    &none    &none    &none    &none   &sys_reset  
+ &none   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR       &none    &none    &none    &none    &none   &bootloader  
  &none    &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
                      &none    &none        &none    &none                       
           &kp RALT  &kp LCMD   &none   &tog 6       &none    &none    &none    &none              

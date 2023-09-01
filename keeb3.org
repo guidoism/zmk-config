@@ -142,11 +142,6 @@ kp = {
     'Bu3': 'LC(LG(N3))',
     'OTH': 'LG(O)', # Other buffer (cycle buffers)
     'FLP': 'LS(LG(O))', # Flip buffer
-    # Standard Mac Shortcuts (don't work with Unicode Hex Input)    
-    '≤': 'LA(COMMA)',
-    '≥': 'LA(DOT)',
-    '≠': 'LA(EQUAL)',
-    '°': 'LA(LS(8))', # degree symbol
 }
 changed = {
     '◌': '&none',
@@ -166,8 +161,43 @@ changed = {
     'RST': '&sys_reset',
     'USB': '&bootloader',
     ':;': '&colonsemi',
+    # M A T H
     '×': '&multiplication_sign', # U+00D7
     '÷': '&division_sign', # U+00F7    
+    '°': '&degree_symbol', # U+00B0
+    '∀': '&for_all', # U+2200
+    '∃': '&there_exists', # U+2203
+    '∅': '&empty_set', # U+2205
+    '∈': '&element_of', # U+2208
+    '∉': '&not_element_of', # U+2209
+    '∎': '&qed_motherfucker', # U+220E
+    '∏': '&product', # U+220F
+    '∑': '&sum', # U+2211
+    '∘': '&ring', # U+2218
+    '∝': '&proportional', # U+221D
+    '∞': '&infinity', # U+221E
+    '∧': '&logical_and', # U+2227
+    '∨': '&logical_or', # U+2228
+    '∩': '&intersection', # U+2229
+    '∪': '&union', # U+222A
+    '≈': '&almost_equal', # U+2248
+    '≤': '&less_than_or_equal', # U+2264
+    '≥': '&greater_than_or_equal', # U+2265
+    '≡': '&identical_to', # U+2261
+    '≢': '&not_identical_to', # U+2262
+    
+    # B O X  D R A W I N G
+    '╭': '&box_upperleft', # U+256D
+    '╮': '&box_upperright', # U+256E
+    '╯': '&box_lowerright', # U+256F
+    '╰': '&box_lowerleft', # U+2570
+    '─': '&box_horizontal', # U+2500
+    '│': '&box_vertical', # U+2502
+    '┼': '&box_middle', # U+253C
+    '┴': '&box_middlebottom', # U+2534
+    '┬': '&box_middletop', # U+252C
+    '┤': '&box_middleright', # U+2524
+    '├': '&box_middleleft', # U+251C
 }
 
 macros = {
@@ -202,9 +232,9 @@ print("""
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#define HOST_OS 2
 #include "../zmk-nodefree-config/helper.h"
 
-#define HOST_OS 2
 
 #define DEFAULT 0
 #define NUMBERS 1
