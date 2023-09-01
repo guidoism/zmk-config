@@ -210,7 +210,7 @@ print("""
 ZMK_UNICODE_SINGLE(euro_sign,           N2, N0, A, C)  // €
 ZMK_UNICODE_SINGLE(multiplication_sign, N0, N0, D, N7) // × 
 ZMK_UNICODE_SINGLE(division_sign,       N0, N0, F, N7) // ÷ 
-
+// U+00B0	°	Degree symbol
 
 """)
 
