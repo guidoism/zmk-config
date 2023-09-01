@@ -16,46 +16,46 @@
 #define NUMBERS 1
 #define SYMBOLS 2
 
-ZMK_UNICODE_SINGLE(euro_sign,           N2, N0, A, C)  // €
+// F O R E I G N
+ZMK_UNICODE_SINGLE(euro_sign,             N2, N0, A, C)   // €
 
 // M A T H
-ZMK_UNICODE_SINGLE(multiplication_sign, N0, N0, D, N7) // × 
-ZMK_UNICODE_SINGLE(division_sign,       N0, N0, F, N7) // ÷ 
-// 00B0	° degree_symbol
-// 2200 ∀ for_all
-// 2203 ∃ there_exists
-// 2205 ∅ empty_set
-// 2208 ∈ element_of
-// 2209 ∉ not_element_of
-// 220E ∎ qed_motherfucker
-// 220F ∏ product
-// 2211 ∑ sum
-// 2218 ∘ ring
-// 221D ∝ proportional
-// 221E ∞ infinity
-// 2227 ∧ logical_and
-// 2228 ∨ logical_or
-// 2229 ∩ intersection
-// 222A ∪ union
-// 2248 ≈ almost_equal
-// 2264 ≤ less_than_or_equal
-// 2265 ≥ greater_than_or_equal
-// 2261 ≡ identical_to
-// 2262 ≢ not_identical_to
+ZMK_UNICODE_SINGLE(multiplication_sign,   N0, N0, D, N7)  // × 
+ZMK_UNICODE_SINGLE(division_sign,         N0, N0, F, N7)  // ÷ 
+ZMK_UNICODE_SINGLE(degree_symbol,         N0, N0, B, N0)  // ° 
+ZMK_UNICODE_SINGLE(for_all,               N2, N2, N0, N0) // ∀ 
+ZMK_UNICODE_SINGLE(there_exists,          N2, N2, N0, N3) // ∃ 
+ZMK_UNICODE_SINGLE(empty_set,             N2, N2, N0, N5) // ∅ 
+ZMK_UNICODE_SINGLE(element_of,            N2, N2, N0, N8) // ∈ 
+ZMK_UNICODE_SINGLE(not_element_of,        N2, N2, N0, N9) // ∉ 
+ZMK_UNICODE_SINGLE(qed_motherfucker,      N2, N2, N0, E)  // ∎ 
+ZMK_UNICODE_SINGLE(product,               N2, N2, N0, F)  // ∏ 
+ZMK_UNICODE_SINGLE(sum,                   N2, N2, N1, N1) // ∑ 
+ZMK_UNICODE_SINGLE(ring,                  N2, N2, N1, N8) // ∘ 
+ZMK_UNICODE_SINGLE(proportional,          N2, N2, N1, D)  // ∝ 
+ZMK_UNICODE_SINGLE(infinity,              N2, N2, N1, E)  // ∞ 
+ZMK_UNICODE_SINGLE(logical_and,           N2, N2, N2, N7) // ∧ 
+ZMK_UNICODE_SINGLE(logical_or,            N2, N2, N2, N8) // ∨ 
+ZMK_UNICODE_SINGLE(intersection,          N2, N2, N2, N9) // ∩ 
+ZMK_UNICODE_SINGLE(union,                 N2, N2, N2, A)  // ∪ 
+ZMK_UNICODE_SINGLE(almost_equal,          N2, N2, N4, N8) // ≈ 
+ZMK_UNICODE_SINGLE(less_than_or_equal,    N2, N2, N6, N4) // ≤ 
+ZMK_UNICODE_SINGLE(greater_than_or_equal, N2, N2, N6, N5) // ≥ 
+ZMK_UNICODE_SINGLE(identical_to,          N2, N2, N6, N1) // ≡ 
+ZMK_UNICODE_SINGLE(not_identical_to,      N2, N2, N6, N2) // ≢ 
 
 // B O X  D R A W I N G
-// 256D ╭ box_upperleft
-// 256E ╮ box_upperright
-// 256F ╯ box_lowerright
-// 2570 ╰ box_lowerleft
-// 2500 ─ box_horizontal
-// 2502 │ box_vertical
-// 253C ┼ box_middle
-// 2534 ┴ box_middlebottom
-// 252C ┬ box_middletop
-// 2524 ┤ box_middleright
-// 251C ├ box_middleleft
-
+ZMK_UNICODE_SINGLE(box_upperleft,         N2, N5, N6, D)  // ╭ 
+ZMK_UNICODE_SINGLE(box_upperright,        N2, N5, N6, E)  // ╮ 
+ZMK_UNICODE_SINGLE(box_lowerright,        N2, N5, N6, F)  // ╯ 
+ZMK_UNICODE_SINGLE(box_lowerleft,         N2, N5, N7, N0) // ╰ 
+ZMK_UNICODE_SINGLE(box_horizontal,        N2, N5, N0, N0) // ─ 
+ZMK_UNICODE_SINGLE(box_vertical,          N2, N5, N0, N2) // │ 
+ZMK_UNICODE_SINGLE(box_middle,            N2, N5, N3, C)  // ┼ 
+ZMK_UNICODE_SINGLE(box_middlebottom,      N2, N5, N3, N4) // ┴ 
+ZMK_UNICODE_SINGLE(box_middletop,         N2, N5, N2, C)  // ┬ 
+ZMK_UNICODE_SINGLE(box_middleright,       N2, N5, N2, N4) // ┤ 
+ZMK_UNICODE_SINGLE(box_middleleft,        N2, N5, N1, C)  // ├ 
 
 
 / {
