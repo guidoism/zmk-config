@@ -4,8 +4,7 @@ For some reason I have two keymap files:
 
 #+name: generate_zmk_config
 #+begin_src python :var layout=parse_layout() :results none
-f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-config-condor-nicenano/config/boards/shields/andean-condor/andean-condor.keymap', 'w')
-f.write(layout)
+# Only write to the keymap in the config directory (ignore the one in board/shield)
 f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-config-condor-nicenano/config/andean-condor.keymap', 'w')
 f.write(layout)
 #+end_src
@@ -210,7 +209,41 @@ print("""
 ZMK_UNICODE_SINGLE(euro_sign,           N2, N0, A, C)  // €
 ZMK_UNICODE_SINGLE(multiplication_sign, N0, N0, D, N7) // × 
 ZMK_UNICODE_SINGLE(division_sign,       N0, N0, F, N7) // ÷ 
-// U+00B0	°	Degree symbol
+// 00B0	° degree_symbol
+// 2200 ∀ for_all
+// 2203 ∃ there_exists
+// 2205 ∅ empty_set
+// 2208 ∈ element_of
+// 2209 ∉ not_element_of
+// 220E ∎ qed_motherfucker
+// 220F ∏ product
+// 2211 ∑ sum
+// 2218 ∘ ring
+// 221D ∝ proportional
+// 221E ∞ infinity
+// 2227 ∧ logical_and
+// 2228 ∨ logical_or
+// 2229 ∩ intersection
+// 222A ∪ union
+// 2248 ≈ almost_equal
+// 2264 ≤ less_than_or_equal
+// 2265 ≥ greater_than_or_equal
+// 2261 ≡ identical_to
+// 2262 ≢ not_identical_to
+
+// B O X  D R A W I N G
+// 256D ╭ box_upperleft
+// 256E ╮ box_upperright
+// 256F ╯ box_lowerright
+// 2570 ╰ box_lowerleft
+// 2500 ─ box_horizontal
+// 2502 │ box_vertical
+// 253C ┼ 
+// 2534 ┴ 
+// 252C ┬ 
+// 2524 ┤ 
+// 251C ├ 
+
 
 """)
 
