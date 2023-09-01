@@ -86,8 +86,8 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
  │          OPT  CMD   ◌    ◌        ◌    ◌    ◌    ◌             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
- │M₀!   ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
- │ ◌   BT4  BT3  BT2  BT1  BTC       ◌    ◌    ◌    ◌    ◌    ◌   │
+ │M₀!   ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌   RST  │
+ │ ◌   BT4  BT3  BT2  BT1  BTC       ◌    ◌    ◌    ◌    ◌   USB  │
 6│ ◌    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
  │                     ◌    ◌        ◌    ◌                       │
  │          OPT  CMD   ◌   M₆!       ◌    ◌    ◌    ◌             │
@@ -163,9 +163,11 @@ changed = {
     'BT2': '&bt BT_SEL 1',
     'BT3': '&bt BT_SEL 2',
     'BT4': '&bt BT_SEL 3',
+    'RST': '&sys_reset',
+    'USB': '&bootloader',
     ':;': '&colonsemi',
     '×': '&multiplication_sign', # U+00D7
-    '÷': '&division_sign', # U+00F7
+    '÷': '&division_sign', # U+00F7    
 }
 
 macros = {
@@ -202,11 +204,15 @@ print("""
 #include <dt-bindings/zmk/bt.h>
 #include "../zmk-nodefree-config/helper.h"
 
+#define HOST_OS 2
+
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOLS 2
 
 ZMK_UNICODE_SINGLE(euro_sign,           N2, N0, A, C)  // €
+
+// M A T H
 ZMK_UNICODE_SINGLE(multiplication_sign, N0, N0, D, N7) // × 
 ZMK_UNICODE_SINGLE(division_sign,       N0, N0, F, N7) // ÷ 
 // 00B0	° degree_symbol
@@ -238,11 +244,11 @@ ZMK_UNICODE_SINGLE(division_sign,       N0, N0, F, N7) // ÷
 // 2570 ╰ box_lowerleft
 // 2500 ─ box_horizontal
 // 2502 │ box_vertical
-// 253C ┼ 
-// 2534 ┴ 
-// 252C ┬ 
-// 2524 ┤ 
-// 251C ├ 
+// 253C ┼ box_middle
+// 2534 ┴ box_middlebottom
+// 252C ┬ box_middletop
+// 2524 ┤ box_middleright
+// 251C ├ box_middleleft
 
 
 """)
