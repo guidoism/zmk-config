@@ -59,7 +59,7 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
  │          OPT  CMD   ◉    ◌        ◌    ␣    ◌    ◌             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
- │ `    ◌    ◌    ◌    ◌    ◌        ◌    ◌    ◌    ◌    ◌    BS  │
+ │ `    ◌    ◌    ◌    ◌    ◌        ◌    ×    ÷    ◌    ◌    BS  │
  │ ◌    [    ]    (    )    ◌        ◌    -    =    ◌    ◌    \   │
 2│ ◌    <    >    {    }    ◌        ◌    ◌    ◌    ◌    ◌    ◌   │
  │                     ◌    ◌        ◌    ◌                       │
@@ -143,6 +143,11 @@ kp = {
     'Bu3': 'LC(LG(N3))',
     'OTH': 'LG(O)', # Other buffer (cycle buffers)
     'FLP': 'LS(LG(O))', # Flip buffer
+    # Standard Mac Shortcuts (don't work with Unicode Hex Input)    
+    '≤': 'LA(COMMA)',
+    '≥': 'LA(DOT)',
+    '≠': 'LA(EQUAL)',
+    '°': 'LA(LS(8))', # degree symbol
 }
 changed = {
     '◌': '&none',
@@ -160,6 +165,8 @@ changed = {
     'BT3': '&bt BT_SEL 2',
     'BT4': '&bt BT_SEL 3',
     ':;': '&colonsemi',
+    '×': '&multiplication_sign', # U+00D7
+    '÷': '&division_sign', # U+00F7
 }
 
 macros = {
@@ -194,10 +201,16 @@ print("""
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include "../zmk-nodefree-config/helper.h"
 
 #define DEFAULT 0
 #define NUMBERS 1
 #define SYMBOLS 2
+
+ZMK_UNICODE_SINGLE(euro_sign,           N2, N0, A, C)  // €
+ZMK_UNICODE_SINGLE(multiplication_sign, N0, N0, D, N7) // × 
+ZMK_UNICODE_SINGLE(division_sign,       N0, N0, F, N7) // ÷ 
+
 
 """)
 
