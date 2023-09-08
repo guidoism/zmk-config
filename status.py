@@ -3,6 +3,7 @@ from copy import copy
 updated = os.stat('layout.txt').st_mtime
 from pprint import pprint as pp
 from more_itertools import chunked
+
 layers = list(chunked(open('layout.txt').read().split('\n'), 7))
 layers = ['\n'.join(l) for l in layers]
 layers = [re.sub(r'([│╰╯─╭╮]+)', r'[bold turquoise2]\1[/]', layer) for layer in layers]
@@ -41,7 +42,20 @@ devs = json.loads(p.stdout)
 path = [d['ports'][0]['dev'] for d in devs if '23C7B91420F266DF' == d['serial_num']][0]
 ser = serial.Serial(path)
 con = rich.console.Console(highlight=False)
+con.show_cursor(False)
 layer = ''
+
+shortcuts = {
+    'C-:    ': 'avy-goto-char',
+    'C-h m  ': 'describe-mode',
+    'C-h k  ': 'describe-key',
+    'C-h i  ': 'info',
+    'C-h l  ': 'view-lossage',
+    'C-x C-x': 'exchange-point-and-mark',
+    'C-c ←  ': 'winner-undo',
+    'M-o    ': 'other-window',
+    'C-c M-o': 'comint-clear-buffer',
+}
 
 while s := ser.readline():
     # zmk: set_layer_state: layer_changed: layer 3 state 0
@@ -90,4 +104,11 @@ while s := ser.readline():
             modline.append('⌘')
         con.clear()
         con.print(modified)
-        con.print(''.join(modline), justify="center")
+        if modline:
+            con.print(''.join(modline), justify="center")
+        else:
+            con.print('---', justify="center")
+    else:
+        con.print('---', justify="center")
+        
+    con.print('\n'.join((f'{k}  {v}' for k, v in shortcuts.items())))
