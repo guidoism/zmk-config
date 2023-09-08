@@ -46,7 +46,15 @@ con.show_cursor(False)
 layer = ''
 
 shortcuts = {
-    'C-:': 'avy-goto-char',
+    'C-:    ': 'avy-goto-char',
+    'C-h m  ': 'describe-mode',
+    'C-h k  ': 'describe-key',
+    'C-h i  ': 'info',
+    'C-h l  ': 'view-lossage',
+    'C-x C-x': 'exchange-point-and-mark',
+    'C-c ←  ': 'winner-undo',
+    'M-o    ': 'other-window',
+    'C-c M-o': 'comint-clear-buffer',
 }
 
 while s := ser.readline():
