@@ -154,7 +154,8 @@ changed = {
     '◌': '&none',
     '◉': '&trans',
     'M₀!': '&tog 0',
-    'M₁': 'SMART_NUM', # Used to be: '&mo 1',
+    #'M₁': 'SMART_NUM', # Used to be: '&mo 1',
+    '&mo 1',
     'SFT': '&smart_shft',
     'M₂': '&mo 2',
     'M₃': '&mo 3',
@@ -324,6 +325,7 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
     /delete-property/ ignore-modifiers;
 };
 
+/*
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUMBERS 0
 ZMK_BEHAVIOR(smart_num, hold_tap,
@@ -340,7 +342,7 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
     layers = <NUMBERS>;
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
-
+,*/
 
 
 
