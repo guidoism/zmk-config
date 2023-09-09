@@ -71,7 +71,7 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
  │ ◌   S←   S→   W←   W→   BEG       ◌    ←    ↓    →    ◌    ◌   │
 3│ ◌    ◌    ◌    ◌    ◌    ◌        ◌   HME   ◌   END   ◌    ◌   │
  │                     ◌    ◌        ◌    ◌                       │
- │          OPT  CMD  M₁    ◉       CUT  COP  PAS   ◌             │
+ │          OPT  CMD  M₁    ◉        ◌    ◌    ◌    ◌             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ ◌    F1   F2   F3   F4   F5      F6   F7   F8   F9   F10  KIL  │
@@ -146,9 +146,6 @@ kp = {
     'Bu3': 'LC(LG(N3))',
     'OTH': 'LG(O)', # Other buffer (cycle buffers)
     'FLP': 'LS(LG(O))', # Flip buffer
-    'CUT': 'LG(X)',
-    'COP': 'LG(C)',
-    'PAS': 'LA(LS(LG(P)))',
 }
 changed = {
     '◌': '&none',
