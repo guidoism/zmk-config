@@ -19,10 +19,21 @@
 // F O R E I G N
 ZMK_UNICODE_SINGLE(euro_sign,             N2, N0, A, C)   // €
 
+// G E N E R A L   P U N C T U A T I O N
+ZMK_UNICODE_SINGLE(degree_symbol,         N0, N0, B, N0)  // ° 
+ZMK_UNICODE_SINGLE(prime,                 N2, N0, N3, N2  // ′
+ZMK_UNICODE_SINGLE(double_prime,          N2, N0, N3, N3  // ″
+ZMK_UNICODE_SINGLE(en_dash,               N2, N0, N1, N3  // –
+ZMK_UNICODE_SINGLE(em_dash,               N2, N0, N1, N4  // —
+ZMK_UNICODE_SINGLE(triangular_bullet,     N2, N0, N2, N3  // ‣
+ZMK_UNICODE_SINGLE(left_single_quote,     N2, N0, N1, N8  // ‘
+ZMK_UNICODE_SINGLE(right_single_quote,    N2, N0, N1, N9  // ’
+ZMK_UNICODE_SINGLE(left_double_quote,     N2, N0, N1, C   // “
+ZMK_UNICODE_SINGLE(right_double_quote,    N2, N0, N1, D   // ”
+
 // M A T H
 ZMK_UNICODE_SINGLE(multiplication_sign,   N0, N0, D, N7)  // × 
 ZMK_UNICODE_SINGLE(division_sign,         N0, N0, F, N7)  // ÷ 
-ZMK_UNICODE_SINGLE(degree_symbol,         N0, N0, B, N0)  // ° 
 ZMK_UNICODE_SINGLE(for_all,               N2, N2, N0, N0) // ∀ 
 ZMK_UNICODE_SINGLE(there_exists,          N2, N2, N0, N3) // ∃ 
 ZMK_UNICODE_SINGLE(empty_set,             N2, N2, N0, N5) // ∅ 
@@ -103,9 +114,9 @@ compatible = "zmk,keymap";
 
 2_layer {
  bindings = <
-  &kp GRAVE    &none    &none    &none    &none    &none        &none    &multiplication_sign    &division_sign    &none    &none    &kp BSPC  
- &none    &kp LBKT    &kp RBKT    &kp LPAR    &kp RPAR    &none        &none    &kp MINUS    &kp EQUAL    &none    &none    &kp BACKSLASH   
- &none    &kp LT    &kp GT    &kp LBRC    &kp RBRC    &none        &none    &none    &none    &none    &none    &none   
+  &kp GRAVE    &left_single_quote    &right_single_quote    &left_double_quote    &right_double_quote    &none        &none    &multiplication_sign    &division_sign    &none    &none    &kp BSPC  
+ &prime    &kp LBKT    &kp RBKT    &kp LPAR    &kp RPAR    &none        &none    &kp MINUS    &kp EQUAL    &none    &none    &kp BACKSLASH   
+ &double_prime    &kp LT    &kp GT    &kp LBRC    &kp RBRC    &none        &none    &none    &none    &none    &none    &none   
                      &none    &none        &none    &none                       
           &kp RALT  &kp LCMD   &none    &none        &none    &none    &trans    &none              
 >;
