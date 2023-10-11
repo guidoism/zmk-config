@@ -141,6 +141,7 @@ ZMK_MACRO(BFS, wait-ms = <30>; tap-ms = <40>; bindings =  <&macro_press &kp LCTR
         #binding-cells = <2>;
         tapping-term-ms = <200>;    // <---[[moderate duration]]
         quick-tap-ms = <0>;
+        require-prior-idle-ms = <125>;
         flavor = "balanced";
         bindings = <&kp>, <&kp>;
       };
