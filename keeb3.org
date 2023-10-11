@@ -170,6 +170,7 @@ changed = {
     'USB': '&bootloader',
     ':;': '&colonsemi',
     '⇧f': '&hm LSFT F',
+    '⇧f': '&hm LSFT J',
     
     # G E N E R A L   P U N C T U A T I O N
     '°': '&degree_symbol', # U+00B0
