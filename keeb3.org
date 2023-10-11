@@ -47,7 +47,7 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
 #+begin_src keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
- │CTL   a    s    d   ⇧f    g        h    j    k    l    :;   RET │
+ │CTL   a    s    d   ⇧f    g        h   ⇧j    k    l    :;   RET │
 0│SFT   z    x    c    v    b        n    m    ,    .    /    ;   │
  │                    M₄   M₅        3   CTL                      │
  │          OPT  CMD  M₁   M₃       SFT   ␣   M₂   M₈             │
