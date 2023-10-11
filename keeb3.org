@@ -169,7 +169,7 @@ changed = {
     'RST': '&sys_reset',
     'USB': '&bootloader',
     ':;': '&colonsemi',
-    '⇧f': '&lh_pht LSFT F',
+    '⇧f': '&hm LSFT F',
     
     # G E N E R A L   P U N C T U A T I O N
     '°': '&degree_symbol', # U+00B0
@@ -362,7 +362,7 @@ print("""
         bindings = <&kp COLON>, <&kp SEMI>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
       };
-      lh_pht: left_hand_positional_hold_tap {
+      lh_pht: left_hand_positional_hold_tap {        // This is a certain type of homerow mod
         compatible = "zmk,behavior-hold-tap";
         label = "LEFT_POSITIONAL_HOLD_TAP";
         #binding-cells = <2>;
@@ -370,7 +370,16 @@ print("""
         tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
         quick-tap-ms = <200>;
         bindings = <&kp>, <&kp>;
-        hold-trigger-key-positions = <5 6 7 8 9 10>;    // <---[[right-hand keys]]
+        hold-trigger-key-positions = <6 7 8 9 10 11>;    // <---[[right-hand keys]]
+      };
+      hm: homerow_mods {                            // This is another way to do homerow mods
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_MODS";
+        #binding-cells = <2>;
+        tapping-term-ms = <150>;
+        quick-tap-ms = <0>;
+        flavor = "tap-preferred";
+        bindings = <&kp>, <&kp>;
       };
    };
 };
