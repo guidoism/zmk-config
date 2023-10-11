@@ -169,8 +169,8 @@ changed = {
     'RST': '&sys_reset',
     'USB': '&bootloader',
     ':;': '&colonsemi',
-    '⇧f': '&hm LSFT F',
-    '⇧j': '&hm LSFT J',
+    '⇧f': '&bhm LSFT F',
+    '⇧j': '&bhm LSFT J',
     
     # G E N E R A L   P U N C T U A T I O N
     '°': '&degree_symbol', # U+00B0
@@ -380,6 +380,15 @@ print("""
         tapping-term-ms = <150>;
         quick-tap-ms = <0>;
         flavor = "tap-preferred";
+        bindings = <&kp>, <&kp>;
+      };
+      bhm: balanced_homerow_mods {
+        compatible = "zmk,behavior-hold-tap";
+        label = "HOMEROW_MODS";
+        #binding-cells = <2>;
+        tapping-term-ms = <200>;    // <---[[moderate duration]]
+        quick-tap-ms = <0>;
+        flavor = "balanced";
         bindings = <&kp>, <&kp>;
       };
    };
