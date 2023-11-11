@@ -155,7 +155,7 @@ changed = {
     '◌': '&none',
     '◉': '&trans',
     'M₀!': '&tog 0',
-    'M₁': '&mo 1', #'M₁': 'SMART_NUM', # Used to be: '&mo 1',
+    'M₁': '&smart_num',
     'SFT': '&smart_shft',
     'M₂': '&mo 2',
     'M₃': '&mo 3',

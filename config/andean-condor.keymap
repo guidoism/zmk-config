@@ -157,7 +157,7 @@ compatible = "zmk,keymap";
 &kp LCTRL  &bhm LCTRL A   &bhm LALT S   &bhm LCMD D   &bhm LSFT F    &kp G        &kp H   &bhm RSFT J   &bhm RCMD K   &bhm RALT L   &colonsemi    &kp RET 
 &smart_shft   &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M    &kp COMMA    &kp DOT    &kp SLASH    &kp SEMI   
                     &mo 4   &mo 5        &kp N3   &kp LCTRL                      
-          &kp RALT  &kp LCMD  &mo 1   &mo 3       &smart_shft   &kp SPACE   &mo 2   &mo 8              
+          &kp RALT  &kp LCMD  &smart_num   &mo 3       &smart_shft   &kp SPACE   &mo 2   &mo 8              
 >;
 };
 
@@ -187,7 +187,7 @@ compatible = "zmk,keymap";
  &none   &kp LG(A)   &kp LG(E)   &kp LG(B)   &kp LG(F)   &kp LG(M)       &none    &kp LEFT    &kp DOWN    &kp RIGHT    &none    &none   
  &none    &none    &none    &none    &none    &none        &none   &kp HOME   &none   &kp END   &none    &none   
                      &none    &none        &none    &none                       
-          &kp RALT  &kp LCMD  &mo 1    &trans        &none    &none    &none    &none              
+          &kp RALT  &kp LCMD  &smart_num    &trans        &none    &none    &none    &none              
 >;
 };
 
@@ -227,7 +227,7 @@ compatible = "zmk,keymap";
 &kp LCTRL   &kp A    &kp R    &kp S    &kp T    &kp D        &kp H    &kp N    &kp E    &kp I    &kp O    &kp RET 
 &smart_shft   &kp Z    &kp X    &kp C    &kp V    &kp B        &kp K    &kp M    &kp COMMA    &kp DOT    &kp SLASH    &none   
                      &none    &none        &none    &none                       
-          &kp RALT  &kp LCMD   &mo 1   &mo 3      &smart_shft   &kp SPACE   &mo 2   &mo 4              
+          &kp RALT  &kp LCMD   &smart_num   &mo 3      &smart_shft   &kp SPACE   &mo 2   &mo 4              
 >;
 };
 
