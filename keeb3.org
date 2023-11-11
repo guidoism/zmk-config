@@ -155,7 +155,7 @@ changed = {
     '◌': '&none',
     '◉': '&trans',
     'M₀!': '&tog 0',
-    'M₁': '&smart_num',
+    'M₁': 'SMART_NUM',
     'SFT': '&smart_shft',
     'M₂': '&mo 2',
     'M₃': '&mo 3',
@@ -333,6 +333,7 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
 };
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
+#define SMART_NUM &smart_num NUM 0
 ZMK_BEHAVIOR(smart_num, hold_tap,
     flavor = "balanced";
     tapping-term-ms = <200>;
