@@ -154,7 +154,7 @@ compatible = "zmk,keymap";
 0_layer {
  bindings = <
  &kp TAB   &kp Q    &kp W    &kp E    &kp R    &kp T        &kp Y    &kp U    &kp I    &kp O    &kp P    &kp BSPC  
-&kp LCTRL   &kp A    &kp S    &kp D   &bhm LSFT F    &kp G        &kp H   &bhm LSFT J    &kp K    &kp L    &colonsemi   &kp RET 
+&kp LCTRL  &bhm LCTRL A   &bhm LALT S   &bhm LCMD D   &bhm LSFT F    &kp G        &kp H   &bhm RSFT J   &bhm RCMD K   &bhm RALT L   &colonsemi    &kp RET 
 &smart_shft   &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M    &kp COMMA    &kp DOT    &kp SLASH    &kp SEMI   
                     &mo 4   &mo 5        &kp N3   &kp LCTRL                      
           &kp RALT  &kp LCMD  &mo 1   &mo 3       &smart_shft   &kp SPACE   &mo 2   &mo 8              

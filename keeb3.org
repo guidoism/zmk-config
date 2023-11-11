@@ -2,6 +2,10 @@ For some reason I have two keymap files:
  - config/andean-condor.keymap
  - config/boards/shields/andean-condor/andean-condor.keymap
 
+TODO:
+ - [ ] CAGS/⌃⌥⌘⇧ for homework mods based off of [[https://precondition.github.io/home-row-mods#cags][this blog post]]
+ 
+
 REMEMBER: Need to tangle before I build too
  
 #+name: generate_zmk_config
@@ -47,7 +51,7 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
 #+begin_src keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
- │CTL   a    s    d   ⇧f    g        h   ⇧j    k    l    :;   RET │
+ │CTL  ⌃a   ⌥s   ⌘d   ⇧f    g        h   ⇧j   ⌘k   ⌥l   :;    RET │
 0│SFT   z    x    c    v    b        n    m    ,    .    /    ;   │
  │                    M₄   M₅        3   CTL                      │
  │          OPT  CMD  M₁   M₃       SFT   ␣   M₂   M₈             │
@@ -170,7 +174,12 @@ changed = {
     'USB': '&bootloader',
     ':;': '&colonsemi',
     '⇧f': '&bhm LSFT F',
-    '⇧j': '&bhm LSFT J',
+    '⇧j': '&bhm RSFT J',
+    '⌘d': '&bhm LCMD D',
+    '⌘k': '&bhm RCMD K',
+    '⌥s': '&bhm LALT S',
+    '⌥l': '&bhm RALT L',
+    '⌃a': '&bhm LCTRL A',
     
     # G E N E R A L   P U N C T U A T I O N
     '°': '&degree_symbol', # U+00B0
