@@ -1,0 +1,51 @@
+layers:
+  '7':
+  - - $$mdi:keyboard-tab$$
+    - Q
+    - W
+    - F
+    - P
+    - G
+    - J
+    - L
+    - U
+    - Y
+    - ':'
+    - t: $$mdi:backspace$$
+      type: backspace
+  - - $$mdi:apple-keyboard-control$$
+    - A
+    - R
+    - S
+    - T
+    - D
+    - H
+    - N
+    - E
+    - I
+    - O
+    - RET
+  - - $$mdi:apple-keyboard-shift$$
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - K
+    - M
+    - ','
+    - .
+    - /
+    - ''
+  - - ''
+    - ''
+    - ''
+    - ''
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-command$$
+    - $$mdi:numeric-1-circle$$
+    - $$mdi:numeric-3-circle$$
+    - $$mdi:apple-keyboard-shift$$
+    - $$mdi:keyboard-space$$
+    - $$mdi:numeric-2-circle$$
+    - $$mdi:numeric-4-circle$$

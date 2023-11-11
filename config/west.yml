@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/urob      
   projects:
     - name: zmk
-      remote: urob
-      revision: main
+      remote: guidoism
+      revision: urob-guidoism
       import: app/west.yml
   self:
     path: config

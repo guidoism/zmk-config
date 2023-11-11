@@ -1,0 +1,147 @@
+layers:
+  0_layer:
+  - - $$mdi:keyboard-tab$$
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - {t: '$$mdi:backspace$$', type: backspace}
+  - ['$$mdi:apple-keyboard-control$$', A, S, D, F, G, H, J, K, L, ':', RET]
+  - ['$$mdi:apple-keyboard-shift$$', Z, X, C, V, B, N, M, ',', ., /, ;]
+  - [4_layer, 5_layer, '3', '$$mdi:apple-keyboard-control$$', '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-command$$', 1_layer, 3_layer, '$$mdi:apple-keyboard-shift$$',
+    '$$mdi:keyboard-space$$', 2_layer, LS(LC(LA(4)))]
+  1_layer:
+  - - '~'
+    - '!'
+    - '@'
+    - '#'
+    - $
+    - '%'
+    - ^
+    - '7'
+    - '8'
+    - '9'
+    - ''
+    - {t: '$$mdi:backspace$$', type: backspace}
+  - ['', '"', '&', '*', _, '0', +, '4', '5', '6', '''', '|']
+  - ['', '', '', '=', '-', ., '', '1', '2', '3', /, '']
+  - - ''
+    - ''
+    - ''
+    - ''
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-command$$
+    - {type: held}
+    - ''
+    - ''
+    - $$mdi:keyboard-space$$
+    - ''
+    - ''
+  2_layer:
+  - - '`'
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - {t: '$$mdi:backspace$$', type: backspace}
+  - ['', '[', ']', (, ), '', '', '-', '=', '', '', \]
+  - ['', <, '>', '{', '}', '', '', '', '', '', '', '']
+  - - ''
+    - ''
+    - ''
+    - ''
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-command$$
+    - ''
+    - ''
+    - ''
+    - ''
+    - {type: held}
+    - ''
+  3_layer:
+  - ['$$mdi:keyboard-esc$$', BACK PARA, FWD PARA, BACK FOO, FWD FOO, '', '', PGUP, '$$mdi:arrow-up-bold$$', PGDN, '', UNDO]
+  - ['', BACK FOO, FWD FOO, BACK FOO, FWD FOO, BEGIN LINE, '', '$$mdi:arrow-left-bold$$', '$$mdi:arrow-down-bold$$', '$$mdi:arrow-right-bold$$', '', '']
+  - ['', '', '', '', '', '', '', HOME, '', END, '', '']
+  - - ''
+    - ''
+    - ''
+    - ''
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-command$$
+    - 1_layer
+    - {type: held}
+    - ''
+    - ''
+    - ''
+    - ''
+  4_layer:
+  - ['', F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, '&KIL']
+  - ['', LS(LC(LA(C))), LS(LC(LA(D))), LS(LC(LA(S))), LS(LC(LA(E))), LS(LC(LA(P))), LC(LG(0)), LC(LG(1)), LC(LG(2)), LC(LG(3)), '', '&SAV']
+  - ['', '', '', '', '', '', '', '&BFS', LS(LG(O)), LG(O), '', '']
+  - - {type: held}
+    - ''
+    - ''
+    - ''
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-command$$
+    - ''
+    - 6_layer
+    - ''
+    - ''
+    - ''
+    - ''
+  5_layer:
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - - ''
+    - {type: held}
+    - ''
+    - ''
+    - $$mdi:apple-keyboard-option$$
+    - $$mdi:apple-keyboard-command$$
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+    - ''
+  6_layer:
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', BT 3, BT 2, BT 1, BT 0, BT CLR, '', '', '', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', '', '', '', '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-command$$', '', 6_layer, '', '', '', '']
+  7_layer:
+  - - $$mdi:keyboard-tab$$
+    - Q
+    - W
+    - F
+    - P
+    - G
+    - J
+    - L
+    - U
+    - Y
+    - ':'
+    - {t: '$$mdi:backspace$$', type: backspace}
+  - ['$$mdi:apple-keyboard-control$$', A, R, S, T, D, H, N, E, I, O, RET]
+  - ['$$mdi:apple-keyboard-shift$$', Z, X, C, V, B, K, M, ',', ., /, '']
+  - ['', '', '', '', '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-command$$', 1_layer, 3_layer, '$$mdi:apple-keyboard-shift$$', '$$mdi:keyboard-space$$',
+    2_layer, 4_layer]
+  8_layer:
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', '', '', '', '', '', '', '', '', '', '', '']
+  - ['', '', '', '', '$$mdi:apple-keyboard-option$$', '$$mdi:apple-keyboard-command$$', '', '', '', '', '', '']

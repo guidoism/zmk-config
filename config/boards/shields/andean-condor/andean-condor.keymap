@@ -5,10 +5,13 @@
  * SPDX-License-Identifier: MIT
  */
 
- #include <behaviors.dtsi>
- #include <dt-bindings/zmk/keys.h>
- #include <dt-bindings/zmk/bt.h>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
+#define DEFAULT 0
+#define NUMBERS 1
+#define SYMBOLS 2
 
 / {
 macros {
@@ -39,7 +42,7 @@ compatible = "zmk,keymap";
 &kp LCTRL   &kp A    &kp S    &kp D    &kp F    &kp G        &kp H    &kp J    &kp K    &kp L    &colonsemi   &kp RET 
 &kp LSHFT   &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M    &kp COMMA    &kp DOT    &kp SLASH    &kp SEMI   
                     &mo 4   &mo 5        &kp N3   &kp LCTRL                      
-          &kp RALT  &kp LCMD  &mo 1   &mo 3       &kp LSHFT   &kp SPACE   &mo 2    &kp N4              
+          &kp RALT  &kp LCMD  &mo 1   &mo 3       &kp LSHFT   &kp SPACE   &mo 2    &kp LS(LC(LA(N4)))            
 >;
 };
 
@@ -95,7 +98,7 @@ compatible = "zmk,keymap";
 
 6_layer {
  bindings = <
-  &none    &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
+ &tog 0   &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
  &none   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR       &none    &none    &none    &none    &none    &none   
  &none    &none    &none    &none    &none    &none        &none    &none    &none    &none    &none    &none   
                      &none    &none        &none    &none                       
