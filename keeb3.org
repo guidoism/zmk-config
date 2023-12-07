@@ -332,6 +332,8 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
     /delete-property/ ignore-modifiers;
 };
 
+ZMK_COMBO(combo_caps_word, &caps_word, 17 20, ALL, 25)
+
 /*
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer
 #define SMART_NUM &smart_num NUM 0
@@ -349,7 +351,7 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
     layers = <NUMBERS>;
     continue-list = <BSPC DEL DOT COMMA PLUS MINUS STAR FSLH EQUAL>;
 };
-*/
+,*/
 
 
 
