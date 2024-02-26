@@ -195,8 +195,8 @@ compatible = "zmk,keymap";
 
 4_layer {
  bindings = <
-  &none    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5      &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &KIL  
- &none    &kp LS(LC(LA(C)))   &kp LS(LC(LA(D)))   &kp LS(LC(LA(S)))   &kp LS(LC(LA(E)))   &kp LS(LC(LA(P)))      &kp LC(LG(N0))  &kp LC(LG(N1))  &kp LC(LG(N2))  &kp LC(LG(N3))   &none   &SAV  
+ &kp F11   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5      &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &KIL  
+&kp F12   &kp LS(LC(LA(C)))   &kp LS(LC(LA(D)))   &kp LS(LC(LA(S)))   &kp LS(LC(LA(E)))   &kp LS(LC(LA(P)))      &kp LC(LG(N0))  &kp LC(LG(N1))  &kp LC(LG(N2))  &kp LC(LG(N3))   &none   &SAV  
  &none    &none    &none    &none    &none    &none        &none   &BFS  &kp LS(LG(O))  &kp LG(O)   &none    &none   
                      &trans    &none        &none    &none                       
           &kp RALT  &kp LCMD   &none   &tog 6       &none    &none    &none    &none              
