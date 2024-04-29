@@ -156,7 +156,7 @@ compatible = "zmk,keymap";
 
 3_layer {
  bindings = <
- &kp ESC  &kp LC(LG(B))   &kp LC(LG(F))   &kp LG(LBRC)   &kp LG(RBRC)    &none        &none   &kp PGUP    &kp UP   &kp PGDN    &none   &kp LC(SLASH)  
+ &kp ESC  &kp LC(LG(B))   &kp LC(LG(F))   &kp LG(LBRC)   &kp LG(RBRC)    &none        &none   &kp PGUP    &kp UP   &kp PGDN    &none    &none   
  &none   &kp LG(A)   &kp LG(E)   &kp LG(B)   &kp LG(F)   &kp LG(M)       &none    &kp LEFT    &kp DOWN    &kp RIGHT    &none    &none   
  &none    &none    &none    &none    &none    &none        &none   &kp HOME   &none   &kp END   &none    &none   
                      &none    &none        &none    &none                       
@@ -166,8 +166,8 @@ compatible = "zmk,keymap";
 
 4_layer {
  bindings = <
- &kp F11   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5      &kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &KIL  
-&kp F12   &kp LS(LC(LA(C)))   &kp LS(LC(LA(D)))   &kp LS(LC(LA(S)))   &kp LS(LC(LA(E)))   &kp LS(LC(LA(P)))      &kp LC(LG(N0))  &kp LC(LG(N1))  &kp LC(LG(N2))  &kp LC(LG(N3))   &none   &SAV  
+ &kp F11   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5      &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &none   
+&kp F12   &kp LS(LC(LA(C)))   &kp LS(LC(LA(D)))   &kp LS(LC(LA(S)))   &kp LS(LC(LA(E)))   &kp LS(LC(LA(P)))      &kp LC(LG(N0))  &kp LC(LG(N1))  &kp LC(LG(N2))  &kp LC(LG(N3))   &none    &none   
  &none    &none    &none    &none    &none    &none        &none   &BFS  &kp LS(LG(O))  &kp LG(O)   &none    &none   
                      &trans    &none        &none    &none                       
           &kp RALT  &kp LCMD   &none   &tog 6       &none    &none    &none    &none              
