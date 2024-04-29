@@ -10,8 +10,8 @@ manifest:
     - name: zmk
       #remote: zmkfirmware
       #revision: main
-      remote: zmk
-      revision: guidoism
+      remote: guidoism
+      revision: main
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
