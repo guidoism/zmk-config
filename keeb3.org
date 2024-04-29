@@ -14,7 +14,7 @@ REMEMBER: Need to tangle before I build too
 #+name: generate_zmk_config
 #+begin_src python :var layout=parse_layout() :results none
 # Only write to the keymap in the config directory (ignore the one in board/shield)
-f = open('/Users/guido/Repositories/Experiments/2023-01-18.andean-condor/zmk-config-condor-nicenano/config/andean-condor.keymap', 'w')
+f = open('config/andean-condor.keymap', 'w')
 f.write(layout)
 #+end_src
 
@@ -267,7 +267,7 @@ print("""
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #define HOST_OS 2
-#include "../zmk-nodefree-config/helper.h"
+#include "zmk-helpers/helper.h"
 
 
 #define DEFAULT 0
