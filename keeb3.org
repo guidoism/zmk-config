@@ -54,7 +54,7 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
 #+begin_src keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
- │CTL   a    s    d   ⇧f    g        h   ⇧j    k    l   :;    RET │
+ │CTL  󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l   󰘵:;   RET │
 0│SFT   z    x    c    v    b        n    m    ,    .    /    ;   │
  │                    M₄   M₅        3   CTL                      │
  │          OPT  CMD  M₁   M₃       SFT   ␣   M₂   M₈             │
@@ -176,13 +176,21 @@ changed = {
     'RST': '&sys_reset',
     'USB': '&bootloader',
     ':;': '&colonsemi',
-    '⇧f': '&bhm LSFT F',
-    '⇧j': '&bhm RSFT J',
-    '⌘d': '&bhm LCMD D',
-    '⌘k': '&bhm RCMD K',
-    '⌥s': '&bhm LALT S',
-    '⌥l': '&bhm RALT L',
-    '⌃a': '&bhm LCTRL A',
+    #'⇧f': '&bhm LSFT F',
+    #'⇧j': '&bhm RSFT J',
+    #'⌘d': '&bhm LCMD D',
+    #'⌘k': '&bhm RCMD K',
+    #'⌥s': '&bhm LALT S',
+    #'⌥l': '&bhm RALT L',
+    #'⌃a': '&bhm LCTRL A',
+    '󰘵a': '&hml LALT A',
+    's': '&hml LS(LC(LALT)) S', # Meh
+    '󰘳d': '&hml LCMD D',
+    '󰘴f': '&hml LCTRL F',
+    '󰘴j': '&hmr RCTRL J',
+    '󰘳k': '&hmr RCMD K',
+    'l': '&hmr LS(LC(LALT)) L', # Meh
+    '󰘵:;': '&hmr RALT COLON',
     
     # G E N E R A L   P U N C T U A T I O N
     '°': '&degree_symbol', # U+00B0
