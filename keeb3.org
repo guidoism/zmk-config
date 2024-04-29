@@ -6,6 +6,7 @@ TODO:
  - [ ] CAGS/⌃⌥⌘⇧ for homework mods based off of [[https://precondition.github.io/home-row-mods#cags][this blog post]]
  - [ ] Combo for f and j to turn on caps word
  - [ ] Hotkey to show all windows on Mac (mission control?)
+ - [ ] Add DEL to be available for BIOS
  
 
 REMEMBER: Need to tangle before I build too
@@ -355,7 +356,15 @@ ZMK_BEHAVIOR(num_dance, tap_dance,
 };
 ,*/
 
+// reuse basic mod-morph scheme
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+    ZMK_MOD_MORPH(NAME, \
+        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        bindings = <BINDING1>, <BINDING2>; \
+    )
 
+// tap: colon | shift + tap: semicolin
+SIMPLE_MORPH(colonsemi, SFT, &kp COLON, &kp SEMI)
 
 """)
 
@@ -369,13 +378,6 @@ print('\n'.join(parts))
 print("""
 / {
     behaviors {
-      colonsemi: colonsemi {
-        compatible = "zmk,behavior-mod-morph";
-        label = "COLONSEMI";
-        #binding-cells = <0>;
-        bindings = <&kp COLON>, <&kp SEMI>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-      };
       lh_pht: left_hand_positional_hold_tap {        // This is a certain type of homerow mod
         compatible = "zmk,behavior-hold-tap";
         label = "LEFT_POSITIONAL_HOLD_TAP";
