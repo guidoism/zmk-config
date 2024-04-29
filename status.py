@@ -6,7 +6,7 @@ from more_itertools import chunked
 layers = list(chunked(open('layout.txt').read().split('\n'), 7))
 layers = ['\n'.join(l) for l in layers]
 layers = [re.sub(r'([│╰╯─╭╮]+)', r'[bold turquoise2]\1[/]', layer) for layer in layers]
-layers = [re.sub(r'([◉◌])', r'[dim]\1[/]', layer) for layer in layers]
+layers = [re.sub(r'([󰆢])', r'[dim]\1[/]', layer) for layer in layers]
 
 modifiers = {
     'shift': {
