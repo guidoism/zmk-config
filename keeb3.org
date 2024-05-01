@@ -87,7 +87,7 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
  │F12   ∫C   ∫D   ∫S   ∫E   ∫P      Bu0  Bu1  Bu2  Bu3   󰆢    󰆢   │
 4│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
  │                         󰆢        󰆢    󰆢                       │
- │          OPT  CMD   󰆢   CFG       󰆢    󰆢    󰆢    󰆢             │
+ │          OPT  CMD   󰆢    󰆢        󰆢    󰆢    󰆢    󰆢             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰆢    󰆢    󰆢    ╭    ╮    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
@@ -152,10 +152,26 @@ kp = {
     '(': 'LPAR', '-': 'MINUS', ']': 'RBKT', '<': 'LT', '{': 'LBRC', ';': 'SEMI',
     '→':   'RIGHT',    '←':   'LEFT',     '↓':  'DOWN',      '↑':  'UP',
     'HME': 'HOME',     'END': 'END',      'P↑': 'PGUP',      'P↓': 'PGDN',
+
+    '.!': 'DOT', # TODO
+    '/?': 'SLASH', # TODO
+    '󰘶': 'LSHIFT',
+    '󱁐T': 'SPACE', # TODO
+    '"″': 'DQT', # TODO
+    "'′": 'SQT', # TODO
+    '󰞕': 'PGUP',
+    '󰞒': 'PGDN',
+    '󰞓': 'HOME',
+    '󰞔': 'END',
+    
+    '': '',
+    '¢': '',
+    
     'W←':  'LG(B)',    'W→':  'LG(F)',    'λ←': 'LC(LG(B))', 'λ→': 'LC(LG(F))',
     '¶←':  'LG(LBRC)', '¶→':  'LG(RBRC)', 'S←': 'LG(A)',     'S→': 'LG(E)',
     'UND': 'LC(SLASH)',
     'BEG': 'LG(M)',
+    '󰞷': 'LG(M)',
     'Bu0': 'LC(LG(N0))',
     'Bu1': 'LC(LG(N1))',
     'Bu2': 'LC(LG(N2))',
@@ -192,6 +208,9 @@ changed = {
     'RST': '&sys_reset',
     'USB': '&bootloader',
     ':;': '&colonsemi',
+
+
+    
     #'⇧f': '&bhm LSFT F',
     #'⇧j': '&bhm RSFT J',
     #'⌘d': '&bhm LCMD D',
