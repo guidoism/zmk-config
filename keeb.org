@@ -148,12 +148,12 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
 ** Unicode
 #+name: unicode
-#+begin_src python 
-'TODO return unicode defines'
-for s in list(open('unicode.tsv')):
+#+begin_src python :var codes=unicode-table[] :results output
+import unicodedata
+for s in codes.splitlines():
     ch, name = s.strip().split('\t')
     hh = ', '.join([f'N{h}' if h in '0123456789' else f' {h}' for h in f'{ord(ch):04X}'])
-    #print(f'ZMK_UNICODE_SINGLE({name+",":26} {hh})   // {ch}  {unicodedata.name(ch)}')
+    print(f'ZMK_UNICODE_SINGLE({name+",":26} {hh})   // {ch}  {unicodedata.name(ch)}')
 
 
 #+end_src
