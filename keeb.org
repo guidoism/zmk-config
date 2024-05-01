@@ -74,6 +74,7 @@
  ╰────────────────────────────────────────────────────────────────╯
 #+end_src
 
+*** Generate layer definitions
 #+name: layer-definitions
 #+begin_src python :var lines=layout :results output :var keycodes=keycodes-table[]
 import re, unicodedata
