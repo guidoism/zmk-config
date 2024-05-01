@@ -38,7 +38,8 @@ def msb(n):
 
 p = subprocess.run(['/Users/guido/miniforge3/bin/discotool', 'json'], capture_output=True)
 devs = json.loads(p.stdout)
-path = [d['ports'][0]['dev'] for d in devs if '23C7B91420F266DF' == d['serial_num']][0]
+#path = [d['ports'][0]['dev'] for d in devs if '23C7B91420F266DF' == d['serial_num']][0]
+path = [d['ports'][0]['dev'] for d in devs if 'DF6114B5C3791031' == d['serial_num']][0]
 ser = serial.Serial(path)
 con = rich.console.Console(highlight=False)
 con.show_cursor(False)
@@ -64,6 +65,7 @@ while s := ser.readline():
         layer = layers[n]
         con.clear()
         con.print(layer)
+        con.print('\n'.join((f'{k}  {v}' for k, v in shortcuts.items())))
 
         if os.stat('layout.txt').st_mtime > updated:
             updated = os.stat('layout.txt').st_mtime
@@ -100,13 +102,11 @@ while s := ser.readline():
         if mods & 0x80:
             modifiers['command']
             modline.append('⌘')
-        con.clear()
-        con.print(modified)
-        if modline:
-            con.print(''.join(modline), justify="center")
-        else:
-            con.print('---', justify="center")
-    else:
-        con.print('---', justify="center")
-
-    con.print('\n'.join((f'{k}  {v}' for k, v in shortcuts.items())))
+        #con.clear()
+        #con.print(modified)
+        #if modline:
+        #    con.print(''.join(modline), justify="center")
+        #else:
+        #    con.print('---', justify="center")
+    #else:
+    #    con.print('---', justify="center")

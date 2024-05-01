@@ -14,6 +14,8 @@ REMEMBER: Need to tangle before I build too
 #+name: generate_zmk_config
 #+begin_src python :var layout=parse_layout() :results none
 # Only write to the keymap in the config directory (ignore the one in board/shield)
+#+end_src
+#+begin_src python :var layout=parse_layout() :results none
 f = open('config/andean-condor.keymap', 'w')
 f.write(layout)
 #+end_src
@@ -56,15 +58,15 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
  │CTL  󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l   󰘵:;   RET │
 0│SFT   z    x    c    v    b        n    m    ,    .    /    ;   │
- │                    M₄   M₅        3   CTL                      │
- │          OPT  CMD  M₁   M₃       SFT   ␣   M₂   M₈             │
+ │                    FUN   󰆢       NEW   󰆢                       │
+ │          OPT  CMD  NUM  MOV       󰆢    󱁐   PAR   󰆢             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ ~    !    @    #    $    %        ^    7    8    9    °    BS  │
  │ 󰆢    "    &    *    _    0        +    4    5    6    '    |   │
 1│ 󰆢    󰆢    󰆢    =    -    .        󰆢    1    2    3    /    󰆢   │
  │                     󰆢    󰆢        󰆢    󰆢                       │
- │          OPT  CMD       󰆢        󰆢    ␣    󰆢    󰆢             │
+ │          OPT  CMD       󰆢        󰆢    󱁐    󰆢    󰆢             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ `    ‘    ’    “    ”    󰆢        󰆢    ×    ÷    󰆢    󰆢    BS  │
@@ -78,14 +80,14 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
  │ 󰆢   S←   S→   W←   W→   BEG       󰆢    ←    ↓    →    󰆢    󰆢   │
 3│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢   HME   󰆢   END   󰆢    󰆢   │
  │                     󰆢    󰆢        󰆢    󰆢                       │
- │          OPT  CMD  M₁            󰆢    󰆢    󰆢    󰆢             │
+ │          OPT  CMD  NUM           󰆢    󰆢    󰆢    󰆢             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │F11   F1   F2   F3   F4   F5      F6   F7   F8   F9   F10   󰆢   │
  │F12   ∫C   ∫D   ∫S   ∫E   ∫P      Bu0  Bu1  Bu2  Bu3   󰆢    󰆢   │
 4│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
  │                         󰆢        󰆢    󰆢                       │
- │          OPT  CMD   󰆢   M₆!       󰆢    󰆢    󰆢    󰆢             │
+ │          OPT  CMD   󰆢   CFG       󰆢    󰆢    󰆢    󰆢             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰆢    󰆢    󰆢    ╭    ╮    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
@@ -95,25 +97,32 @@ cairosvg pretty/layer.8.svg -b white -o pretty/layer.8.png
  │          OPT  CMD   󰆢    󰆢        󰆢    󰆢    󰆢    󰆢             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
- │M₀!   󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢   RST  │
- │ 󰆢   BT4  BT3  BT2  BT1  BTC       󰆢    󰆢    󰆢    󰆢    󰆢   USB  │
-6│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
- │                     󰆢    󰆢        󰆢    󰆢                       │
- │          OPT  CMD   󰆢   M₆!       󰆢    󰆢    󰆢    󰆢             │
+ │ 󰿦    q    w    e    r    t        y    u    i    o    p     󰿦  │
+ │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l   󰘵:;    󰿦  │
+6│ 󰿦    z    x    c    v    b        n    m    ,    .!   /?    󰿦  │
+ │                     󰿦    󰿦        󰿦    󰿦                       │
+ │           󰿦   NM    󰘶   BS       RET   󱁐T  MV    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
- │TAB   q    w    f    p    g        j    l    u    y    :;   BS  │
- │CTL   a    r    s    t    d        h    n    e    i    o    RET │
-7│SFT   z    x    c    v    b        k    m    ,    .    /    󰆢   │
- │                     󰆢    󰆢        󰆢    󰆢                       │
- │          OPT  CMD   M₁   M₃      SFT   ␣   M₂   M₄             │
+ │ 󰿦    “    ”    ‘    ’    "″       󰆢    󰞕    ↑    󰞒    󰆢    󰿦   │
+ │ 󰿦    [    ]    (    )    '′       󰆢    ←    ↓    →    󰞷    󰿦   │
+7│ 󰿦    <    >    {    }    `        󰆢    󰞓    󰆢    󰞔    󰆢    󰿦   │
+ │                     󰿦    󰿦        󰿦    󰿦                       │
+ │           󰿦    󰆢    󰘶   BS       RET   󱁐        󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
- │ 󰆢    󰆢    q    w    e    r        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
- │ 󰆢    󰆢    a    s    d    f        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
-8│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
- │                     󰆢    󰆢        󰆢    󰆢                       │
- │          OPT  CMD   ␣    󰆢        󰆢    󰆢    󰆢    󰆢             │
+ │ 󰿦    ~    @    #    $    %        ^    &    |    °    \    󰿦   │
+ │ 󰿦    0    1    2    3    4        5    6    7    8    9    󰿦   │
+8│ 󰿦        ¢    *    +    =        _    -    ,    .    /    󰿦   │
+ │                     󰿦    󰿦        󰿦    󰿦                       │
+ │           󰿦        󰘶   BS       RET   󱁐   FN    󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ 󰿦   ESC  F1   F2   F3   F4       F5   F6   F7   F8   F9    󰿦   │
+ │ 󰿦   F10  F11  F12  F13  F14      F15  F16  F17  F18  F19   󰿦   │
+9│ 󰿦    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
+ │                     󰿦    󰿦        󰿦    󰿦                       │
+ │           󰿦    󰆢    󰘶   BS       RET   󱁐    󰆢    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
 #+end_src
 
@@ -136,7 +145,7 @@ kp = {
     'CTL': 'LCTRL',
     #'SFT': 'LSHFT',
     'OPT': 'RALT', 'CMD': 'LCMD', ',': 'COMMA', '.': 'DOT',
-    '␣': 'SPACE', 'BS': 'BSPC', '/': 'SLASH', '~': 'TILDE', '^': 'CARET', "'": 'SQT',
+    '󱁐': 'SPACE', 'BS': 'BSPC', '/': 'SLASH', '~': 'TILDE', '^': 'CARET', "'": 'SQT',
     '%': 'PERCENT', '|': 'PIPE', '_': 'UNDER', '+': 'PLUS', '"': 'DQT', '$': 'DLLR',
     '&': 'AMPS', '*': 'STAR', '@': 'AT', '!': 'EXCL', '#': 'HASH', ')': 'RPAR',
     '\\': 'BACKSLASH', '=': 'EQUAL', '}': 'RBRC', '`': 'GRAVE', '[': 'LBKT', '>': 'GT',
@@ -155,19 +164,26 @@ kp = {
     'FLP': 'LS(LG(O))', # Flip buffer
 }
 changed = {
+    '󰿦': '&none',
     '󰆢': '&none',
     '': '&trans',
     'M₀!': '&tog 0',
+    'QUE': '&tog 0',
     'M₁': '&mo 1',
+    'NUM': '&mo 1',
     'SFT': '&smart_shft',
     'M₂': '&mo 2',
+    'PAR': '&mo 2',
     'M₃': '&mo 3',
+    'MOV': '&mo 3',
     'M₄': '&mo 4',
+    'FUN': '&mo 4',
     'M₅': '&mo 5',
-    'M₆!': '&tog 6',
-    'M₇': '&mo 7',
-    'M₈': '&mo 8',
-    'M₉': '&mo 9',
+    'LIN': '&mo 5',
+    'NEW': '&to 6',
+    'MV': '&mo 7',
+    'NM': '&mo 8',
+    'FN': '&mo 9',
     'BTC': '&bt BT_CLR',
     'BT1': '&bt BT_SEL 0',
     'BT2': '&bt BT_SEL 1',
@@ -494,7 +510,8 @@ def msb(n):
 
 p = subprocess.run(['/Users/guido/miniforge3/bin/discotool', 'json'], capture_output=True)
 devs = json.loads(p.stdout)
-path = [d['ports'][0]['dev'] for d in devs if '23C7B91420F266DF' == d['serial_num']][0]
+#path = [d['ports'][0]['dev'] for d in devs if '23C7B91420F266DF' == d['serial_num']][0]
+path = [d['ports'][0]['dev'] for d in devs if 'DF6114B5C3791031' == d['serial_num']][0]
 ser = serial.Serial(path)
 con = rich.console.Console(highlight=False)
 con.show_cursor(False)
@@ -520,6 +537,7 @@ while s := ser.readline():
         layer = layers[n]
         con.clear()
         con.print(layer)
+        con.print('\n'.join((f'{k}  {v}' for k, v in shortcuts.items())))
 
         if os.stat('layout.txt').st_mtime > updated:
             updated = os.stat('layout.txt').st_mtime
@@ -556,16 +574,16 @@ while s := ser.readline():
         if mods & 0x80:
             modifiers['command']
             modline.append('⌘')
-        con.clear()
-        con.print(modified)
-        if modline:
-            con.print(''.join(modline), justify="center")
-        else:
-            con.print('---', justify="center")
-    else:
-        con.print('---', justify="center")
+        #con.clear()
+        #con.print(modified)
+        #if modline:
+        #    con.print(''.join(modline), justify="center")
+        #else:
+        #    con.print('---', justify="center")
+    #else:
+    #    con.print('---', justify="center")
 
-    con.print('\n'.join((f'{k}  {v}' for k, v in shortcuts.items())))
+    
 #+end_src
 
 
@@ -610,7 +628,7 @@ print(list(re.findall(r'( ╭─.+?─╯)', layout, re.DOTALL))[0])
 :  │CTL   a    s    d    f    g        h    j    k    l    :;   RET │
 : 0│SFT   z    x    c    v    b        n    m    ,    .    /    ;   │
 :  │                    M₄   M₅        3   CTL                      │
-:  │          OPT  CMD  M₁   M₃       SFT   ␣   M₂   ∫N4            │
+:  │          OPT  CMD  M₁   M₃       SFT   󱁐   M₂   ∫N4            │
 :  ╰────────────────────────────────────────────────────────────────╯
 
 ** Urob Git Stuff
