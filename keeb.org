@@ -11,8 +11,8 @@ TODO
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
  │CTL  󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l   󰘵:;   RET │
 0│SFT   z    x    c    v    b        n    m    ,    .    /    ;   │
- │                     0   1        NEW   2                       │
- │          OPT  CMD  NUM  MOV       3    󱁐   PAR   4             │
+ │                    FUN   󰆢       NEW   󰆢                       │
+ │          OPT  CMD  NUM  MOV       󰆢    󱁐   PAR   󰆢             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ ~    !    @    #    $    %        ^    7    8    9    °    BS  │
@@ -52,28 +52,28 @@ TODO
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    q    w    e    r    t        y    u    i    o    p     󰿦  │
  │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l   󰘵:;    󰿦  │
-6│ 󰿦    z    x    c    v    b        n    m    ,    .!   /?    󰿦  │
+6│ 󰿦    z    x    c    v    b        n    m    ,    .!   /?    󰿦  │NEW
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦   NM    󰘶   BS       RET   󱁐T  MV    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    “    ”    ‘    ’    "″       󰆢    󰞕    ↑    󰞒    󰆢    󰿦   │
  │ 󰿦    [    ]    (    )    '′       󰆢    ←    ↓    →    󰞷    󰿦   │
-7│ 󰿦    <    >    {    }    `        󰆢    󰞓    󰆢    󰞔    󰆢    󰿦   │
+7│ 󰿦    <    >    {    }    `        󰆢    󰞓    󰆢    󰞔    󰆢    󰿦   │MV
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦    󰆢    󰘶   BS       RET   󱁐        󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    ~    @    #    $    %        ^    &    |    °    \    󰿦   │
  │ 󰿦    0    1    2    3    4        5    6    7    8    9    󰿦   │
-8│ 󰿦        ¢    *    +    =        _    -    ,    .    /    󰿦   │
+8│ 󰿦    󰆢    󰆢    *    +    =        _    -    ,    .    /    󰿦   │NM
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦        󰘶   BS       RET   󱁐   FN    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦   ESC  F1   F2   F3   F4       F5   F6   F7   F8   F9    󰿦   │
  │ 󰿦    󰆢    󰆢    󰅗    󰍵    󰆢        󰆢    󰇽    󰿋    󰆢    󰆢    󰿦   │
-9│ 󰿦   F10  F11  F12  F13  F14      F15  F16  F17  F18  F19   󰿦   │
+9│ 󰿦   F10  F11  F12  F13  F14      F15  F16  F17  F18  F19   󰿦   │FN
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦    󰆢    󰘶   BS       RET   󱁐    󰆢    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
@@ -83,8 +83,10 @@ TODO
 #+name: layer-definitions
 #+begin_src python :var lines=layout :results output :var keycodes=keycodes-table[]
 import re, unicodedata
-splitup = re.findall(r'\n?(.╭─+╮.+?╰─+╯)', lines, re.S)
-insides = [' '.join([s[2:-1] for s in t.split('\n')[1:-1]]) for t in splitup]
+splitup = re.findall(r'\n?(.╭─+╮.+?╰─+╯)\w*', lines, re.S)
+vmid = lambda t: t.split('\n')[1:-1]
+hmid = lambda s: re.match(r'.*│(.+)│.*', s).group(1)
+insides = [' '.join([hmid(s) for s in vmid(t)]) for t in splitup]
 keycodes = dict(k.split('\t') for k in keycodes.splitlines())
 for i, layer in enumerate(insides):
     codes = ' '.join([keycodes[k] for k in layer.split()])
@@ -325,8 +327,6 @@ P↓	&kp PGDN
 󰞒	&kp PGDN
 󰞓	&kp HOME
 󰞔	&kp END
-	&kp 
-¢	&kp 
 W←	&kp LG(B)
 W→	&kp LG(F)
 λ←	&kp LC(LG(B))
