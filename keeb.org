@@ -167,6 +167,9 @@ ZMK_BEHAVIOR(flip_buffer, macro,
     bindings = <&kp LC(X) &kp B &kp RET>;
 )
 
+// index on r u in FN layer for 1 second
+ZMK_COMBO(startbootloader,  &bootloader, 4 7, 4, 1000)
+
 <<layer-definitions()>>
 
 #+end_src
