@@ -36,7 +36,7 @@ TODO
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦   ESC  F1   F2   F3   F4       F5   F6   F7   F8   F9    󰿦   │
- │ 󰿦    󰆢    󰆢    󰅗    󰍵    󰆢        󰆢    󰇽    󰿋    󰆢    󰆢    󰿦   │
+ │ 󰿦    󰆢    󱢍    󰅗    󰍵    󰆢        󰆢    󰇽    󰿋    󰆢    󰆢    󰿦   │
 4│ 󰿦   F10  F11  F12  F13  F14      F15  F16  F17  F18  F19   󰿦   │FN
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦        󰆢    󰆢        󰆢    󰆢        󰿦             │
@@ -160,6 +160,12 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 //MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 //MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
 //MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
+
+ZMK_BEHAVIOR(flip_buffer, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LC(X) &kp B &kp RET>;
+)
 
 <<layer-definitions()>>
 
@@ -353,6 +359,7 @@ Bu0	&kp LC(LG(N0))
 Bu1	&kp LC(LG(N1))
 Bu2	&kp LC(LG(N2))
 Bu3	&kp LC(LG(N3))
+󱢍	&flip_buffer
 󰅗	&kp LC(LG(N0))
 󰍵	&kp LC(LG(N1))
 󰇽	&kp LC(LG(N2))
