@@ -358,7 +358,7 @@ LIN	&mo 5
 NEW	&to 6
 MV	&mo 7
 NM	&mo 8
-FN	&mo 9
+FN	&mo 4
 BTC	&bt BT_CLR
 BT1	&bt BT_SEL 0
 BT2	&bt BT_SEL 1
