@@ -103,8 +103,6 @@ for i, layer in enumerate(insides):
 #define HOST_OS 2
 #include "zmk-helpers/helper.h"
 
-//#define DEFAULT 0 //#define NUMBERS 1 //#define SYMBOLS 2
-
 <<unicode()>>
 
 // tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
