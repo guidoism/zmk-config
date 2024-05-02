@@ -1,4 +1,9 @@
 
+TODO
+- [ ] Add × ÷ to * and / with shifted
+- [ ] Remove - = × ÷ from layer two and add movement from new MV layer to try out here
+- [ ] Add combos for common symbols
+
 ** Layout
 #+name: layout
 #+begin_src keymap :tangle layout.txt
@@ -6,8 +11,8 @@
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
  │CTL  󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l   󰘵:;   RET │
 0│SFT   z    x    c    v    b        n    m    ,    .    /    ;   │
- │                    FUN   󰆢       NEW   󰆢                       │
- │          OPT  CMD  NUM  MOV       󰆢    󱁐   PAR   󰆢             │
+ │                     0   1        NEW   2                       │
+ │          OPT  CMD  NUM  MOV       3    󱁐   PAR   4             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ ~    !    @    #    $    %        ^    7    8    9    °    BS  │
