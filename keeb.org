@@ -170,7 +170,7 @@ ZMK_BEHAVIOR(flip_buffer, macro,
 // index on r u in FN layer for 1 second
 ZMK_COMBO(startbootloader,  &bootloader, 4 7, 4, 1000)
 
-ZMK_COMBO(movelayer, &mo 7, 16 17, ALL, 1000)
+ZMK_COMBO(movelayer, &mo 7, 16 17, ALL, 25)
 
 <<layer-definitions()>>
 
