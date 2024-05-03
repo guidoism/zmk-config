@@ -1,6 +1,7 @@
 
 - [ ] Figure out how to add RET and BS back to new layers
 - [ ] Figure out how to quick move around words and paragraphs
+- [ ] Fix status.py to not crash and reload
 
 ** Layout
 #+name: layout
@@ -394,7 +395,7 @@ M₅	&mo 5
 LIN	&mo 5
 NEW	&to 6
 MV	&mo 7
-       &tog 7
+	&tog 7
 NM	&mo 8
 FN	&mo 9
 BTC	&bt BT_CLR
