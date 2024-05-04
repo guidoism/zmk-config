@@ -3,6 +3,7 @@
 - [ ] Fix status.py to not crash and reload
 - [ ] Add command to run within emacs that tells status.py to show shortcut
 - [ ] Fix status.py to show modifiers
+- [ ] Change status.py to show combos when a certain key is pressed
 
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    q    w    e    r    t        y    --BS---   o    p    BS  │
@@ -494,7 +495,7 @@ from more_itertools import chunked
 
 def load_layers():
     layers = list(chunked(open('layout.txt').read().split('\n'), 7))
-    layers = ['\n'.join(l) for l in layers]
+    layers = ['\n'.join([s[:67] for s in l]) for l in layers]
     layers = [re.sub(r'([│╰╯─╭╮]+)', r'[bold turquoise2]\1[/]', layer) for layer in layers]
     layers = [re.sub(r'([󰆢])', r'[dim]\1[/]', layer) for layer in layers]
     return layers
