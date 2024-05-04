@@ -1,4 +1,4 @@
-import json, subprocess, serial, re, rich, rich.console, os
+import json, subprocess, serial, re, rich, rich.console, os, sys
 from copy import copy
 updated = os.stat('layout.txt').st_mtime
 from pprint import pprint as pp
@@ -47,6 +47,10 @@ devs = json.loads(p.stdout)
 path = [d['ports'][0]['dev'] for d in devs if 'DF6114B5C3791031' == d['serial_num']][0]
 ser = serial.Serial(path)
 con = rich.console.Console(highlight=False)
+if sys.argv[1] == '-v':
+    while s := ser.readline():
+        print(s)
+        
 con.show_cursor(False)
 layer = ''
 shortcuts = {
@@ -61,6 +65,12 @@ shortcuts = {
     'C-c M-o': 'comint-clear-buffer',
 }
 
+# TODO: OSError when restarted this, we know this is going to happen when
+#       we press the bootloader combo so maybe we should ancticipate this
+#       and check until it's working.
+#
+#       It would also be cool if the script would watch for the download
+#       Unzip it and copy it over.
 while s := ser.readline():
     # zmk: set_layer_state: layer_changed: layer 3 state 0
     # GUIDO: layer 4, new state set: 16
@@ -84,34 +94,34 @@ while s := ser.readline():
         
         if mods & 0x01:
             modifiers['control']
-            modline.append('^')
+            modline.append('Control')
         if mods &0x02:
             for a, b in modifiers['shift'].items():
                 modified = re.sub(a, b, modified)
-            modline.append('⇧')
+            modline.append('Shift')
         if mods & 0x04:
             modifiers['option']
-            modline.append('⌥')
+            modline.append('Option')
         if mods & 0x08:
             modifiers['command']
-            modline.append('⌘')
+            modline.append('Command')
         if mods & 0x10:
             modifiers['control']
-            modline.append('^')
+            modline.append('Control')
         if mods &0x20:
             modifiers['shift']
-            modline.append('⇧')
+            modline.append('Shift')
         if mods & 0x40:
             modifiers['option']
-            modline.append('⌥')
+            modline.append('Option')
         if mods & 0x80:
             modifiers['command']
-            modline.append('⌘')
-        #con.clear()
-        #con.print(modified)
-        #if modline:
-        #    con.print(''.join(modline), justify="center")
-        #else:
-        #    con.print('---', justify="center")
+            modline.append('Command')
+        con.clear()
+        con.print(modified)
+        if modline:
+            con.print(' '.join(modline), justify="center")
+        else:
+            con.print('---', justify="center")
     #else:
     #    con.print('---', justify="center")
