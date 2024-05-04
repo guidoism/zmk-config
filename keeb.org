@@ -10,7 +10,7 @@
 #+begin_src keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    q    w    e    r    t        y    u    i    o    p    BS  │
- │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l   󰘵:;   󰿦   │
+ │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;   󰿦   │
 0│ 󰿦    z    x    c    v    b        n    m    ,    .    /?   ;   │
  │                     󰿦    󰿦       NEW   󰿦                       │
  │           󰿦   SFT  NUM  MOV       󰆢    󱁐   SYM   󰿦             │
@@ -422,7 +422,7 @@ USB	&bootloader
 󰘴j	&hmr RCTRL J
 󰘳k	&hmr RCMD K
 l	&hmr LS(LC(LALT)) L
-󰘵:;	&hmr RALT colonsemi
+󰘵:;	&hmr RALT &colonsemi
 °	&degree_symbol
 ′	&prime
 ″	&double_prime
