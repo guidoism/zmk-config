@@ -491,10 +491,15 @@ from copy import copy
 updated = os.stat('layout.txt').st_mtime
 from pprint import pprint as pp
 from more_itertools import chunked
-layers = list(chunked(open('layout.txt').read().split('\n'), 7))
-layers = ['\n'.join(l) for l in layers]
-layers = [re.sub(r'([│╰╯─╭╮]+)', r'[bold turquoise2]\1[/]', layer) for layer in layers]
-layers = [re.sub(r'([󰆢])', r'[dim]\1[/]', layer) for layer in layers]
+
+def load_layers():
+    layers = list(chunked(open('layout.txt').read().split('\n'), 7))
+    layers = ['\n'.join(l) for l in layers]
+    layers = [re.sub(r'([│╰╯─╭╮]+)', r'[bold turquoise2]\1[/]', layer) for layer in layers]
+    layers = [re.sub(r'([󰆢])', r'[dim]\1[/]', layer) for layer in layers]
+    return layers
+
+layers = load_layers()
 
 modifiers = {
     'shift': {
@@ -557,7 +562,7 @@ while s := ser.readline():
 
         if os.stat('layout.txt').st_mtime > updated:
             updated = os.stat('layout.txt').st_mtime
-            layers = json.load(open('layout.txt'))
+            layers = load_layers()
 
     if m := re.search(r'GUIDO: Modifiers set to 0x(\d\d)', s.decode()):
         mods = int(m.group(1), 16)
