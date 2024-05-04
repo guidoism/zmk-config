@@ -4,6 +4,7 @@
 - [ ] Fix status.py to not crash and reload
 
 
+
 ** Layout
 #+name: layout
 #+begin_src keymap :tangle layout.txt
@@ -12,7 +13,7 @@
  │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l   󰘵:;   󰿦   │
 0│ 󰿦    z    x    c    v    b        n    m    ,    .    /?   ;   │
  │                     󰿦    󰿦       NEW   󰿦                       │
- │           󰿦   SFT  NUM  MOV       󰆢    󱁐   PAR   󰿦             │
+ │           󰿦   SFT  NUM  MOV       󰆢    󱁐   SYM   󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ ~    !    @    #    $    %        ^    7    8    9    °    BS  │
@@ -24,7 +25,7 @@
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    “    ”    ‘    ’    "″       󰆢    󰆢    󰆢    󰆢    󰆢    BS  │
  │ 󰿦    [    ]    (    )    '′       󰆢    -    =    󰆢    󰆢    \   │
-2│ 󰿦    <    >    {    }    `        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │PAR
+2│ 󰿦    <    >    {    }    `        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │SYM
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │          OPT  FN    󰆢    󰆢        󰆢    󰆢        󰆢             │
  ╰────────────────────────────────────────────────────────────────╯
@@ -395,7 +396,7 @@ M₁	&mo 1
 NUM	&mo 1
 SFT	&smart_shft
 M₂	&mo 2
-PAR	&mo 2
+SYM	&mo 2
 M₃	&mo 3
 MOV	&mo 3
 M₄	&mo 4
@@ -421,7 +422,7 @@ USB	&bootloader
 󰘴j	&hmr RCTRL J
 󰘳k	&hmr RCMD K
 l	&hmr LS(LC(LALT)) L
-󰘵:;	&hmr RALT &colonsemi
+󰘵:;	&hmr RALT colonsemi
 °	&degree_symbol
 ′	&prime
 ″	&double_prime
