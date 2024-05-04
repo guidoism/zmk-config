@@ -601,20 +601,134 @@ while s := ser.readline():
 
 ** Hand Position Cheat Sheet
 
+#+name: zmk-keymap
+#+begin_src html :noweb yes :tangle layout.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <link href="stylesheet.css" rel="stylesheet">
+  <style>
+    body { background-color: black; color: white; }
+    td { padding-top: -1px; padding-bottom: -1px; padding-left: 5px; padding-right: 5px; }
+    .positions { display: none; }
+    .show { display: block; }
+  </style>
 
-<pre style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal;">
+  <<hand-positions()>>
 
- ╭────────────────────────────────────────────────────────────────╮
- │ 󰿦    q    w    e    r    t        y    u    i    o    p    BS  │
- │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;   󰿦   │
-0│ 󰿦    z    x    c    v    b        n    m    ,    .    /?   ;   │
- │                     󰿦    󰿦       NEW   󰿦                       │
- │           󰿦   SFT  NUM  MOV       󰆢    󱁐   SYM   󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
 
-</pre>
+#+end_src
+
+#+name: hand-positions
+#+begin_src python :results output
+from string import whitespace
+import re
+taps = '󰎤󰎧󰎪󰎭󰎱󰎳󰎶󰎹󰎼󰽽󰎡'
+
+kb = """
+Tqwert  yuiopB
+Casdfg  hjkl:R
+Szxcvb  nm,./H
+    123456
+""".strip()
+
+right = "TqwertCasdfgSzxcvb"
+left = "yuiopBhjkl:Rnm,./H"
+home = 'asdfjkl:25'
+leftmods = {
+    'O': 'a',
+    'H': 's',
+    'M': 'd',
+    'C': 'f',
+    '1': '1',
+    '2': '2',
+    '3': '3',
+}
+rightmods = {
+    'C': 'j',
+    'M': 'k',
+    'H': 'l',
+    'O': ':',
+    '4': '4',
+    '5': '5',
+    '6': '6',
+}
+
+# TODO: change to convert from emacs notation to my notation before everything
+lossage_chars = [
+    ('SPC',    '5'),
+    ('<left>', '3-j'),
+]
+
+lossage = """
+ C-x C-s        ;; save-buffer
+ C-x b          ;; switch-to-buffer
+ C-y            ;; yank
+ C-d            ;; delete-char
+ C-x k          ;; kill-buffer
+ C-a            ;; beginning-of-line-or-indentation
+ C-k            ;; kill-line
+ C-/            ;; undo
+ C-SPC          ;; set-mark-command
+ M-w            ;; indicate-and-copy-region
+"""
+
+def r(c, seq):
+    if c in seq: return seq.pop(c)
+    if c in whitespace: return c
+    if c in home: return '󰆢'
+    return ' '
+
+def table(kb):
+    print("""<table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">""")
+    for row in kb.splitlines():
+        print('<tr>')
+        for k in row:
+            if k == '󰿦':
+                k = f'<span style="color: magenta;">{k}</span>'
+            elif k in taps:
+                k = f'<span style="color: cyan;">{k}</span>'
+            elif k == ' ':
+                k = '<span style="color: black;">󰆢</span>'
+            print(f'<td>{k}</td>')
+        print('</tr>')
+    print('</table>')
+
+for seq in lossage.strip().splitlines():
+    if m := re.search(r'(.+);; (\S+)', seq):
+        seq, name = m.groups()
+    held = None
+    d = {}
+    print('<table class="positions show"><tr><td>')
+    print(name)
+    for x, y in lossage_chars:
+        seq = seq.replace(x, y)
+    if m := re.search(r'(.);; (\S+)', seq):
+        seq, name = m.groups()
+    for s in seq.strip().split():
+        if m := re.match(r'(.)-(\S+)', s):
+            mod, key = m.groups()
+            if held and mod != held:
+                table(''.join([r(c, d) for c in kb]))
+                print('</td><td>')
+            held = mod
+            if key in left:
+                d[leftmods[mod]] = '󰿦'
+            elif key in right:
+                d[rightmods[mod]] = '󰿦'
+            d[key] = taps[len(d)]
+        else:
+            if held:
+                table(''.join([r(c, d) for c in kb]))
+                print('</td><td>')
+            held = mod
+            if s in lossage_chars:
+                s = lossage_chars[s]
+            d[s] = taps[len(d)]
+    table(''.join([r(c, d) for c in kb]))
+    print('</td></tr></table>')
+    print('<br><br><br><br><br><br>')
+    
+#+end_src
+

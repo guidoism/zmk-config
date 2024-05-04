@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="stylesheet.css" rel="stylesheet">
+  <style>
+    body { background-color: black; color: white; }
+    td { padding-top: -1px; padding-bottom: -1px; padding-left: 5px; padding-right: 5px; }
+    .positions { display: none; }
+    .show { display: block; }
+  </style>
+
+  <table class="positions show"><tr><td>
+  save-buffer
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: cyan;">󰎪</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: magenta;">󰿦</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: cyan;">󰎧</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td></tr></table>
+  <br><br><br><br><br><br>
+  <table class="positions show"><tr><td>
+  switch-to-buffer
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: magenta;">󰿦</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: cyan;">󰎧</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td><td>
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: cyan;">󰎤</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td></tr></table>
+  <br><br><br><br><br><br>
+  <table class="positions show"><tr><td>
+  yank
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: cyan;">󰎧</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: magenta;">󰿦</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td></tr></table>
+  <br><br><br><br><br><br>
+  <table class="positions show"><tr><td>
+  delete-char
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: cyan;">󰎧</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: magenta;">󰿦</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td></tr></table>
+  <br><br><br><br><br><br>
+  <table class="positions show"><tr><td>
+  kill-buffer
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: magenta;">󰿦</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: cyan;">󰎧</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td><td>
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: cyan;">󰎤</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td></tr></table>
+  <br><br><br><br><br><br>
+  <table class="positions show"><tr><td>
+  beginning-of-line-or-indentation
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: cyan;">󰎧</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: magenta;">󰿦</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td></tr></table>
+  <br><br><br><br><br><br>
+  <table class="positions show"><tr><td>
+  kill-line
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: magenta;">󰿦</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: cyan;">󰎧</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td></tr></table>
+  <br><br><br><br><br><br>
+  <table class="positions show"><tr><td>
+  undo
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: magenta;">󰿦</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: cyan;">󰎧</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td></tr></table>
+  <br><br><br><br><br><br>
+  <table class="positions show"><tr><td>
+  set-mark-command
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: cyan;">󰎤</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td></tr></table>
+  <br><br><br><br><br><br>
+  <table class="positions show"><tr><td>
+  indicate-and-copy-region
+  <table style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal; font-size: 40px;">
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: cyan;">󰎧</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: magenta;">󰿦</span></td>
+  <td>󰆢</td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  <tr>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td><span style="color: black;">󰆢</span></td>
+  <td>󰆢</td>
+  <td><span style="color: black;">󰆢</span></td>
+  </tr>
+  </table>
+  </td></tr></table>
+  <br><br><br><br><br><br>

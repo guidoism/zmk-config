@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MonaspiceAr Nerd Font Mono';
+    src: url('MonaspiceArNFM-Regular.woff2') format('woff2'),
+        url('MonaspiceArNFM-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
