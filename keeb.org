@@ -605,7 +605,7 @@ while s := ser.readline():
 ** Hand Position Cheat Sheet
 
 #+name: zmk-keymap
-#+begin_src html :noweb yes :tangle layout.html
+#+begin_src html :noweb yes :tangle docs/layout.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
