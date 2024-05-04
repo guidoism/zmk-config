@@ -180,8 +180,8 @@ ZMK_COMBO(startbootloader,  &bootloader, 4 7, 9, 100)
 // GUIDO: This doesn't work because of the home-row-mods
 // ZMK_COMBO(movelayer, &mo 7, 16 17, ALL, 50)
 
-// TAB = SPACE + M
-ZMK_COMBO(tab, &kp TAB, 45 31, ALL, 50)
+// TAB = C + V
+ZMK_COMBO(tab, &kp TAB, 27 28, ALL, 50)
 
 <<layer-definitions()>>
 
