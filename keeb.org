@@ -1,8 +1,8 @@
 
-- [ ] Figure out how to add RET and BS back to new layers
 - [ ] Figure out how to quick move around words and paragraphs
 - [ ] Fix status.py to not crash and reload
-
+- [ ] Add command to run within emacs that tells status.py to show shortcut
+- [ ] Fix status.py to show modifiers
 
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    q    w    e    r    t        y    --BS---   o    p    BS  │
@@ -12,14 +12,12 @@ X│ 󰿦    z    x   --TAB--    b        n    --RET--   .    /?   ;   │
  │           󰿦   SFT  NUM  MOV       󰆢    󱁐   SYM   󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
 
-
-
 ** Layout
 #+name: layout
 #+begin_src keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
- │ 󰿦    q    w    e    r    t        y    u    i    o    p    BS  │
- │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;   󰿦   │
+ │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
+ │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;  RET  │
 0│ 󰿦    z    x    c    v    b        n    m    ,    .    /?   ;   │
  │                     󰿦    󰿦       NEW   󰿦                       │
  │           󰿦   SFT  NUM  MOV       󰆢    󱁐   SYM   󰿦             │
@@ -601,3 +599,22 @@ while s := ser.readline():
     
 #+end_src
 
+** Hand Position Cheat Sheet
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="stylesheet.css" rel="stylesheet">
+
+<pre style="font-family: 'MonaspiceAr Nerd Font Mono'; font-weight: normal; font-style: normal;">
+
+ ╭────────────────────────────────────────────────────────────────╮
+ │ 󰿦    q    w    e    r    t        y    u    i    o    p    BS  │
+ │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;   󰿦   │
+0│ 󰿦    z    x    c    v    b        n    m    ,    .    /?   ;   │
+ │                     󰿦    󰿦       NEW   󰿦                       │
+ │           󰿦   SFT  NUM  MOV       󰆢    󱁐   SYM   󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+
+</pre>
