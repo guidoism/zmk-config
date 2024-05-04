@@ -189,13 +189,16 @@ ZMK_COMBO(startbootloader,  &bootloader, 4 7, 9, 100)
 // ZMK_COMBO(movelayer, &mo 7, 16 17, ALL, 50)
 
 // TAB = C + V
-ZMK_COMBO(tab, &kp TAB, 27 28, ALL, 50)
+ZMK_COMBO(tab_combo, &kp TAB, 27 28, ALL, 50)
 
 // RET = M + ,
-ZMK_COMBO(ret, &kp RET, 31 32, ALL, 50)
+ZMK_COMBO(ret_combo, &kp RET, 31 32, ALL, 50)
 
 // BS = U + I
-ZMK_COMBO(bksp, &kp BSPC, 7 8, ALL, 50)
+ZMK_COMBO(bksp_combo, &kp BSPC, 7 8, ALL, 50)
+
+// One-shot Shift = NUM + 󱁐
+ZMK_COMBO(oneshot_space_combo, &sk LSHIFT, 42 45, ALL, 50)
 
 <<layer-definitions()>>
 
