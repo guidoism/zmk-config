@@ -181,7 +181,7 @@ ZMK_COMBO(startbootloader,  &bootloader, 4 7, 4, 100)
 // ZMK_COMBO(movelayer, &mo 7, 16 17, ALL, 50)
 
 // TAB = SPACE + M
-ZMK_COMBO(tab, &tab, 45 31, ALL, 50)
+ZMK_COMBO(tab, &kp TAB, 45 31, ALL, 50)
 
 <<layer-definitions()>>
 
