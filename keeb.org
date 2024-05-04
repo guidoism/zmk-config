@@ -4,6 +4,15 @@
 - [ ] Fix status.py to not crash and reload
 
 
+ ╭────────────────────────────────────────────────────────────────╮
+ │ 󰿦    q    w    e    r    t        y    --BS---   o    p    BS  │
+ │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;   󰿦   │
+X│ 󰿦    z    x   --TAB--    b        n    --RET--   .    /?   ;   │
+ │                     󰿦    󰿦       NEW   󰿦                       │
+ │           󰿦   SFT  NUM  MOV       󰆢    󱁐   SYM   󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+
+
 
 ** Layout
 #+name: layout
@@ -186,6 +195,9 @@ ZMK_COMBO(tab, &kp TAB, 27 28, ALL, 50)
 
 // RET = M + ,
 ZMK_COMBO(ret, &kp RET, 31 32, ALL, 50)
+
+// BS = U + I
+ZMK_COMBO(bksp, &kp BSPC, 7 8, ALL, 50)
 
 <<layer-definitions()>>
 
