@@ -175,7 +175,7 @@ ZMK_BEHAVIOR(flip_buffer, macro,
 //       40 41 42 43    44 45 46 47
 
 // index on r u in FN layer within 100 milliseconds
-ZMK_COMBO(startbootloader,  &bootloader, 4 7, 4, 100)
+ZMK_COMBO(startbootloader,  &bootloader, 4 7, 9, 100)
 
 // GUIDO: This doesn't work because of the home-row-mods
 // ZMK_COMBO(movelayer, &mo 7, 16 17, ALL, 50)
