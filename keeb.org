@@ -3,12 +3,13 @@
 - [ ] Figure out how to quick move around words and paragraphs
 - [ ] Fix status.py to not crash and reload
 
+
 ** Layout
 #+name: layout
 #+begin_src keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    q    w    e    r    t        y    u    i    o    p    BS  │
- │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l   󰘵:;   RET │
+ │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l   󰘵:;   󰿦   │
 0│ 󰿦    z    x    c    v    b        n    m    ,    .    /?   ;   │
  │                     󰿦    󰿦       NEW   󰿦                       │
  │           󰿦   SFT  NUM  MOV       󰆢    󱁐   PAR   󰿦             │
@@ -420,7 +421,7 @@ USB	&bootloader
 󰘴j	&hmr RCTRL J
 󰘳k	&hmr RCMD K
 l	&hmr LS(LC(LALT)) L
-󰘵:;	&hmr RALT COLON
+󰘵:;	&hmr RALT &colonsemi
 °	&degree_symbol
 ′	&prime
 ″	&double_prime
