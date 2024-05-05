@@ -47,9 +47,9 @@ devs = json.loads(p.stdout)
 path = [d['ports'][0]['dev'] for d in devs if 'DF6114B5C3791031' == d['serial_num']][0]
 ser = serial.Serial(path)
 con = rich.console.Console(highlight=False)
-if sys.argv[1] == '-v':
+if len(sys.argv) > 1 and sys.argv[1] == '-v':
     while s := ser.readline():
-        print(s)
+        print(s.decode().strip())
         
 con.show_cursor(False)
 layer = ''
