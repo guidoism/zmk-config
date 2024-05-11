@@ -1,0 +1,13 @@
+file_format: "1"
+id: andean_condor_split
+name: Andean Condor W
+type: shield
+url: https://github.com/guidoism/andean-condor-split
+requires: [pro_micro, i2c_oled]
+exposes: [nice_view_header]
+features:
+  - keys
+  - display
+siblings:
+  - andean_condor_split_left
+  - andean_condor_split_right
