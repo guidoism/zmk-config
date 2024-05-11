@@ -15,3 +15,25 @@
 include:
   - board: adafruit_kb2040
     shield: andean-condor
+  - board: nice_nano_v2
+    shield: andean_condor_split_left nice_view
+    artifact-name: andean_condor_split_left
+  - board: nice_nano_v2
+    shield: andean_condor_split_right nice_view
+    artifact-name: andean_condor_split_right
+  - board: nice_nano_v2
+    shield: andean_condor_split_left nice_view
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: andean_condor_split_left_with_logging
+  - board: nice_nano_v2
+    shield: andean_condor_split_right nice_view
+    cmake-args: -DCONFIG_ZMK_USB_LOGGING=y
+    artifact-name: andean_condor_split_right_with_logging
+  - board: nice_nano_v2
+    shield: andean_condor_split_left nice_view
+    cmake-args: -DCONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
+    artifact-name: andean_condor_split_left_ble_experimental
+  - board: nice_nano_v2
+    shield: andean_condor_split_right nice_view
+    cmake-args: -DCONFIG_ZMK_BLE_EXPERIMENTAL_CONN=y
+    artifact-name: andean_condor_split_right_ble_experimental
