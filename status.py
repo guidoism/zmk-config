@@ -1,14 +1,25 @@
 import json, subprocess, serial, re, rich, rich.console, os, sys
 from copy import copy
-updated = os.stat('layout.txt').st_mtime
 from pprint import pprint as pp
 from more_itertools import chunked
+updated = os.stat('layout.txt').st_mtime
+
+POSITIONS = """
+ ╭────────────────────────────────────────────────────────────────╮
+ │                                                    │
+ │     a    s    d    f                j    k    l    :       │
+ │                                                    │
+ │                                                            │
+ │               󰆢    󰆢                󰆢    󰆢                 │
+ ╰────────────────────────────────────────────────────────────────╯
+"""
+
 
 def load_layers():
     layers = list(chunked(open('layout.txt').read().split('\n'), 7))
     layers = ['\n'.join([s[:67] for s in l]) for l in layers]
     layers = [re.sub(r'([│╰╯─╭╮]+)', r'[bold turquoise2]\1[/]', layer) for layer in layers]
-    layers = [re.sub(r'([󰆢])', r'[dim]\1[/]', layer) for layer in layers]
+    layers = [re.sub(r'([󰆢])', r'[dim]\1[/]', layer) for layer in layers]
     return layers
 
 layers = load_layers()
@@ -54,15 +65,15 @@ if len(sys.argv) > 1 and sys.argv[1] == '-v':
 con.show_cursor(False)
 layer = ''
 shortcuts = {
-    'C-:    ': 'avy-goto-char',
-    'C-h m  ': 'describe-mode',
-    'C-h k  ': 'describe-key',
-    'C-h i  ': 'info',
-    'C-h l  ': 'view-lossage',
-    'C-x C-x': 'exchange-point-and-mark',
-    'C-c ←  ': 'winner-undo',
-    'M-o    ': 'other-window',
-    'C-c M-o': 'comint-clear-buffer',
+#    'C-:    ': 'avy-goto-char',
+#    'C-h m  ': 'describe-mode',
+#    'C-h k  ': 'describe-key',
+#    'C-h i  ': 'info',
+#    'C-h l  ': 'view-lossage',
+#    'C-x C-x': 'exchange-point-and-mark',
+#    'C-c ←  ': 'winner-undo',
+#    'M-o    ': 'other-window',
+#    'C-c M-o': 'comint-clear-buffer',
 }
 
 # TODO: OSError when restarted this, we know this is going to happen when

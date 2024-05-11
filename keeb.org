@@ -3,11 +3,12 @@
 - [ ] Fix status.py to not crash and reload
 - [ ] Add command to run within emacs that tells status.py to show shortcut
 - [ ] Change status.py to show combos when a certain key is pressed
+- [ ] Command-shift-4 for screenshot
 
  ╭────────────────────────────────────────────────────────────────╮
- │ 󰿦    q    w    e    r    t        y    --BS---   o    p    BS  │
+ │ 󰿦    q    w    e    r    t        y    󰞓─BKSP󰞔   o    p    BS  │
  │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;   󰿦   │
-X│ 󰿦    z    x   --TAB--    b        n    --RET--   .    /?   ;   │
+X│ 󰿦    z    x   󰞓─TAB─󰞔    b        n    󰞓─RET─󰞔   .    /?   ;   │
  │                     󰿦    󰿦       NEW   󰿦                       │
  │           󰿦   SFT  NUM  MOV       󰆢    󱁐   SYM   󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
@@ -81,7 +82,7 @@ X│ 󰿦    z    x   --TAB--    b        n    --RET--   .    /?   ;   │
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦   ESC  F1   F2   F3   F4       F5   F6   F7   F8   F9    󰿦   │
  │ 󰿦    󰆢    󱢍    󰅗    󰍵    󰆢        󰆢    󰇽    󰿋    󱃗    󰆢    󰿦   │
-9│ 󰿦   F10  F11  F12  F13  F14      F15  F16  F17  F18  F19   󰿦   │FN
+9│ 󰿦   F10  F11  F12  F13  F14      F15  F16  F17  F18       󰿦   │FN
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦        󰆢    󰆢        󰆢    󰆢        󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
@@ -481,6 +482,7 @@ USB	&bootloader
 ┤	&box_middleright
 ├	&box_middleleft
 *	&kp STAR
+	&kp LG(LS(N4))
 #+end_src
 
 ** Status Viewer
@@ -489,15 +491,26 @@ USB	&bootloader
 #+begin_src python :tangle status.py :results value pp
 import json, subprocess, serial, re, rich, rich.console, os, sys
 from copy import copy
-updated = os.stat('layout.txt').st_mtime
 from pprint import pprint as pp
 from more_itertools import chunked
+updated = os.stat('layout.txt').st_mtime
+
+POSITIONS = """
+ ╭────────────────────────────────────────────────────────────────╮
+ │                                                    │
+ │     a    s    d    f                j    k    l    :       │
+ │                                                    │
+ │                                                            │
+ │               󰆢    󰆢                󰆢    󰆢                 │
+ ╰────────────────────────────────────────────────────────────────╯
+"""
+
 
 def load_layers():
     layers = list(chunked(open('layout.txt').read().split('\n'), 7))
     layers = ['\n'.join([s[:67] for s in l]) for l in layers]
     layers = [re.sub(r'([│╰╯─╭╮]+)', r'[bold turquoise2]\1[/]', layer) for layer in layers]
-    layers = [re.sub(r'([󰆢])', r'[dim]\1[/]', layer) for layer in layers]
+    layers = [re.sub(r'([󰆢])', r'[dim]\1[/]', layer) for layer in layers]
     return layers
 
 layers = load_layers()
@@ -543,15 +556,15 @@ if len(sys.argv) > 1 and sys.argv[1] == '-v':
 con.show_cursor(False)
 layer = ''
 shortcuts = {
-    'C-:    ': 'avy-goto-char',
-    'C-h m  ': 'describe-mode',
-    'C-h k  ': 'describe-key',
-    'C-h i  ': 'info',
-    'C-h l  ': 'view-lossage',
-    'C-x C-x': 'exchange-point-and-mark',
-    'C-c ←  ': 'winner-undo',
-    'M-o    ': 'other-window',
-    'C-c M-o': 'comint-clear-buffer',
+#    'C-:    ': 'avy-goto-char',
+#    'C-h m  ': 'describe-mode',
+#    'C-h k  ': 'describe-key',
+#    'C-h i  ': 'info',
+#    'C-h l  ': 'view-lossage',
+#    'C-x C-x': 'exchange-point-and-mark',
+#    'C-c ←  ': 'winner-undo',
+#    'M-o    ': 'other-window',
+#    'C-c M-o': 'comint-clear-buffer',
 }
 
 # TODO: OSError when restarted this, we know this is going to happen when
@@ -693,6 +706,35 @@ lossage = """
  M-w            ;; indicate-and-copy-region
 """
 
+"""
+ C-x C-s        ;; save-buffer
+ M-o            ;; other-window
+ C-x b          ;; switch-to-buffer
+ C-l            ;; recenter-top-bottom
+ C-y            ;; yank
+ C-d            ;; delete-char
+ C-x k          ;; kill-buffer
+ C-a            ;; beginning-of-line-or-indentation
+ C-k            ;; kill-line
+ C-/            ;; undo
+ C-SPC          ;; set-mark-command
+ M-w            ;; indicate-and-copy-region
+ C-e            ;; move-end-of-line
+ M-^            ;; delete-indentation
+ C-g            ;; abort-minibuffers
+ C-x C-f        ;; find-file
+ C-:            ;; avy-goto-char
+ C-h m          ;; describe-mode
+ C-h k          ;; describe-key
+ C-h i          ;; info
+ C-h l          ;; view-lossage
+ C-x C-x        ;; exchange-point-and-mark
+ C-c <left>     ;; winner-undo
+ M-o            ;; other-window
+ C-c M-o        ;; comint-clear-buffer
+ C-h a          ;;
+"""
+
 def r(c, seq):
     if c in seq: return seq.pop(c)
     if c in whitespace: return c
@@ -748,6 +790,7 @@ for seq in lossage.strip().splitlines():
     table(''.join([r(c, d) for c in kb]))
     print('</td></tr></table>')
     print('<br><br><br><br><br><br>')
-    
+
 #+end_src
+
 
