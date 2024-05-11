@@ -1,9 +1,8 @@
 
 - [ ] Figure out how to quick move around words and paragraphs
-- [ ] Fix status.py to not crash and reload
+- [ ] Fix status.py to not crash during bootstrap mode
 - [ ] Add command to run within emacs that tells status.py to show shortcut
 - [ ] Change status.py to show combos when a certain key is pressed
-- [ ] Command-shift-4 for screenshot
 
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    q    w    e    r    t        y    󰞓─BKSP󰞔   o    p    BS  │
