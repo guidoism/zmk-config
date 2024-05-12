@@ -199,6 +199,7 @@ ZMK_COMBO(oneshot_space_combo, &sk LSHIFT, 42 45, ALL, 50)
 
 #+end_src
 
+*** Unibody Template
 #+begin_src dts :noweb yes :tangle config/andean-condor.keymap
 
 /*                                      48 KEY MATRIX / LAYOUT MAPPING
@@ -272,6 +273,7 @@ ZMK_COMBO(oneshot_space_combo, &sk LSHIFT, 42 45, ALL, 50)
 
 #+end_src
 
+*** Split Template
 #+begin_src dts :noweb yes :tangle config/andean_condor_split.keymap
 /*                                      48 KEY MATRIX / LAYOUT MAPPING
 
