@@ -785,6 +785,7 @@ while s := ser.readline():
     td { padding-top: -1px; padding-bottom: -1px; padding-left: 5px; padding-right: 5px; }
     .positions { display: none; }
     .show { display: block; }
+    pre { font-family: MonaspiceAr Nerd Font Mono,monospace; }
   </style>
 
   <pre>
