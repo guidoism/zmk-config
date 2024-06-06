@@ -6,6 +6,7 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 - [ ] Add command to run within emacs that tells status.py to show shortcut
 - [ ] Change status.py to show combos when a certain key is pressed
 - [ ] Add andean_condor_split.keymap to tangle
+- [ ] Make way to memorize keystrokes with spaced-repetition
 
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    q    w    e    r    t        y    󰞓─BKSP󰞔   o    p    BS  │
@@ -76,7 +77,7 @@ X│ 󰿦    z    x   󰞓─TAB─󰞔    b        n    󰞓─RET─󰞔   .  
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰆢    󰆢    󰆢    ╭    ╮    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
- │ 󰆢    ─    │    ╰    ╯    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
+ │ 󰆢    ─    │    ╰    ╯    󰆢       BOX   󰆢    󰆢    󰆢    󰆢    󰆢   │
 8│ 󰆢    ┼    ┴    ┬    ┤    ├        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │BOX
  │                     󰆢    󰆢        󰆢    󰆢                       │
  │          OPT  CMD   󰆢    󰆢        󰆢    󰆢    󰆢    󰆢             │
@@ -570,6 +571,7 @@ GAM	&tog 4
 FUN	&mo 9
 M₅	&mo 5
 LIN	&mo 5
+SEL	&mo 5
 NEW	&to 6
 MV	&mo 7
 	&tog 7
