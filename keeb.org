@@ -803,9 +803,27 @@ while s := ser.readline():
     .show { display: block; }
   </style>
 
+  <pre>
+    <<layout>>
+  </pre>
+  
+#+end_src
+
+#+name: zmk-keymap
+#+begin_src html :noweb yes :tangle docs/hand-positions.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link href="stylesheet.css" rel="stylesheet">
+  <style>
+    body { background-color: black; color: white; }
+    td { padding-top: -1px; padding-bottom: -1px; padding-left: 5px; padding-right: 5px; }
+    .positions { display: none; }
+    .show { display: block; }
+  </style>
+
   <<hand-positions()>>
-
-
 #+end_src
 
 #+name: hand-positions
