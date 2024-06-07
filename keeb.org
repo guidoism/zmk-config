@@ -34,8 +34,8 @@ X│ 󰿦    z    x   󰞓─TAB─󰞔    b        n    󰞓─RET─󰞔   .  
  │          OPT  CMD       󰆢        󰆢   󰘶󱁐    󰆢    󰆢             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
- │ 󰿦    “    ”    ‘    ’    "″       󰆢    󰆢    󰆢    󰆢    󰆢    BS  │
- │ 󰿦    [    ]    (    )    '′       󰆢    -    =    󰆢    󰆢    \   │
+ │ 󰿦    “    ”    ‘    ’    ″        µ    Ω    󰆢    󰆢    󰆢    BS  │
+ │ 󰿦    [    ]    (    )    ′        󰆢    -    =    󰆢    󰆢    \   │
 2│ 󰿦    <    >    {    }    `        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │SYM
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │          OPT  FN    󰆢    󰆢        󰆢   󰘶󱁐        󰆢             │
@@ -391,6 +391,8 @@ for s in codes.splitlines():
 ┬	box_middletop
 ┤	box_middleright
 ├	box_middleleft
+Ω	ohm
+µ	micro
 #+end_src
 
 ** Keycodes
@@ -598,6 +600,8 @@ USB	&bootloader
 ∎	&qed_motherfucker
 ∏	&product
 ∑	&sum
+Ω	&ohm
+µ	&micro
 ∘	&ring
 ∝	&proportional
 ∞	&infinity
