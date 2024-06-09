@@ -21,7 +21,7 @@ X│ 󰿦    z    x   󰞓─TAB─󰞔    b        n    󰞓─RET─󰞔   .  
 #+begin_src keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
  │TAB   q    w    e    r    t        y    u    i    o    :;   BS  │
- │CTL  󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    p   RET  │
+ │CTL  󰘵a   󰆾s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    p   RET  │
 0│SFT   z    x    c    v    b        n    m    ,    .    /?   󰿦   │
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦   CMD  NUM  MOV      SEL  󰘶󱁐   SYM   󰿦             │
@@ -157,6 +157,9 @@ SIMPLE_MORPH(colonsemi, SFT, &kp COLON, &kp SEMI)
     )
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
+
+MAKE_HRM(hltl, &mo, &kp, KEYS_R THUMBS)  // left-hand HR layer-taps
+MAKE_HRM(hltr, &mo, &kp, KEYS_L THUMBS)  // right-hand HR layer-taps
 
 //MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 //MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
@@ -573,6 +576,7 @@ RST	&sys_reset
 USB	&bootloader
 󰘵a	&hml LALT A
 s	&hml LS(LC(LALT)) S
+󰆾s	&hltl 3 S
 󰘳d	&hml LCMD D
 󰘴f	&hml LCTRL F
 󰘴j	&hmr RCTRL J
