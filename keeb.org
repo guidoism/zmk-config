@@ -20,8 +20,8 @@ X│ 󰿦    z    x   󰞓─TAB─󰞔    b        n    󰞓─RET─󰞔   .  
 #+name: layout
 #+begin_src keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
- │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
- │CTL  󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;  RET  │
+ │TAB   q    w    e    r    t        y    u    i    o    :;   BS  │
+ │CTL  󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    p   RET  │
 0│SFT   z    x    c    v    b        n    m    ,    .    /?   󰿦   │
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦   CMD  NUM  MOV      SEL  󰘶󱁐   SYM   󰿦             │
