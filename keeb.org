@@ -9,7 +9,7 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 - [ ] Make way to memorize keystrokes with spaced-repetition
 
  ╭────────────────────────────────────────────────────────────────╮
- │ 󰿦    q    w    e    r    t        y    󰞓─BKSP󰞔   o    p    BS  │
+ │ 󰿦    q    w    e    r    t        y    u    i    o    p    BS  │
  │ 󰿦   󰘵a   s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;   󰿦   │
 X│ 󰿦    z    x   󰞓─TAB─󰞔    b        n    󰞓─RET─󰞔   .    /?   ;   │
  │                     󰿦    󰿦        󰿦    󰿦                       │
@@ -182,9 +182,6 @@ ZMK_COMBO(tab_combo, &kp TAB, 27 28, ALL, 50)
 
 // RET = M + ,
 ZMK_COMBO(ret_combo, &kp RET, 31 32, ALL, 50)
-
-// BS = U + I
-ZMK_COMBO(bksp_combo, &kp BSPC, 7 8, ALL, 50)
 
 // One-shot Shift = NUM + 󱁐
 ZMK_COMBO(oneshot_space_combo, &sk LSHIFT, 42 45, ALL, 50)
