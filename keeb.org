@@ -609,7 +609,7 @@ M₁	&mo 1
 NUM	&mo 1
 SFT	&smart_shft
 M₂	&mo 2
-SYM	&sym_layer6
+SYM	&mo 3
 M₃	&mo 3
 MOV	&mo 3
 M₄	&mo 4
