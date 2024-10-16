@@ -220,10 +220,6 @@ ZMK_MOD_MORPH(bs_del_num,
 //    bindings = <&lt NUM BSPC>, <&kp DEL>;
 //    mods = <(MOD_LCMD|MOD_RCMD)>;
 //)
-ZMK_MOD_MORPH(sym_layer6,
-    bindings = <&lt 2 BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
 
 ZMK_BEHAVIOR(flip_buffer, macro,
     wait-ms = <100>;
