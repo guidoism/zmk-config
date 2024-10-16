@@ -95,7 +95,7 @@ X│ 󰿦    z    x   󰞓─TAB─󰞔    b        n    󰞓─RET─󰞔   .  
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
- │ 󰿦    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
+ │ 󰿦    󰆢    f    r    e    e        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
 6│ 󰿦    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢             │
@@ -206,6 +206,19 @@ MAKE_HRM(hltr, &mo, &kp, KEYS_L THUMBS)  // right-hand HR layer-taps
 //MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
 //MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
 //MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
+
+/* From urob's example
+// tap: backspace | shift + tap: delete | hold: num layer
+ZMK_MOD_MORPH(bs_del_num,
+    bindings = <&lt NUM BSPC>, <&kp DEL>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+)
+,*/
+
+ZMK_MOD_MORPH(sym_layer6,
+    bindings = <&mo 2>, <&mo 6>;
+    mods = <(MOD_LCMD|MOD_RCMD)>;
+)
 
 ZMK_BEHAVIOR(flip_buffer, macro,
     wait-ms = <100>;
@@ -591,7 +604,7 @@ M₁	&mo 1
 NUM	&mo 1
 SFT	&smart_shft
 M₂	&mo 2
-SYM	&mo 2
+SYM	&sym_layer6
 M₃	&mo 3
 MOV	&mo 3
 M₄	&mo 4
