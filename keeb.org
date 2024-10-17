@@ -207,14 +207,7 @@ MAKE_HRM(hltr, &mo, &kp, KEYS_L THUMBS)  // right-hand HR layer-taps
 //MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
 //MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
 
-/* From urob's example
-// tap: backspace | shift + tap: delete | hold: num layer
-ZMK_MOD_MORPH(bs_del_num,
-    bindings = <&lt NUM BSPC>, <&kp DEL>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
-*/
-
+// tap: nothing | hold: symbol layer | cmd + hold: new layer
 ZMK_MOD_MORPH(sym_layer6,
     bindings = <&mo 2>, <&mo 6>;
     mods = <(MOD_LGUI|MOD_RGUI)>;
