@@ -184,7 +184,7 @@ ZMK_MOD_MORPH(bs_del_num,
 
 ZMK_MOD_MORPH(sym_layer6,
     bindings = <&mo 2>, <&mo 6>;
-    mods = <(MOD_LCMD|MOD_RCMD)>;
+    mods = <(MOD_LGUI|MOD_RGUI)>;
 )
 
 ZMK_BEHAVIOR(flip_buffer, macro,
