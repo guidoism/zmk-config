@@ -215,9 +215,8 @@ ZMK_MOD_MORPH(bs_del_num,
 )
 */
 
-    //bindings = <&mo 2>, <&mo 6>;
 ZMK_MOD_MORPH(sym_layer6,
-    bindings = <&lt 3 BSPC>, <&kp DEL>;
+    bindings = <&mo 2>, <&mo 6>;
     mods = <(MOD_LCMD|MOD_RCMD)>;
 )
 
@@ -605,7 +604,7 @@ M₁	&mo 1
 NUM	&mo 1
 SFT	&smart_shft
 M₂	&mo 2
-SYM	&mo 3
+SYM	&sym_layer6
 M₃	&mo 3
 MOV	&mo 3
 M₄	&mo 4
