@@ -82,57 +82,64 @@ shortcuts = {
 #
 #       It would also be cool if the script would watch for the download
 #       Unzip it and copy it over.
-while s := ser.readline():
-    # zmk: set_layer_state: layer_changed: layer 3 state 0
-    # GUIDO: layer 4, new state set: 16
-    if m := re.search(r'GUIDO: layer (\d+), new state set: (\d+)', s.decode()):
-        state = int(m.group(2))
-        n = msb(state)
-        layer = layers[n]
-        con.clear()
-        con.print(layer)
-        con.print('\n'.join((f'{k}  {v}' for k, v in shortcuts.items())))
-
-        if os.stat('layout.txt').st_mtime > updated:
-            updated = os.stat('layout.txt').st_mtime
-            layers = load_layers()
-
-    if m := re.search(r'GUIDO: Modifiers set to 0x(\d\d)', s.decode()):
-        mods = int(m.group(1), 16)
-
-        modified = copy(layer)
-        modline = []
-        
-        if mods & 0x01:
-            modifiers['control']
-            modline.append('Control')
-        if mods &0x02:
-            for a, b in modifiers['shift'].items():
-                modified = re.sub(a, b, modified)
-            modline.append('Shift')
-        if mods & 0x04:
-            modifiers['option']
-            modline.append('Option')
-        if mods & 0x08:
-            modifiers['command']
-            modline.append('Command')
-        if mods & 0x10:
-            modifiers['control']
-            modline.append('Control')
-        if mods &0x20:
-            modifiers['shift']
-            modline.append('Shift')
-        if mods & 0x40:
-            modifiers['option']
-            modline.append('Option')
-        if mods & 0x80:
-            modifiers['command']
-            modline.append('Command')
-        con.clear()
-        con.print(modified)
-        if modline:
-            con.print(' '.join(modline), justify="center")
-        else:
-            con.print('---', justify="center")
-    #else:
-    #    con.print('---', justify="center")
+try:
+    while s := ser.readline():
+        # zmk: set_layer_state: layer_changed: layer 3 state 0
+        # GUIDO: layer 4, new state set: 16
+        if m := re.search(r'GUIDO: layer (\d+), new state set: (\d+)', s.decode()):
+            state = int(m.group(2))
+            n = msb(state)
+            layer = layers[n]
+            con.clear()
+            con.print(layer)
+            con.print('\n'.join((f'{k}  {v}' for k, v in shortcuts.items())))
+    
+            if os.stat('layout.txt').st_mtime > updated:
+                updated = os.stat('layout.txt').st_mtime
+                layers = load_layers()
+    
+        if m := re.search(r'GUIDO: Modifiers set to 0x(\d\d)', s.decode()):
+            mods = int(m.group(1), 16)
+    
+            modified = copy(layer)
+            modline = []
+            
+            if mods & 0x01:
+                modifiers['control']
+                modline.append('Control')
+            if mods &0x02:
+                for a, b in modifiers['shift'].items():
+                    modified = re.sub(a, b, modified)
+                modline.append('Shift')
+            if mods & 0x04:
+                modifiers['option']
+                modline.append('Option')
+            if mods & 0x08:
+                modifiers['command']
+                modline.append('Command')
+            if mods & 0x10:
+                modifiers['control']
+                modline.append('Control')
+            if mods &0x20:
+                modifiers['shift']
+                modline.append('Shift')
+            if mods & 0x40:
+                modifiers['option']
+                modline.append('Option')
+            if mods & 0x80:
+                modifiers['command']
+                modline.append('Command')
+            con.clear()
+            con.print(modified)
+            if modline:
+                con.print(' '.join(modline), justify="center")
+            else:
+                con.print('---', justify="center")
+        #else:
+        #    con.print('---', justify="center")
+except serial.serialutil.SerialException as e:
+    print('Shutting down because keyboard was unplugged...')
+    con.show_cursor(True)
+except Exception as e:
+    print('Shutting down...')
+    print(type(e), e)
