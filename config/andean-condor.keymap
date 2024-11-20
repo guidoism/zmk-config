@@ -198,6 +198,12 @@ ZMK_COMBO(tab_combo, &kp TAB, 27 28, ALL, 50)
 // RET = M + ,
 ZMK_COMBO(ret_combo, &kp RET, 31 32, ALL, 50)
 
+// MOV = D + F
+ZMK_COMBO(mov_combo, &mo 3, 15 16, ALL, 50)
+
+// SFT = J + K
+ZMK_COMBO(oneshot_space_combo2, &sk LSHIFT, 19 20, ALL, 50)
+
 // One-shot Shift = NUM + 󱁐
 ZMK_COMBO(oneshot_space_combo, &sk LSHIFT, 42 45, ALL, 50)
 
