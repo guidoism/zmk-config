@@ -8,7 +8,7 @@ manifest:
       url-base: https://github.com/urob      
   projects:
     - name: zmk
-      remote: guidoism # zmkfirmware
+      remote: guidoism@d1ad34761a0a98fd8e36edbf978ebd4938797472 # zmkfirmware
       revision: main
       import: app/west.yml
     - name: zmk-helpers
