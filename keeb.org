@@ -6,7 +6,7 @@ To build:
 Remember that =x= is the *ring finger* and =c= is the middle finger.
 
 - [ ] Figure out how to quick move around words and paragraphs
-- [ ] Fix status.py to not crash during bootstrap mode
+- [X] Fix status.py to not crash during bootstrap mode
 - [ ] Add command to run within emacs that tells status.py to show shortcut
 - [ ] Change status.py to show combos when a certain key is pressed
 - [ ] Make way to memorize keystrokes with spaced-repetition
@@ -20,6 +20,65 @@ X│ 󰿦    z    x   󰞓─TAB─󰞔    b        n    󰞓─RET─󰞔   .  
  │           󰿦   SFT  NUM  MOV       󰆢    󱁐   SYM   󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
                       󰞓─  one shot shift ─󰞔
+
+
+** Hummingbird Layout Test
+#+name: layout-hummingbird-test
+#+begin_src keymap
+ ╭────────────────────────────────────────────────────────╮
+ │  q    w    e    r    t        y    u    i    o    p    │
+ │  a    s    d    f    g        h    j    k    l    n    │
+0│       x    c    v                  m    b    z         │    /?:;
+ │           CMD  NUM                󰘶󱁐   SYM             │
+ ╰────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────╮
+ │  !    @    #    $    %        ^    7    8    9    °    │
+ │  "    &    *    _    0        +    4    5    6    '    │
+1│       ÷    =    -                  1    2    3         │NUM /×.
+ │           CMD                    󰘶󱁐    󰆢              │
+ ╰────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────╮
+ │  “    ”    ‘    ’    ″        µ    Ω    󰆢    󰆢    󰆢    │
+ │  [    ]    (    )    ′       TAB   -    =    BS  RET   │
+2│       >    {    }                  󰆢    󰆢    󰆢         │SYM <`
+ │           FN    󰆢                 󰘶󱁐                  │
+ ╰────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────╮
+ │  󰆢    󰆢   ¶←   ¶→    󰆢        󰆢   P↑    ↑   P↓    󰆢    │
+ │  󰆢    󰆢   W←   W→    󰆢        󰆢    ←    ↓    →    󰞷    │
+3│       󰆢    󰆢    󰆢                 HME   󰆢   END        │MOV
+ │           CMD  NUM                󰘶󱁐    󰆢              │
+ ╰────────────────────────────────────────────────────────╯
+#+end_src
+
+** Hummingbird Layout
+#+name: layout-hummingbird
+#+begin_src keymap
+ ╭────────────────────────────────────────────────────────╮
+ │  q    w    e    r    t        y    u    i    o    p    │
+ │ 󰘵a   󰆾s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;   │
+0│       x    c    v                  m    ,    .         │    z/?bn
+ │           CMD  NUM                󰘶󱁐   SYM             │
+ ╰────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────╮
+ │  !    @    #    $    %        ^    7    8    9    °    │
+ │  "    &    *    _    0        +    4    5    6    '    │
+1│       ÷    =    -                  1    2    3         │NUM /×.
+ │           CMD                    󰘶󱁐    󰆢              │
+ ╰────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────╮
+ │  “    ”    ‘    ’    ″        µ    Ω    󰆢    󰆢    󰆢    │
+ │  [    ]    (    )    ′       TAB   -    =    BS  RET   │
+2│       >    {    }                  󰆢    󰆢    󰆢         │SYM <`
+ │           FN    󰆢                 󰘶󱁐                  │
+ ╰────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────╮
+ │  󰆢    󰆢   ¶←   ¶→    󰆢        󰆢   P↑    ↑   P↓    󰆢    │
+ │  󰆢    󰆢   W←   W→    󰆢        󰆢    ←    ↓    →    󰞷    │
+3│       󰆢    󰆢    󰆢                 HME   󰆢   END        │MOV
+ │           CMD  NUM                󰘶󱁐    󰆢              │
+ ╰────────────────────────────────────────────────────────╯
+#+end_src
 
 
 ** Totem Changes
