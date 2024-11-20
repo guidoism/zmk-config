@@ -293,7 +293,7 @@ ZMK_COMBO(startbootloader,  &bootloader, 4 7, 9, 100)
 // ZMK_COMBO(movelayer, &mo 7, 16 17, ALL, 50)
 
 // TAB = C + V
-ZMK_COMBO(tab_combo, &kp TAB, 27 28, ALL, 50)
+//ZMK_COMBO(tab_combo, &kp TAB, 27 28, ALL, 50)
 
 // TAB = S + F
 ZMK_COMBO(tab_combo2, &kp TAB, 14 16, ALL, 50)
