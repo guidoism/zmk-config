@@ -222,8 +222,6 @@ ZMK_BEHAVIOR(smart_shft, mod_morph,
     /delete-property/ ignore-modifiers;
 };
 
-ZMK_COMBO(combo_caps_word, &caps_word, 17 20, ALL, 25)
-
 // reuse basic mod-morph scheme
 #define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
     ZMK_MOD_MORPH(NAME, \
@@ -294,10 +292,14 @@ ZMK_COMBO(ret_combo, &kp RET, 31 32, ALL, 50)
 ZMK_COMBO(mov_combo, &mo 3, 15 16, ALL, 50)
 
 // SFT = J + K
-ZMK_COMBO(oneshot_space_combo2, &sk LSHIFT, 19 20, ALL, 50)
+ZMK_COMBO(oneshot_space_combo, &sk LSHIFT, 19 20, ALL, 50)
 
-// One-shot Shift = NUM + 󱁐
-ZMK_COMBO(oneshot_space_combo, &sk LSHIFT, 42 45, ALL, 50)
+// CAPSWORD = J + K + L
+ZMK_COMBO(capsword_combo, &caps_word, 19 20 21, ALL, 50)
+
+// OPT = R + T
+ZMK_COMBO(option_combo, &kp LALT, 4 5, ALL, 50)
+
 
 #+end_src
 
