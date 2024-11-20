@@ -112,7 +112,7 @@ X│ 󰿦    z    x   󰞓─TAB─󰞔    b        n    󰞓─RET─󰞔   .  
 #+begin_src keymap :tangle layout.txt
  ╭────────────────────────────────────────────────────────────────╮
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
- │CTL  󰘵a   󰆾s   󰘳d   󰘴f    g        h   󰘴j   󰘳k   l    :;  RET  │
+ │CTL   a    s    d   󰘴f    g        h   󰘴j    k    l    :;  RET  │
 0│SFT   z    x    c    v    b        n    m    ,    .    /?   󰿦   │
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦   CMD  NUM  MOV      SEL  󰘶󱁐   SYM   󰿦             │
