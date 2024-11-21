@@ -15,6 +15,7 @@
 include:
   - board: adafruit_kb2040
     shield: andean-condor
+    snippet: zmk-usb-logging
 #  - board: nice_nano_v2
 #    shield: andean-split_left nice_view
 #    artifact-name: andean_split_left
