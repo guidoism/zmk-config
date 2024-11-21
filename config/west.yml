@@ -9,7 +9,7 @@ manifest:
   projects:
     - name: zmk
       remote: guidoism # zmkfirmware
-      revision: a080b5287f9814d90166be523c3cd2969f4d69a3 # d1ad34761a0a98fd8e36edbf978ebd4938797472
+      revision: main # a080b5287f9814d90166be523c3cd2969f4d69a3 # d1ad34761a0a98fd8e36edbf978ebd4938797472
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
