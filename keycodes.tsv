@@ -1,0 +1,227 @@
+0	&kp N0
+1	&kp N1
+2	&kp N2
+3	&kp N3
+4	&kp N4
+5	&kp N5
+6	&kp N6
+7	&kp N7
+8	&kp N8
+9	&kp N9
+a	&kp A
+b	&kp B
+c	&kp C
+d	&kp D
+e	&kp E
+f	&kp F
+g	&kp G
+h	&kp H
+i	&kp I
+j	&kp J
+k	&kp K
+l	&kp L
+m	&kp M
+n	&kp N
+o	&kp O
+p	&kp P
+q	&kp Q
+r	&kp R
+s	&kp S
+t	&kp T
+u	&kp U
+v	&kp V
+w	&kp W
+x	&kp X
+y	&kp Y
+z	&kp Z
+F1	&kp F1
+F2	&kp F2
+F3	&kp F3
+F4	&kp F4
+F5	&kp F5
+F6	&kp F6
+F7	&kp F7
+F8	&kp F8
+F9	&kp F9
+F10	&kp F10
+F11	&kp F11
+F12	&kp F12
+F13	&kp F13
+F14	&kp F14
+F15	&kp F15
+F16	&kp F16
+F17	&kp F17
+F18	&kp F18
+F19	&kp F19
+CTL	&kp LCTRL
+OPT	&kp RALT
+CMD	&kp LCMD
+.!	&dotbang
+,	&kp COMMA
+.	&kp DOT
+󱁐	&kp SPACE
+󱁐T	&spacetab
+TAB	&kp TAB
+RET	&kp RET
+ESC	&kp ESC
+BS	&kp BSPC
+/	&kp SLASH
+/?	&kp SLASH
+~	&kp TILDE
+^	&kp CARET
+'	&kp SQT
+%	&kp PERCENT
+|	&kp PIPE
+_	&kp UNDER
++	&kp PLUS
+"	&kp DQT
+"″	&doublequoteprime
+'′	&singlequoteprime
+$	&kp DLLR
+&	&kp AMPS
+@	&kp AT
+!	&kp EXCL
+#	&kp HASH
+)	&kp RPAR
+\	&kp BACKSLASH
+=	&kp EQUAL
+}	&kp RBRC
+`	&kp GRAVE
+[	&kp LBKT
+>	&kp GT
+(	&kp LPAR
+-	&kp MINUS
+]	&kp RBKT
+<	&kp LT
+{	&kp LBRC
+;	&kp SEMI
+:;	&colonsemi
+→	&kp RIGHT
+←	&kp LEFT
+↓	&kp DOWN
+↑	&kp UP
+HME	&kp HOME
+END	&kp END
+P↑	&kp PGUP
+P↓	&kp PGDN
+.!	&kp DOT
+/?	&kp SLASH
+󰘶	&kp LSHIFT
+󱁐T	&kp SPACE
+"″	&kp DQT
+'′	&kp SQT
+󰞕	&kp PGUP
+󰞒	&kp PGDN
+󰞓	&kp HOME
+󰞔	&kp END
+W←	&kp LG(B)
+W→	&kp LG(F)
+λ←	&kp LC(LG(B))
+λ→	&kp LC(LG(F))
+¶←	&kp LG(LBRC)
+¶→	&kp LG(RBRC)
+S←	&kp LG(A)
+S→	&kp LG(E)
+UND	&kp LC(SLASH)
+BEG	&kp LG(M)
+󰞷	&kp LG(M)
+Bu0	&kp LC(LG(N0))
+Bu1	&kp LC(LG(N1))
+Bu2	&kp LC(LG(N2))
+Bu3	&kp LC(LG(N3))
+󱢍	&flip_buffer
+󰅗	&kp LC(LG(N0))
+󰍵	&kp LC(LG(N1))
+󰇽	&kp LC(LG(N2))
+󰿋	&kp LC(LG(N3))
+󱃗	&kp LG(O)
+OTH	&kp LG(O)
+FLP	&kp LS(LG(O))
+󰿦	&none
+󰆢	&none
+	&trans
+M₀!	&tog 0
+QUE	&tog 0
+M₁	&mo 1
+NUM	&mo 1
+SFT	&smart_shft
+M₂	&mo 2
+SYM	&sym_layer6
+M₃	&mo 3
+MOV	&mo 3
+M₄	&mo 4
+GAM	&tog 4
+FUN	&mo 9
+M₅	&mo 5
+LIN	&mo 5
+SEL	&mo 5
+NEW	&to 6
+MV	&mo 7
+	&tog 7
+BOX	&tog 8
+NM	&mo 8
+FN	&mo 9
+BTC	&bt BT_CLR
+BT1	&bt BT_SEL 0
+BT2	&bt BT_SEL 1
+BT3	&bt BT_SEL 2
+BT4	&bt BT_SEL 3
+RST	&sys_reset
+USB	&bootloader
+󰘵a	&hmlslow LALT A
+s	&hml LS(LC(LALT)) S
+󰆾s	&hltl 3 S
+󰘳d	&hml LCMD D
+󰘴f	&hml LCTRL F
+󰘴j	&hmr RCTRL J
+󰘳k	&hmr RCMD K
+l	&hmr LS(LC(LALT)) L
+󰘵:;	&hmr RALT &colonsemi
+󰘶󱁐	&hmr RSHIFT SPACE
+°	&degree_symbol
+′	&prime
+″	&double_prime
+–	&en_dash
+—	&em_dash
+‣	&triangular_bullet
+‘	&left_single_quote
+’	&right_single_quote
+“	&left_double_quote
+”	&right_double_quote
+×	&multiplication_sign
+÷	&division_sign
+∀	&for_all
+∃	&there_exists
+∅	&empty_set
+∈	&element_of
+∉	&not_element_of
+∎	&qed_motherfucker
+∏	&product
+∑	&sum
+Ω	&ohm
+µ	&micro
+∘	&ring
+∝	&proportional
+∞	&infinity
+∧	&logical_and
+∨	&logical_or
+∩	&intersection
+∪	&union
+≈	&almost_equal
+≤	&less_than_or_equal
+≥	&greater_than_or_equal
+≡	&identical_to
+≢	&not_identical_to
+╭	&box_upperleft
+╮	&box_upperright
+╯	&box_lowerright
+╰	&box_lowerleft
+─	&box_horizontal
+│	&box_vertical
+┼	&box_middle
+┴	&box_middlebottom
+┬	&box_middletop
+┤	&box_middleright
+├	&box_middleleft
+*	&kp STAR
+	&kp LG(LS(N4))
