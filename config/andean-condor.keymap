@@ -206,7 +206,7 @@ ZMK_COMBO(option_combo, &kp LALT, 4 5, ALL, 50)
 ZMK_COMBO(ret_combo, &kp RET, 19 21, ALL, 50)
 
 // SFT = J + K
-ZMK_COMBO(oneshot_space_combo, &sk LSHIFT, 19 20, ALL, 50)
+ZMK_COMBO(oneshot_shift_combo, &sk LSHIFT, 19 20, ALL, 50)
 
 // CAPSWORD = J + K + L
 ZMK_COMBO(capsword_combo, &caps_word, 19 20 21, ALL, 50)
