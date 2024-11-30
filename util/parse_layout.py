@@ -47,6 +47,8 @@ for i, s in enumerate(splitup):
         'k': name,
         'l': ['BASE'],
         'draw_separate': separate,
+        #  align: top
+        #  offset: 2
     })
 
 lines = open('layout.txt').read()
