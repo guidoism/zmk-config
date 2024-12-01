@@ -232,12 +232,12 @@ ZMK_LAYER(SEL,
  &none  &none  &none  &none  &none  &tog 8 &none  &none  &none  &none 
  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none 
  &trans &none  &none  &none  &none  &trans)
-ZMK_LAYER(,
+ZMK_LAYER(foo1,
  &none &none &none &none &none &none &none &none &none &none
  &none &kp F &kp R &kp E &kp E &none &none &none &none &none
  &none &none &none &none &none &none &none &none &none &none
  &none &none &none &none &none &none)
-ZMK_LAYER(,
+ZMK_LAYER(foo2,
  &none &none &none &none &none &none &none &none &none &none
  &none &none &none &none &none &none &none &none &none &none
  &none &none &none &none &none &none &none &none &none &none
