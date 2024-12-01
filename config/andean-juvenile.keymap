@@ -144,7 +144,9 @@ SIMPLE_MORPH(colonsemi, SFT, &kp COLON, &kp SEMI)
         bindings = <HOLD>, <TAP>; \
         hold-trigger-key-positions = <TRIGGER_POS>; \
         hold-trigger-on-release; \
-    )
+)
+
+/*
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
@@ -204,7 +206,7 @@ ZMK_COMBO(oneshot_shift_combo, &sk LSHIFT, 19 20, ALL, 50)
 // CAPSWORD = J + K + L
 ZMK_COMBO(capsword_combo, &caps_word, 19 20 21, ALL, 50)
 
-
+*/
 
 
 
