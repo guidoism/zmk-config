@@ -161,7 +161,6 @@ SIMPLE_MORPH(colonsemi, SFT, &kp COLON, &kp SEMI)
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
-/*
 ZMK_HOLD_TAP(hmlslow, 
     flavor = "balanced"; 
     tapping-term-ms = <280>; 
@@ -218,7 +217,6 @@ ZMK_COMBO(oneshot_shift_combo, &sk LSHIFT, 19 20, ALL, 50)
 // CAPSWORD = J + K + L
 ZMK_COMBO(capsword_combo, &caps_word, 19 20 21, ALL, 50)
 
-*/
 
 
 

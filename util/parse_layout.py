@@ -53,7 +53,8 @@ drawingcodes = {
 def split(s):
     return re.findall(r'\n?(.╭─+╮.+?╰─+╯)\w*', s, re.S)
 
-for i, s in enumerate(split(layers)):
+#for i, s in enumerate(split(layers)):
+for i, s in enumerate(split(combos)):
     # 1. Split apart into index, name, and list of rows
     lines = s.splitlines()
     top, middle, bottom = lines[0], lines[1:-1], lines[-1]
@@ -82,16 +83,9 @@ for i, s in enumerate(split(layers)):
         layer = '\n '.join(map(' '.join, rows))
         print(f"ZMK_LAYER({name},\n {layer})")
     elif outtype == 'drawing':
+        for r in rows:
+            print(r)
         #print(yaml.dump(config, default_flow_style=None, sort_keys=False))
-        pass
-
-quit()
-
-
-
-
-
-
 
 
 
@@ -110,20 +104,32 @@ for i, s in enumerate(split(combos)):
         elif m := re.match(r'.*│(.+)│.*', line):
             keys.extend(m.group(1).split())
     keys = [k for k, key in enumerate(keys) if key == '']
-    config['combos'].append({
+    d = {
         'p': keys,
         'k': name,
         'l': ['BASE'],
         'draw_separate': separate,
         #  align: top
         #  offset: 2
-    })
+    }
+    pp(d)
+    config['combos'].append(d)
 
+
+
+
+
+
+quit()
+
+
+    
 vmid = lambda t: t.split('\n')[1:-1]
 def hmid(s):
     if m := re.match(r'[\s\d]│(.+)│([^│]*)', s):
         return (m.group(1).split(), m.group(2))
-    
+
+
 keycodes = dict(k.split('\t') for k in keycodes.splitlines())
 
 #insides = [' '.join([hmid(s) for s in vmid(t)]) for t in splitup]
