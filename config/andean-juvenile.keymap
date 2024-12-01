@@ -146,10 +146,10 @@ SIMPLE_MORPH(colonsemi, SFT, &kp COLON, &kp SEMI)
         hold-trigger-on-release; \
 )
 
-/*
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
+/*
 ZMK_HOLD_TAP(hmlslow, 
     flavor = "balanced"; 
     tapping-term-ms = <280>; 
