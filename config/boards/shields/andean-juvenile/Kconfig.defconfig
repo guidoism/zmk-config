@@ -4,6 +4,6 @@
 if SHIELD_ANDEAN_JUVENILE
 
 config ZMK_KEYBOARD_NAME
-    default "Andean Condor Juvenile"
+    default "Andean Juvenile"
 
 endif
