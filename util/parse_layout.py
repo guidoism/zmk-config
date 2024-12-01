@@ -58,7 +58,7 @@ for i, s in enumerate(split(layers)):
     columns = [list(map(''.join, split_into(s, column_sizes))) for s in middle]
     segments = list(transpose(columns))
     index = ''.join([s.strip(' │') for s in segments[0]])
-    name = ''.join([s.strip(' │') for s in segments[2]])
+    name = ''.join([s.strip(' │') for s in segments[2]]) or f'layer_{i}'
     rows = [s.split() for s in segments[1]]
 
     # 2. Remove rows and columns based on intended keyboard size
