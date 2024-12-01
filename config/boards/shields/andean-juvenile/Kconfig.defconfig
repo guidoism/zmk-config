@@ -1,0 +1,9 @@
+# Copyright (c) 2023 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_ANDEAN_JUVENILE
+
+config ZMK_KEYBOARD_NAME
+    default "Andean Condor Juvenile"
+
+endif

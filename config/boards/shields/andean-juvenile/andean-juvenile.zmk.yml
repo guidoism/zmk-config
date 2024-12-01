@@ -1,0 +1,11 @@
+file_format: "1"
+id: andean-juvenile
+name: Andean Condor Juvenile
+type: shield
+url: https://github.com/guidoism/andean-condor-juvenile
+requires: [pro_micro]
+exposes:
+  - nice_view_spi
+features:
+  - keys
+  - display

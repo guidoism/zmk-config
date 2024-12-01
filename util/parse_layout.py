@@ -1,9 +1,12 @@
-import re, unicodedata, yaml, sys
+import re, unicodedata, yaml, sys, collections
 from pprint import pprint as pp
 
-if len(sys.argv) != 4:
-    print(f'Usage: {sys.argv[0]} columns rows thumbs')
-columns, rows, thumbs = map(int, sys.argv[1:])
+
+if len(sys.argv) != 5:
+    print(f'Usage: {sys.argv[0]} [drawing|firmware] columns rows thumbs')
+
+outtype = sys.argv[1]
+columns, rows, thumbs = map(int, sys.argv[2:])
 
 config = {
 'layout': {
@@ -75,31 +78,49 @@ keycodes = dict(k.split('\t') for k in keycodes.splitlines())
 #  - arrows to $$phosphor:bold/arrow-fat-up$$
 #  - P↑ to
 
-def replace(k):
+def drawingcodes(k):
     if k == '󰘴f': return {'t': 'f', 'h': 'CTRL'}
     if k == '󰘴j': return {'t': 'j', 'h': 'CTRL'}
     if k == '󰆢': return ''
-    if k == '󰿦': return ''
-    if k == '': return {'type': 'held'} # held
+    if k == '󰿦': return {'type': 'ghost'}
+    if k == '': return {'type': 'held'}
     return k
 
+entire_layers = collections.defaultdict(list)
 for i, t in enumerate(splitup):
     #print(f'LAYER {i}')
     layer = []
     name = f'layer_{i}'
     for j, s in enumerate(vmid(t)):
         middle, newname = hmid(s)
-        middle = [replace(k) for k in middle]
+        if outtype == 'drawing':
+            middle = [drawingcodes(k) for k in middle]
+        elif outtype == 'firmware':
+            middle = [keycodes[k] for k in middle]
         if newname:
             name = newname
+
         if j == 3: continue # we no longer use this row
         if j < 3: # top three rows
             if columns == 6:
                 layer.append(middle)
+                entire_layers[name].extend(middle)
                 #print(i, len(middle))
             elif columns == 5:
                 layer.append(middle[1:-1])
+                entire_layers[name].extend(middle[1:-1])
         else: # thumbs
             layer.extend(middle)
+            entire_layers[name].extend(middle)
     config['layers'][name] = layer
-print(yaml.dump(config, default_flow_style=None, sort_keys=False))
+
+if outtype == 'drawing':
+    print(yaml.dump(config, default_flow_style=None, sort_keys=False))
+elif outtype == 'firmware':
+    for name, layer in entire_layers.items():
+        layer = ' '.join(layer)
+        print(f"ZMK_LAYER({name}, {layer})")
+
+
+
+            
