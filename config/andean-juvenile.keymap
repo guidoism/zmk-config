@@ -114,6 +114,103 @@ ZMK_UNICODE_SINGLE(micro,                     N0, N0,  B, N5)   // µ  MICRO SIG
 
 
 
+// tap: sticky-shift | shift + tap/ double-tap: caps-word | hold: shift
+ZMK_BEHAVIOR(smart_shft, mod_morph,
+    bindings = <&sk LSHFT>, <&caps_word>;
+    mods = <(MOD_LSFT)>;
+)
+&caps_word {  // mods deactivate caps-word, requires PR #1451
+    /delete-property/ ignore-modifiers;
+};
+
+// reuse basic mod-morph scheme
+#define SIMPLE_MORPH(NAME, MOD, BINDING1, BINDING2) \
+    ZMK_MOD_MORPH(NAME, \
+        mods = <(MOD_L ## MOD|MOD_R ## MOD)>; \
+        bindings = <BINDING1>, <BINDING2>; \
+    )
+
+// tap: colon | shift + tap: semicolon
+SIMPLE_MORPH(colonsemi, SFT, &kp COLON, &kp SEMI)
+
+#define QUICK_TAP_MS 175
+
+#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
+    ZMK_HOLD_TAP(NAME, \
+        flavor = "balanced"; \
+        tapping-term-ms = <280>; \
+        quick-tap-ms = <QUICK_TAP_MS>; \
+        require-prior-idle-ms = <150>; \
+        bindings = <HOLD>, <TAP>; \
+        hold-trigger-key-positions = <TRIGGER_POS>; \
+        hold-trigger-on-release; \
+    )
+MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
+MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
+
+ZMK_HOLD_TAP(hmlslow, 
+    flavor = "balanced"; 
+    tapping-term-ms = <280>; 
+    quick-tap-ms = <280>; 
+    require-prior-idle-ms = <150>; 
+    bindings = <&kp>, <&kp>; 
+    hold-trigger-key-positions = <KEYS_R THUMBS>; 
+    hold-trigger-on-release; 
+)
+
+MAKE_HRM(hltl, &mo, &kp, KEYS_R THUMBS)  // left-hand HR layer-taps
+MAKE_HRM(hltr, &mo, &kp, KEYS_L THUMBS)  // right-hand HR layer-taps
+
+//MAKE_HRM(hml_repeat, &kp, &key_repeat, KEYS_R THUMBS)  // used for HRM-combo
+//MAKE_HRM(hmr_lpar_lt, &kp, &lpar_lt, KEYS_L THUMBS)    // "    "   "   "
+//MAKE_HRM(hmr_rpar_gt, &kp, &rpar_gt, KEYS_L THUMBS)    // "    "   "   "
+
+// tap: nothing | hold: symbol layer | cmd + hold: new layer
+ZMK_MOD_MORPH(sym_layer6,
+    bindings = <&mo 2>, <&mo 6>;
+    mods = <(MOD_LGUI|MOD_RGUI)>;
+)
+
+ZMK_BEHAVIOR(flip_buffer, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LC(X) &kp B &kp RET>;
+)
+
+// index on r u in FN layer within 100 milliseconds
+ZMK_COMBO(startbootloader,  &bootloader, 4 7, 9, 100)
+
+//////////////////////////////////////////////////////////
+// L E F T   H A N D
+
+// TAB = S + F
+ZMK_COMBO(tab_combo, &kp TAB, 14 16, ALL, 50)
+
+// MOV = D + F
+ZMK_COMBO(mov_combo, &mo 3, 15 16, ALL, 50)
+
+// OPT = R + T
+ZMK_COMBO(option_combo, &kp LALT, 4 5, ALL, 50)
+
+//////////////////////////////////////////////////////////
+// R I G H T   H A N D 
+
+// RET = J + L
+ZMK_COMBO(ret_combo, &kp RET, 19 21, ALL, 50)
+
+// SFT = J + K
+ZMK_COMBO(oneshot_shift_combo, &sk LSHIFT, 19 20, ALL, 50)
+
+// CAPSWORD = J + K + L
+ZMK_COMBO(capsword_combo, &caps_word, 19 20 21, ALL, 50)
+
+
+
+
+
+
+
+
 
 ZMK_LAYER(BASE,
     &kp Q        &kp W        &kp E        &kp R        &kp T        &kp Y        &kp U        &kp I        &kp O        &kp P    
