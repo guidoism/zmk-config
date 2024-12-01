@@ -7,6 +7,7 @@ on webpages.
 
 import re, unicodedata, yaml, sys, collections
 from pprint import pprint as pp
+from more_itertools import split_into, transpose
 
 if len(sys.argv) != 5:
     print(f'Usage: {sys.argv[0]} [drawing|firmware] columns rows thumbs')
@@ -38,15 +39,20 @@ config = {
 
 
 layers = open('layout.txt').read()
-keycodes = dict(k.strip().split('\t') for k in open('keycodes.tsv'))
 combos = open('combos.txt').read()
 
-#split_layers = lambda s: re.findall(r'\n?.╭─+╮(.+?)╰─+╯\w*', s, re.S)
+keycodes = dict(k.strip().split('\t') for k in open('keycodes.tsv'))
+drawingcodes = {
+    '󰘴f': {'t': 'f', 'h': 'CTRL'},
+    '󰘴j': {'t': 'j', 'h': 'CTRL'},
+    '󰆢': '',
+    '󰿦': {'type': 'ghost'},
+    '': {'type': 'held'},
+}
 
 def split(s):
     return re.findall(r'\n?(.╭─+╮.+?╰─+╯)\w*', s, re.S)
 
-from more_itertools import split_into, transpose
 for i, s in enumerate(split(layers)):
     # 1. Split apart into index, name, and list of rows
     lines = s.splitlines()
@@ -75,8 +81,16 @@ for i, s in enumerate(split(layers)):
         rows = [[k.center(maxlen) for k in r] for r in rows]
         layer = '\n '.join(map(' '.join, rows))
         print(f"ZMK_LAYER({name},\n {layer})")
+    elif outtype == 'drawing':
+        #print(yaml.dump(config, default_flow_style=None, sort_keys=False))
+        pass
 
 quit()
+
+
+
+
+
 
 
 
