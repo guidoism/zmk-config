@@ -19,7 +19,6 @@ assert columnslen in {5, 6}
 assert rowslen    in {3}
 assert thumbslen  in {3, 4}
 
-
 config = {
     'layout': {
         'ortho_layout': {
@@ -36,8 +35,6 @@ config = {
     ],
 }
 
-
-
 layers = open('layout.txt').read()
 combos = open('combos.txt').read()
 
@@ -53,9 +50,7 @@ drawingcodes = {
 def split(s):
     return re.findall(r'\n?(.╭─+╮.+?╰─+╯)\w*', s, re.S)
 
-#for i, s in enumerate(split(layers)):
-for i, s in enumerate(split(combos)):
-    # 1. Split apart into index, name, and list of rows
+def extract_middle(s):
     lines = s.splitlines()
     top, middle, bottom = lines[0], lines[1:-1], lines[-1]
     column_sizes = list(map(len, re.search(r'(.*╭)(─+)(╮.*)', top).groups()))
@@ -67,7 +62,12 @@ for i, s in enumerate(split(combos)):
     index = ''.join([s.strip(' │') for s in segments[0]])
     name = ''.join([s.strip(' │') for s in segments[2]]) or f'layer_{i}'
     rows = [s.split() for s in segments[1]]
+    return index, name, rows
 
+for i, s in enumerate(split(layers)): # for i, s in enumerate(split(combos)):
+    # 1. Split apart into index, name, and list of rows
+    index, name, rows = extract_middle(s)
+    
     # 2. Remove rows and columns based on intended keyboard size
     del rows[3] # We've given up on this row of thumb keys, too many keys clanky!
     if columnslen == 5:
