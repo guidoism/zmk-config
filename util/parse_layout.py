@@ -75,7 +75,7 @@ def whittle_down(rows):
     if columnslen == 5:
         rows = [r[1:-1] for r in rows[:3]] + rows[3:]
     if thumbslen == 3:
-        rows = rows[:3] + [rows[3][1:-1]]
+        rows[3][4:6] = []
     return rows
 
 for i, s in enumerate(split(combos)):
