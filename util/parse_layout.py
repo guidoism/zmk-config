@@ -74,27 +74,16 @@ def whittle_down(rows):
         rows = rows[:3] + [rows[3][1:-1]]
     return rows
 
-for i, s in enumerate(split(layers)):
-    index, name, rows = extract_middle(s)
-    rows = whittle_down(rows)
-    if outtype == 'firmware':
-        rows = [[keycodes[k] for k in r] for r in rows]
-        maxlen = min(12, max([max(map(len, r)) for r in rows]))
-        rows = [[k.center(maxlen) for k in r] for r in rows]
-        layer = '\n '.join(map(' '.join, rows))
-        print(f"ZMK_LAYER({name},\n {layer})")
-    elif outtype == 'drawing':
-        config['layers'][name] = [[drawingcodes.get(k, k) for k in r] for r in rows]
-
 for i, s in enumerate(split(combos)):
     index, name, rows = extract_middle(s)
     rows = whittle_down(rows)
-
+    name, separate, action = re.match(r'(\w+)(\*?)\((.+)\)', name).groups()
+    layer = 'ALL'
+    keysdown = [i for i, k in enumerate(flatten(rows)) if k == '']
     if outtype == 'firmware':
-        pass
+        keysdown = ' '.join(map(str, keysdown))
+        print(f"ZMK_COMBO({name.lower()}_combo, {action}, {keysdown}, {layer}, 50)")
     elif outtype == 'drawing':
-        name, separate = re.match(r'(\w+)(\*?)', name).groups()
-        keysdown = [i for i, k in enumerate(flatten(rows)) if k == '']
         d = {
             'p': keysdown,
             'k': name,
@@ -105,6 +94,19 @@ for i, s in enumerate(split(combos)):
 
 if outtype == 'drawing':
     print(yaml.dump(config, default_flow_style=None, sort_keys=False))
+
+for i, s in enumerate(split(layers)):
+    index, name, rows = extract_middle(s)
+    rows = whittle_down(rows)
+    if outtype == 'firmware':
+        rows = [[keycodes[k] for k in r] for r in rows]
+        maxlen = min(15, max([max(map(len, r)) for r in rows]))
+        rows = [[k.ljust(maxlen) for k in r] for r in rows]
+        layer = '\n '.join(map(' '.join, rows))
+        print(f"ZMK_LAYER({name},\n {layer})")
+    elif outtype == 'drawing':
+        config['layers'][name] = [[drawingcodes.get(k, k) for k in r] for r in rows]
+
 
 
 
