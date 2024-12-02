@@ -529,7 +529,7 @@ for s in codes.splitlines():
 Typing =C-q TAB= will insert a tab literal.
 
 #+name: keycodes-table
-#+begin_src tsv
+#+begin_src tsv :tangle keycodes.tsv
 0	&kp N0
 1	&kp N1
 2	&kp N2

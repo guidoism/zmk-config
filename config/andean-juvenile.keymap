@@ -136,8 +136,11 @@ ZMK_BEHAVIOR(flip_buffer, macro,
     bindings = <&kp LC(X) &kp B &kp RET>;
 )
 
-// index on r u in FN layer within 100 milliseconds
-ZMK_COMBO(startbootloader,  &bootloader, 4 7, 9, 100)
+ZMK_BEHAVIOR(clear_shell, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LC(C) &kp LG(O)>;
+)
 
 #include "andean-juvenile-layout.h"
 

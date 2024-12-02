@@ -35,10 +35,10 @@ ZMK_LAYER(SEL,
  &none  &none  &none  &none  &none  &none  &none  &none  &none  &none 
  &trans &none  &none  &none  &none  &trans)
 ZMK_LAYER(layer_6,
- &none &none &none &none &none &none &none &none &none &none
- &none &kp F &kp R &kp E &kp E &none &none &none &none &none
- &none &none &none &none &none &none &none &none &none &none
- &none &none &none &none &none &none)
+ &none       &none       &none       &none       &none       &none       &none       &none       &none       &bootloader
+ &none       &kp F       &kp R       &kp E       &kp E       &none       &none       &none       &none       &none      
+ &none       &none       &none       &none       &none       &none       &none       &none       &none       &none      
+ &none       &none       &none       &none       &none       &none      )
 ZMK_LAYER(layer_7,
  &none &none &none &none &none &none &none &none &none &none
  &none &none &none &none &none &none &none &none &none &none
@@ -51,6 +51,6 @@ ZMK_LAYER(BOX,
  &kp LCMD        &none           &none           &none           &none           &none          )
 ZMK_LAYER(FN,
  &kp ESC        &kp F1         &kp F2         &kp F3         &kp F4         &kp F5         &kp F6         &kp F7         &kp F8         &kp F9        
- &none          &flip_buffer   &kp LC(LG(N0)) &kp LC(LG(N1)) &none          &none          &kp LC(LG(N2)) &kp LC(LG(N3)) &kp LG(O)      &none         
+ &none          &flip_buffer   &kp LC(LG(N0)) &kp LC(LG(N1)) &none          &clear_shell   &kp LC(LG(N2)) &kp LC(LG(N3)) &kp LG(O)      &none         
  &kp F10        &kp F11        &kp F12        &kp F13        &kp F14        &kp F15        &kp F16        &kp F17        &kp F18        &kp LG(LS(N4))
  &trans         &none          &none          &none          &none          &trans        )
