@@ -187,7 +187,7 @@ ZMK_BEHAVIOR(flip_buffer, macro,
 ZMK_BEHAVIOR(clear_shell, macro,
     wait-ms = <100>;
     tap-ms = <5>;
-    bindings = <&kp LC(C) &kp LG(o)>;
+    bindings = <&kp LC(C) &kp LG(O)>;
 )
 
 // index on r u in FN layer within 100 milliseconds

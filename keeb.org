@@ -13,8 +13,8 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 - [ ] Make way to memorize keystrokes with spaced-repetition
 - [X] Add new layer using same thumbs as function layer
 - [ ] Add =keymap draw keymap-drawer.yaml > pretty/layout.svg=
-- [ ] Macro key for clear shell screen (CLS): C-c M-o
-- [ ] Macro key for comment out python code (CMT): # C-a down
+- [X] Macro key for clear shell screen (CLS): C-c M-o
+- [ ] Macro key for comment out python code (CMT)...maybe?: # C-a down
   
 
 ** Other keyboards
@@ -283,7 +283,7 @@ ZMK_BEHAVIOR(flip_buffer, macro,
 ZMK_BEHAVIOR(clear_shell, macro,
     wait-ms = <100>;
     tap-ms = <5>;
-    bindings = <&kp LC(C) &kp LG(o)>;
+    bindings = <&kp LC(C) &kp LG(O)>;
 )
 
 // index on r u in FN layer within 100 milliseconds
