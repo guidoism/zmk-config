@@ -7,7 +7,7 @@ on webpages.
 
 import re, unicodedata, yaml, sys, collections
 from pprint import pprint as pp
-from more_itertools import split_into, transpose
+from more_itertools import split_into, transpose, flatten
 
 if len(sys.argv) != 5:
     print(f'Usage: {sys.argv[0]} [drawing|firmware] columns rows thumbs')
@@ -83,117 +83,135 @@ for i, s in enumerate(split(combos)):
         layer = '\n '.join(map(' '.join, rows))
         print(f"ZMK_LAYER({name},\n {layer})")
     elif outtype == 'drawing':
-        for r in rows:
-            print(r)
-        #print(yaml.dump(config, default_flow_style=None, sort_keys=False))
-
-
-
-for i, s in enumerate(split(combos)):
-    keys = []
-    for j, line in enumerate(s.splitlines()):
-        if j == 4: continue
-        if m := re.match(r'.*│(.+)│(\w+)\*.*', line):
-            name = m.group(2)
-            separate = True
-            keys.extend(m.group(1).split())
-        elif m := re.match(r'.*│(.+)│(\w+).*', line):
-            name = m.group(2)
-            separate = False
-            keys.extend(m.group(1).split())
-        elif m := re.match(r'.*│(.+)│.*', line):
-            keys.extend(m.group(1).split())
-    keys = [k for k, key in enumerate(keys) if key == '']
-    d = {
-        'p': keys,
-        'k': name,
-        'l': ['BASE'],
-        'draw_separate': separate,
-        #  align: top
-        #  offset: 2
-    }
-    pp(d)
-    config['combos'].append(d)
-
-
-
-
-
-
-quit()
-
-
-    
-vmid = lambda t: t.split('\n')[1:-1]
-def hmid(s):
-    if m := re.match(r'[\s\d]│(.+)│([^│]*)', s):
-        return (m.group(1).split(), m.group(2))
-
-
-keycodes = dict(k.split('\t') for k in keycodes.splitlines())
-
-#insides = [' '.join([hmid(s) for s in vmid(t)]) for t in splitup]
-#for i, layer in enumerate(insides):
-#    #codes = ' '.join([keycodes[k] for k in layer.split()])
-#    # print(f"ZMK_LAYER(layer_{i}, {codes})")
-#    for k in layer.split():
-#        print(k, keycodes[k])
-
-
-# TODO: change
-#  - 󰘴f to {t: f, h: CTRL}
-#  - arrows to $$phosphor:bold/arrow-fat-up$$
-#  - P↑ to
-
-# This is basically just like keycodes.tsv
-def drawingcodes(k):
-    if k == '󰘴f': return {'t': 'f', 'h': 'CTRL'}
-    if k == '󰘴j': return {'t': 'j', 'h': 'CTRL'}
-    if k == '󰆢': return ''
-    if k == '󰿦': return {'type': 'ghost'}
-    if k == '': return {'type': 'held'}
-    return k
-
-
-
-
-splitup = re.findall(r'\n?(.╭─+╮.+?╰─+╯)\w*', layers, re.S)
-
-
-entire_layers = collections.defaultdict(list)
-for i, t in enumerate(splitup):
-    #print(f'LAYER {i}')
-    print(t)
-    quit()
-    layer = []
-    name = f'layer_{i}'
-    for j, s in enumerate(vmid(t)):
-        middle, newname = hmid(s)
-        if outtype == 'drawing':
-            middle = [drawingcodes(k) for k in middle]
-        elif outtype == 'firmware':
-            middle = [keycodes[k] for k in middle]
-        if newname:
-            name = newname
-
-        if j == 3: continue # we no longer use this row
-        if j < 3: # top three rows
-            if columns == 6:
-                layer.append(middle)
-                entire_layers[name].extend(middle)
-            elif columns == 5:
-                layer.append(middle[1:-1])
-                entire_layers[name].extend(middle[1:-1])
-        else: # thumbs
-            if thumbs == 3:
-                middle = middle[1:-1]
-            layer.extend(middle)
-            entire_layers[name].extend(middle)
-    config['layers'][name] = layer
+        name, separate = re.match(r'(\w+)(\*?)', name).groups()
+        keysdown = [i for i, k in enumerate(flatten(rows)) if k == '']
+        d = {
+            'p': keysdown,
+            'k': name,
+            'l': ['BASE'],
+            'draw_separate': bool(separate),
+        }
+        config['combos'].append(d)
+        config['layers'][name] = [[drawingcodes.get(k, k) for k in r] for r in rows]
 
 if outtype == 'drawing':
     print(yaml.dump(config, default_flow_style=None, sort_keys=False))
-elif outtype == 'firmware':
-    for name, layer in entire_layers.items():
-        layer = ' '.join(layer)
-        print(f"ZMK_LAYER({name}, {layer})")
+
+
+
+
+
+
+        
+
+quit()
+
+# for i, s in enumerate(split(combos)):
+#     keys = []
+#     for j, line in enumerate(s.splitlines()):
+#         if j == 4: continue
+#         if m := re.match(r'.*│(.+)│(\w+)\*.*', line):
+#             name = m.group(2)
+#             separate = True
+#             keys.extend(m.group(1).split())
+#         elif m := re.match(r'.*│(.+)│(\w+).*', line):
+#             name = m.group(2)
+#             separate = False
+#             keys.extend(m.group(1).split())
+#         elif m := re.match(r'.*│(.+)│.*', line):
+#             keys.extend(m.group(1).split())
+#     keys = [k for k, key in enumerate(keys) if key == '']
+#     d = {
+#         'p': keys,
+#         'k': name,
+#         'l': ['BASE'],
+#         'draw_separate': separate,
+#         #  align: top
+#         #  offset: 2
+#     }
+#     pp(d)
+#     config['combos'].append(d)
+# 
+# 
+# 
+# 
+# 
+# 
+# quit()
+# 
+# 
+#     
+# vmid = lambda t: t.split('\n')[1:-1]
+# def hmid(s):
+#     if m := re.match(r'[\s\d]│(.+)│([^│]*)', s):
+#         return (m.group(1).split(), m.group(2))
+# 
+# 
+# keycodes = dict(k.split('\t') for k in keycodes.splitlines())
+# 
+# #insides = [' '.join([hmid(s) for s in vmid(t)]) for t in splitup]
+# #for i, layer in enumerate(insides):
+# #    #codes = ' '.join([keycodes[k] for k in layer.split()])
+# #    # print(f"ZMK_LAYER(layer_{i}, {codes})")
+# #    for k in layer.split():
+# #        print(k, keycodes[k])
+# 
+# 
+# # TODO: change
+# #  - 󰘴f to {t: f, h: CTRL}
+# #  - arrows to $$phosphor:bold/arrow-fat-up$$
+# #  - P↑ to
+# 
+#  This is basically just like keycodes.tsv
+# def drawingcodes(k):
+#     if k == '󰘴f': return {'t': 'f', 'h': 'CTRL'}
+#     if k == '󰘴j': return {'t': 'j', 'h': 'CTRL'}
+#     if k == '󰆢': return ''
+#     if k == '󰿦': return {'type': 'ghost'}
+#     if k == '': return {'type': 'held'}
+#     return k
+# 
+# 
+# 
+# 
+# splitup = re.findall(r'\n?(.╭─+╮.+?╰─+╯)\w*', layers, re.S)
+# 
+# 
+# entire_layers = collections.defaultdict(list)
+# for i, t in enumerate(splitup):
+#     #print(f'LAYER {i}')
+#     print(t)
+#     quit()
+#     layer = []
+#     name = f'layer_{i}'
+#     for j, s in enumerate(vmid(t)):
+#         middle, newname = hmid(s)
+#         if outtype == 'drawing':
+#             middle = [drawingcodes(k) for k in middle]
+#         elif outtype == 'firmware':
+#             middle = [keycodes[k] for k in middle]
+#         if newname:
+#             name = newname
+# 
+#         if j == 3: continue # we no longer use this row
+#         if j < 3: # top three rows
+#             if columns == 6:
+#                 layer.append(middle)
+#                 entire_layers[name].extend(middle)
+#             elif columns == 5:
+#                 layer.append(middle[1:-1])
+#                 entire_layers[name].extend(middle[1:-1])
+#         else: # thumbs
+#             if thumbs == 3:
+#                 middle = middle[1:-1]
+#             layer.extend(middle)
+#             entire_layers[name].extend(middle)
+#     config['layers'][name] = layer
+# 
+# if outtype == 'drawing':
+#     print(yaml.dump(config, default_flow_style=None, sort_keys=False))
+# elif outtype == 'firmware':
+#     for name, layer in entire_layers.items():
+#         layer = ' '.join(layer)
+#         print(f"ZMK_LAYER({name}, {layer})")
+# 
