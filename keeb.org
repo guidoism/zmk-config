@@ -669,7 +669,7 @@ Bu3	&kp LC(LG(N3))
 󱃗	&kp LG(O)
 OTH	&kp LG(O)
 FLP	&kp LS(LG(O))
-CLS     &clear_shell
+CLS	&clear_shell
 󰿦	&none
 󰆢	&none
 	&trans

@@ -42,6 +42,7 @@ keycodes = dict(k.strip().split('\t') for k in open('keycodes.tsv'))
 drawingcodes = {
     '󰘴f': {'t': 'f', 'h': 'CTRL'},
     '󰘴j': {'t': 'j', 'h': 'CTRL'},
+    '󰘶󱁐': {'t': '$$mdi:keyboard-space$$', 'h': 'SHIFT'},
     '󰆢': '',
     '󰿦': {'type': 'ghost'},
     '': {'type': 'held'},
@@ -92,9 +93,6 @@ for i, s in enumerate(split(combos)):
         }
         config['combos'].append(d)
 
-if outtype == 'drawing':
-    print(yaml.dump(config, default_flow_style=None, sort_keys=False))
-
 for i, s in enumerate(split(layers)):
     index, name, rows = extract_middle(s)
     rows = whittle_down(rows)
@@ -106,6 +104,9 @@ for i, s in enumerate(split(layers)):
         print(f"ZMK_LAYER({name},\n {layer})")
     elif outtype == 'drawing':
         config['layers'][name] = [[drawingcodes.get(k, k) for k in r] for r in rows]
+
+if outtype == 'drawing':
+    print(yaml.dump(config, default_flow_style=None, sort_keys=False))
 
 
 
