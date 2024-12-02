@@ -1,7 +1,8 @@
 
 To build:
  1. =C-c C-v t= to tangle
- 2. Commit and push
+ 2. make
+ 3. Commit and push
 
 Remember that =x= is the *ring finger* and =c= is the middle finger.
 
@@ -12,8 +13,8 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 - [ ] Make way to memorize keystrokes with spaced-repetition
 - [X] Add new layer using same thumbs as function layer
 - [ ] Add =keymap draw keymap-drawer.yaml > pretty/layout.svg=
-- [ ] Macro key for clear shell screen 
-- [ ] Macro key for comment out python code
+- [ ] Macro key for clear shell screen (CLS): C-c M-o
+- [ ] Macro key for comment out python code (CMT): # C-a down
   
 
 ** Other keyboards
@@ -168,7 +169,7 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦   ESC  F1   F2   F3   F4       F5   F6   F7   F8   F9    󰿦   │
- │ 󰿦    󰆢    󱢍    󰅗    󰍵    󰆢        󰆢    󰇽    󰿋    󱃗    󰆢    󰿦   │
+ │ 󰿦    󰆢    󱢍    󰅗    󰍵    󰆢       CLS   󰇽    󰿋    󱃗    󰆢    󰿦   │
 9│ 󰿦   F10  F11  F12  F13  F14      F15  F16  F17  F18       󰿦   │FN
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦        󰆢    󰆢        󰆢    󰆢        󰿦             │
@@ -277,6 +278,12 @@ ZMK_BEHAVIOR(flip_buffer, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LC(X) &kp B &kp RET>;
+)
+
+ZMK_BEHAVIOR(clear_shell, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LC(C) &kp LG(o)>;
 )
 
 // index on r u in FN layer within 100 milliseconds
@@ -662,6 +669,7 @@ Bu3	&kp LC(LG(N3))
 󱃗	&kp LG(O)
 OTH	&kp LG(O)
 FLP	&kp LS(LG(O))
+CLS     &clear_shell
 󰿦	&none
 󰆢	&none
 	&trans
