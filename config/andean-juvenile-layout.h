@@ -16,7 +16,7 @@ ZMK_LAYER(NUM,
  &kp LCMD        &trans          &none           &none           &hmr RSHIFT SPACE &none          )
 ZMK_LAYER(SYM,
  &left_double_quote &right_double_quote &left_single_quote &right_single_quote &double_prime   &micro          &ohm            &none           &none           &none          
- &kp LBKT        &kp RBKT        &kp LPAR        &kp RPAR        &prime          &none           &kp MINUS       &kp EQUAL       &none           &kp PIPE       
+ &kp LBKT        &kp RBKT        &kp LPAR        &kp RPAR        &prime          &kp TILDE       &kp MINUS       &kp EQUAL       &none           &kp PIPE       
  &kp LT          &kp GT          &kp LBRC        &kp RBRC        &kp GRAVE       &none           &none           &none           &none           &kp BACKSLASH  
  &mo 9           &none           &none           &none           &hmr RSHIFT SPACE &trans         )
 ZMK_LAYER(MOV,

@@ -7,10 +7,11 @@ on webpages.
 
 import re, unicodedata, yaml, sys, collections
 from pprint import pprint as pp
-from more_itertools import split_into, transpose, flatten
+from itertools import chain
+from more_itertools import split_into, transpose, flatten, divide
 
 if len(sys.argv) != 5:
-    print(f'Usage: {sys.argv[0]} [drawing|firmware] columns rows thumbs')
+    print(f'Usage: {sys.argv[0]} [drawing|firmware|status] columns rows thumbs')
 
 outtype = sys.argv[1]
 columnslen, rowslen, thumbslen = map(int, sys.argv[2:])
@@ -28,7 +29,9 @@ config = {
             'thumbs': thumbslen,
         },
     },
-    #'draw_config': {'n_columns': 2,},
+    'draw_config': {
+        'n_columns': 2,
+    },
     'layers': {
     },
     'combos': [
@@ -104,6 +107,17 @@ for i, s in enumerate(split(layers)):
         print(f"ZMK_LAYER({name},\n {layer})")
     elif outtype == 'drawing':
         config['layers'][name] = [[drawingcodes.get(k, k) for k in r] for r in rows]
+    elif outtype == 'status':
+        rows.insert(3, [])
+        width = columnslen * 2 * 5
+        print(' ╭' + '─' * (width+5) + '╮')
+        for j, row in enumerate(rows):
+            prefix = f'{i}│' if j == 2 else ' │'
+            middle = (''.join([k.center(5) for k in row])).center(width)
+            left, right = divide(2, middle)
+            middle = ''.join(chain(left, ' '*5, right))
+            print(prefix + middle + '│')
+        print(' ╰' + '─' * (width+5) + '╯')
 
 if outtype == 'drawing':
     print(yaml.dump(config, default_flow_style=None, sort_keys=False))

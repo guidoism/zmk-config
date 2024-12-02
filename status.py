@@ -2,7 +2,7 @@ import json, subprocess, serial, re, rich, rich.console, os, sys, time
 from copy import copy
 from pprint import pprint as pp
 from more_itertools import chunked
-updated = os.stat('layout.txt').st_mtime
+updated = os.stat('status-layout.txt').st_mtime
 
 POSITIONS = """
  ╭────────────────────────────────────────────────────────────────╮
@@ -16,7 +16,7 @@ POSITIONS = """
 
 
 def load_layers():
-    layers = list(chunked(open('layout.txt').read().split('\n'), 7))
+    layers = list(chunked(open('status-layout.txt').read().split('\n'), 7))
     layers = ['\n'.join([s[:67] for s in l]) for l in layers]
     layers = [re.sub(r'([│╰╯─╭╮]+)', r'[bold turquoise2]\1[/]', layer) for layer in layers]
     layers = [re.sub(r'([󰆢])', r'[dim]\1[/]', layer) for layer in layers]
@@ -95,8 +95,8 @@ while True:
                 con.print(layer)
                 con.print('\n'.join((f'{k}  {v}' for k, v in shortcuts.items())))
         
-                if os.stat('layout.txt').st_mtime > updated:
-                    updated = os.stat('layout.txt').st_mtime
+                if os.stat('status-layout.txt').st_mtime > updated:
+                    updated = os.stat('status-layout.txt').st_mtime
                     layers = load_layers()
         
             if m := re.search(r'GUIDO: Modifiers set to 0x(\d\d)', s.decode()):
