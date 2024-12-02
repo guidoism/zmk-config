@@ -5,25 +5,25 @@ ZMK_COMBO(ret_combo, &kp RET, 16 18, ALL, 50)
 ZMK_COMBO(sft_combo, &sk LSHIFT, 16 17, ALL, 50)
 ZMK_COMBO(caps_combo, &caps_word, 16 17 18, ALL, 50)
 ZMK_LAYER(BASE,
- &kp Q        &kp W        &kp E        &kp R        &kp T        &kp Y        &kp U        &kp I        &kp O        &kp P       
- &kp A        &kp S        &kp D        &hml LCTRL F &kp G        &kp H        &hmr RCTRL J &kp K        &kp L        &colonsemi  
- &kp Z        &kp X        &kp C        &kp V        &kp B        &kp N        &kp M        &kp COMMA    &kp DOT      &kp SLASH   
- &none        &kp LCMD     &mo 1        &mo 3        &sym_layer6  &none       )
+ &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P          
+ &kp A           &kp S           &kp D           &hml LCTRL F    &kp G           &kp H           &hmr RCTRL J    &kp K           &kp L           &colonsemi     
+ &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH      
+ &none           &kp LCMD        &mo 1           &hmr RSHIFT SPACE &sym_layer6     &none          )
 ZMK_LAYER(NUM,
  &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PERCENT     &kp CARET       &kp N7          &kp N8          &kp N9          &degree_symbol 
  &kp DQT         &kp AMPS        &kp STAR        &kp UNDER       &kp N0          &kp PLUS        &kp N4          &kp N5          &kp N6          &kp SQT        
  &multiplication_sign &division_sign  &kp EQUAL       &kp MINUS       &kp DOT         &none           &kp N1          &kp N2          &kp N3          &kp SLASH      
- &kp RALT        &kp LCMD        &trans          &none           &none           &none          )
+ &kp RALT        &kp LCMD        &trans          &hmr RSHIFT SPACE &none           &none          )
 ZMK_LAYER(SYM,
  &left_double_quote &right_double_quote &left_single_quote &right_single_quote &double_prime   &micro          &ohm            &none           &none           &none          
  &kp LBKT        &kp RBKT        &kp LPAR        &kp RPAR        &prime          &kp TILDE       &kp MINUS       &kp EQUAL       &none           &kp PIPE       
  &kp LT          &kp GT          &kp LBRC        &kp RBRC        &kp GRAVE       &none           &none           &none           &none           &kp BACKSLASH  
- &kp RALT        &mo 9           &none           &none           &trans          &none          )
+ &kp RALT        &mo 9           &none           &hmr RSHIFT SPACE &trans          &none          )
 ZMK_LAYER(MOV,
- &none        &none        &kp LG(LBRC) &kp LG(RBRC) &none        &kp ESC      &kp PGUP     &kp UP       &kp PGDN     &none       
- &none        &none        &kp LG(B)    &kp LG(F)    &none        &kp BSPC     &kp LEFT     &kp DOWN     &kp RIGHT    &kp LG(M)   
- &none        &none        &none        &none        &none        &none        &kp HOME     &none        &kp END      &none       
- &kp RALT     &kp LCMD     &mo 1        &trans       &none        &none       )
+ &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &none           &kp ESC         &kp PGUP        &kp UP          &kp PGDN        &none          
+ &none           &none           &kp LG(B)       &kp LG(F)       &none           &kp BSPC        &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(M)      
+ &none           &none           &none           &none           &none           &none           &kp HOME        &none           &kp END         &none          
+ &kp RALT        &kp LCMD        &mo 1           &hmr RSHIFT SPACE &none           &none          )
 ZMK_LAYER(GAM,
  &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp Y       &kp U       &kp UP      &kp O       &kp P      
  &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &kp LEFT    &kp DOWN    &kp RIGHT   &kp I      
