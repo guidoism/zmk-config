@@ -52,7 +52,13 @@ drawingcodes = {
     '': {'type': 'held'},
     'L←': '$$mdi:chevron-double-left$$',
     'L→': '$$mdi:chevron-double-right$$',
+    'P↑': 'PGUP',
+    'P↓': 'PGDN',
 }
+
+# │ESC   󰆢    󰆢   ¶←   ¶→    󰆢       ESC  P↑    ↑   P↓    󰆢    󰆢   │
+# │ 󰆢    󰆢    󰆢   W←   W→    󰆢       BS    ←    ↓    →    󰞷    󰆢   │
+
 
 def split(s):
     return re.findall(r'\n?(.╭─+╮.+?╰─+╯)\w*', s, re.S)

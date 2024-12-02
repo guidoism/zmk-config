@@ -30,10 +30,20 @@ ZMK_LAYER(NAV,
  &none           &none           &none           &none           &none           &none           &none           &none           &none           &none          
  &none           &kp LCMD        &trans          &hmr RSHIFT SPACE &none           &none          )
 ZMK_LAYER(layer_5,
+ &none &none &none &none &none &none &none &none &none &none
+ &none &none &none &none &none &none &none &none &none &none
+ &none &none &none &none &none &none &none &none &none &none
+ &none &none &none &none &none &none)
+ZMK_LAYER(layer_6,
  &none       &none       &none       &none       &none       &none       &none       &none       &none       &bootloader
  &none       &kp F       &kp R       &kp E       &kp E       &none       &none       &none       &none       &none      
  &none       &none       &none       &none       &none       &none       &none       &none       &none       &none      
  &none       &none       &none       &none       &none       &none      )
+ZMK_LAYER(layer_7,
+ &none &none &none &none &none &none &none &none &none &none
+ &none &none &none &none &none &none &none &none &none &none
+ &none &none &none &none &none &none &none &none &none &none
+ &none &none &none &none &none &none)
 ZMK_LAYER(BOX,
  &none           &none           &box_upperleft  &box_upperright &none           &none           &none           &none           &none           &none          
  &box_horizontal &box_vertical   &box_lowerleft  &box_lowerright &none           &tog 8          &none           &none           &none           &none          
