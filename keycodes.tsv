@@ -116,8 +116,8 @@ P↓	&kp PGDN
 󰞔	&kp END
 W←	&kp LG(B)
 W→	&kp LG(F)
-λ←	&kp LC(LG(B))
-λ→	&kp LC(LG(F))
+L←	&kp LC(LG(B))
+L→	&kp LC(LG(F))
 ¶←	&kp LG(LBRC)
 ¶→	&kp LG(RBRC)
 S←	&kp LG(A)
@@ -152,6 +152,7 @@ M₃	&mo 3
 MOV	&mo 3
 M₄	&mo 4
 GAM	&tog 4
+NAV	&mo 4
 FUN	&mo 9
 M₅	&mo 5
 LIN	&mo 5

@@ -13,42 +13,32 @@ ZMK_LAYER(NUM,
  &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PERCENT     &kp CARET       &kp N7          &kp N8          &kp N9          &degree_symbol 
  &kp DQT         &kp AMPS        &kp STAR        &kp UNDER       &kp N0          &kp PLUS        &kp N4          &kp N5          &kp N6          &kp SQT        
  &multiplication_sign &division_sign  &kp EQUAL       &kp MINUS       &kp DOT         &none           &kp N1          &kp N2          &kp N3          &kp SLASH      
- &kp RALT        &kp LCMD        &trans          &hmr RSHIFT SPACE &none           &none          )
+ &none           &kp LCMD        &trans          &hmr RSHIFT SPACE &none           &none          )
 ZMK_LAYER(SYM,
  &left_double_quote &right_double_quote &left_single_quote &right_single_quote &double_prime   &micro          &ohm            &none           &none           &none          
  &kp LBKT        &kp RBKT        &kp LPAR        &kp RPAR        &prime          &kp TILDE       &kp MINUS       &kp EQUAL       &none           &kp PIPE       
  &kp LT          &kp GT          &kp LBRC        &kp RBRC        &kp GRAVE       &none           &none           &none           &none           &kp BACKSLASH  
- &kp RALT        &mo 9           &none           &hmr RSHIFT SPACE &trans          &none          )
+ &none           &mo 9           &none           &hmr RSHIFT SPACE &trans          &none          )
 ZMK_LAYER(MOV,
  &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &none           &kp ESC         &kp PGUP        &kp UP          &kp PGDN        &none          
  &none           &none           &kp LG(B)       &kp LG(F)       &none           &kp BSPC        &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(M)      
  &none           &none           &none           &none           &none           &none           &kp HOME        &none           &kp END         &none          
- &kp RALT        &kp LCMD        &mo 1           &hmr RSHIFT SPACE &none           &none          )
-ZMK_LAYER(GAM,
- &kp ESC     &kp Q       &kp W       &kp E       &kp R       &kp Y       &kp U       &kp UP      &kp O       &kp P      
- &kp TAB     &kp A       &kp S       &kp D       &kp F       &kp G       &kp LEFT    &kp DOWN    &kp RIGHT   &kp I      
- &kp L       &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M       &kp H       &kp J      
- &kp RALT    &smart_shft &kp SPACE   &none       &none       &none      )
-ZMK_LAYER(SEL,
- &none  &none  &none  &none  &none  &none  &none  &none  &none  &none 
- &none  &none  &none  &none  &none  &tog 8 &none  &none  &none  &none 
- &none  &none  &none  &none  &none  &none  &none  &none  &none  &none 
- &none  &trans &none  &none  &trans &none )
-ZMK_LAYER(layer_6,
+ &none           &kp LCMD        &mo 4           &hmr RSHIFT SPACE &none           &none          )
+ZMK_LAYER(NAV,
+ &none           &none           &none           &none           &none           &none           &kp LC(LG(B))   &kp LC(LG(F))   &none           &none          
+ &none           &none           &none           &none           &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &kp LG(B)       &kp LG(F)      
+ &none           &none           &none           &none           &none           &none           &none           &none           &none           &none          
+ &none           &kp LCMD        &trans          &hmr RSHIFT SPACE &none           &none          )
+ZMK_LAYER(layer_5,
  &none       &none       &none       &none       &none       &none       &none       &none       &none       &bootloader
  &none       &kp F       &kp R       &kp E       &kp E       &none       &none       &none       &none       &none      
  &none       &none       &none       &none       &none       &none       &none       &none       &none       &none      
  &none       &none       &none       &none       &none       &none      )
-ZMK_LAYER(layer_7,
- &none &none &none &none &none &none &none &none &none &none
- &none &none &none &none &none &none &none &none &none &none
- &none &none &none &none &none &none &none &none &none &none
- &none &none &none &none &none &none)
 ZMK_LAYER(BOX,
  &none           &none           &box_upperleft  &box_upperright &none           &none           &none           &none           &none           &none          
  &box_horizontal &box_vertical   &box_lowerleft  &box_lowerright &none           &tog 8          &none           &none           &none           &none          
  &box_middle     &box_middlebottom &box_middletop  &box_middleright &box_middleleft &none           &none           &none           &none           &none          
- &kp RALT        &kp LCMD        &none           &none           &none           &none          )
+ &none           &kp LCMD        &none           &none           &none           &none          )
 ZMK_LAYER(FN,
  &kp ESC        &kp F1         &kp F2         &kp F3         &kp F4         &kp F5         &kp F6         &kp F7         &kp F8         &kp F9        
  &none          &flip_buffer   &kp LC(LG(N0)) &kp LC(LG(N1)) &none          &clear_shell   &kp LC(LG(N2)) &kp LC(LG(N3)) &kp LG(O)      &none         

@@ -31,6 +31,7 @@ config = {
     },
     'draw_config': {
         'n_columns': 2,
+        'append_colon_to_layer_header': False,
     },
     'layers': {
     },
@@ -49,6 +50,8 @@ drawingcodes = {
     '󰆢': '',
     '󰿦': {'type': 'ghost'},
     '': {'type': 'held'},
+    'L←': '$$mdi:chevron-double-left$$',
+    'L→': '$$mdi:chevron-double-right$$',
 }
 
 def split(s):
