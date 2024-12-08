@@ -27,7 +27,7 @@ ZMK_LAYER(MOV,
 ZMK_LAYER(NAV,
  &none           &none           &none           &none           &none           &none           &kp LC(LG(B))   &kp LC(LG(F))   &none           &none          
  &none           &none           &none           &none           &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &kp LG(B)       &kp LG(F)      
- &none           &none           &none           &none           &none           &none           &none           &none           &none           &none          
+ &none           &none           &none           &none           &none           &none           &kp LA(LG(LEFT)) &kp LA(LG(RIGHT)) &none           &none          
  &none           &kp LCMD        &trans          &hmr RSHIFT SPACE &none           &none          )
 ZMK_LAYER(layer_5,
  &none &none &none &none &none &none &none &none &none &none

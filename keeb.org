@@ -135,7 +135,7 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    L←   L→   󰆢    󰆢    󰆢   │
  │ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    ¶←   ¶→   W←   W→   󰆢   │
-4│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │NAV
+4│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    T←   T→   󰆢    󰆢    󰆢   │NAV
  │                     󰆢    󰆢        󰆢    󰆢                       │
  │           󰿦   CMD               󰿦   󰘶󱁐    󰆢    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
@@ -654,6 +654,8 @@ L→	&kp LC(LG(F))
 ¶→	&kp LG(RBRC)
 S←	&kp LG(A)
 S→	&kp LG(E)
+T←	&kp LA(LG(LEFT))
+T→	&kp LA(LG(RIGHT))
 UND	&kp LC(SLASH)
 BEG	&kp LG(M)
 󰞷	&kp LG(M)
