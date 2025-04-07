@@ -64,6 +64,7 @@ CMD	&kp LCMD
 TAB	&kp TAB
 RET	&kp RET
 ESC	&kp ESC
+DEL	&kp DEL
 BS	&kp BSPC
 /	&kp SLASH
 /?	&kp SLASH
@@ -140,6 +141,7 @@ Bu3	&kp LC(LG(N3))
 OTH	&kp LG(O)
 FLP	&kp LS(LG(O))
 CLS	&clear_shell
+SPL	&kp LG(DOLLAR)
 󰿦	&none
 󰆢	&none
 	&trans
@@ -227,5 +229,7 @@ USB	&bootloader
 ┬	&box_middletop
 ┤	&box_middleright
 ├	&box_middleleft
+²	&superscript_2
+³	&superscript_3
 *	&kp STAR
 	&kp LG(LS(N4))

@@ -15,7 +15,10 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 - [X] Add =keymap draw keymap-drawer.yaml > pretty/layout.svg=
 - [X] Macro key for clear shell screen (CLS): C-c M-o
 - [ ] Macro key for comment out python code (CMT)...maybe?: # C-a down
-  
+- [X] Macro key for fly-spell correct word
+- [X] Add DEL key
+- [X] En dash and Em dash
+- [ ] Superscript 2 and 3
 
 ** Other keyboards
 *** Hummingbird Layout Test
@@ -113,22 +116,22 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ ~    !    @    #    $    %        ^    7    8    9    °    BS  │
- │ 󰆢    "    &    *    _    0        +    4    5    6    '    |   │
-1│ 󰆢    ×    ÷    =    -    .        󰆢    1    2    3    /    󰆢   │NUM
+ │ ²    "    &    *    _    0        +    4    5    6    '    |   │
+1│ ³    ×    ÷    =    -    .        󰆢    1    2    3    /    󰆢   │NUM
  │                     󰆢    󰆢        󰆢    󰆢                       │
  │           󰿦   CMD       󰆢        󰆢   󰘶󱁐    󰆢    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
- │ 󰿦    “    ”    ‘    ’    ″        µ    Ω    󰆢    󰆢    󰆢    BS  │
- │ 󰿦    [    ]    (    )    ′        ~    -    =    󰆢    |    \   │
+ │ 󰿦    “    ”    ‘    ’    ″        µ    Ω    󰆢    –    󰆢    BS  │
+ │ 󰿦    [    ]    (    )    ′        ~    -    =    —    |    \   │
 2│ 󰿦    <    >    {    }    `        󰆢    󰆢    󰆢    󰆢    \    󰿦   │SYM
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦   FN    󰆢    󰆢        󰆢   󰘶󱁐        󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ESC   󰆢    󰆢   ¶←   ¶→    󰆢       ESC  P↑    ↑   P↓    󰆢    󰆢   │
- │ 󰆢    󰆢    󰆢   W←   W→    󰆢       BS    ←    ↓    →    󰞷    󰆢   │
-3│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢   HME   󰆢   END   󰆢    󰆢   │MOV
+ │ 󰆢    󰆢    󰆢   W←   W→   SPL      BS    ←    ↓    →    󰞷    󰆢   │
+3│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢       DEL  HME   󰆢   END   󰆢    󰆢   │MOV
  │                     󰆢    󰆢        󰆢    󰆢                       │
  │           󰿦   CMD  NAV           󰿦   󰘶󱁐    󰆢    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
@@ -522,6 +525,8 @@ for s in codes.splitlines():
 ├	box_middleleft
 Ω	ohm
 µ	micro
+²	superscript_2
+³	superscript_3
 #+end_src
 
 ** Keycodes
@@ -596,6 +601,7 @@ CMD	&kp LCMD
 TAB	&kp TAB
 RET	&kp RET
 ESC	&kp ESC
+DEL	&kp DEL
 BS	&kp BSPC
 /	&kp SLASH
 /?	&kp SLASH
@@ -672,6 +678,7 @@ Bu3	&kp LC(LG(N3))
 OTH	&kp LG(O)
 FLP	&kp LS(LG(O))
 CLS	&clear_shell
+SPL	&kp LG(DOLLAR)
 󰿦	&none
 󰆢	&none
 	&trans
@@ -759,6 +766,8 @@ USB	&bootloader
 ┬	&box_middletop
 ┤	&box_middleright
 ├	&box_middleleft
+²	&superscript_2
+³	&superscript_3
 *	&kp STAR
 	&kp LG(LS(N4))
 #+end_src
