@@ -141,7 +141,7 @@ Bu3	&kp LC(LG(N3))
 OTH	&kp LG(O)
 FLP	&kp LS(LG(O))
 CLS	&clear_shell
-SPL	&kp LG(DOLLAR)
+SPL	&ispell_word
 󰿦	&none
 󰆢	&none
 	&trans

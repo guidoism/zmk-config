@@ -18,7 +18,7 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 - [X] Macro key for fly-spell correct word
 - [X] Add DEL key
 - [X] En dash and Em dash
-- [ ] Superscript 2 and 3
+- [X] Superscript 2 and 3
 
 ** Other keyboards
 *** Hummingbird Layout Test
@@ -287,6 +287,12 @@ ZMK_BEHAVIOR(clear_shell, macro,
     wait-ms = <100>;
     tap-ms = <5>;
     bindings = <&kp LC(C) &kp LG(O)>;
+)
+
+ZMK_BEHAVIOR(ispell_word, macro,
+    wait-ms = <100>;
+    tap-ms = <5>;
+    bindings = <&kp LC(C) &kp I>;
 )
 
 // index on r u in FN layer within 100 milliseconds
@@ -678,7 +684,7 @@ Bu3	&kp LC(LG(N3))
 OTH	&kp LG(O)
 FLP	&kp LS(LG(O))
 CLS	&clear_shell
-SPL	&kp LG(DOLLAR)
+SPL	&ispell_word
 󰿦	&none
 󰆢	&none
 	&trans

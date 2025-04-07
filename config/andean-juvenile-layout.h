@@ -15,14 +15,14 @@ ZMK_LAYER(NUM,
  &multiplication_sign &division_sign  &kp EQUAL       &kp MINUS       &kp DOT         &none           &kp N1          &kp N2          &kp N3          &kp SLASH      
  &none           &kp LCMD        &trans          &hmr RSHIFT SPACE &none           &none          )
 ZMK_LAYER(SYM,
- &left_double_quote &right_double_quote &left_single_quote &right_single_quote &double_prime   &micro          &ohm            &none           &none           &none          
- &kp LBKT        &kp RBKT        &kp LPAR        &kp RPAR        &prime          &kp TILDE       &kp MINUS       &kp EQUAL       &none           &kp PIPE       
+ &left_double_quote &right_double_quote &left_single_quote &right_single_quote &double_prime   &micro          &ohm            &none           &en_dash        &none          
+ &kp LBKT        &kp RBKT        &kp LPAR        &kp RPAR        &prime          &kp TILDE       &kp MINUS       &kp EQUAL       &em_dash        &kp PIPE       
  &kp LT          &kp GT          &kp LBRC        &kp RBRC        &kp GRAVE       &none           &none           &none           &none           &kp BACKSLASH  
  &none           &mo 9           &none           &hmr RSHIFT SPACE &trans          &none          )
 ZMK_LAYER(MOV,
  &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &none           &kp ESC         &kp PGUP        &kp UP          &kp PGDN        &none          
- &none           &none           &kp LG(B)       &kp LG(F)       &none           &kp BSPC        &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(M)      
- &none           &none           &none           &none           &none           &none           &kp HOME        &none           &kp END         &none          
+ &none           &none           &kp LG(B)       &kp LG(F)       &ispell_word    &kp BSPC        &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(M)      
+ &none           &none           &none           &none           &none           &kp DEL         &kp HOME        &none           &kp END         &none          
  &none           &kp LCMD        &mo 4           &hmr RSHIFT SPACE &none           &none          )
 ZMK_LAYER(NAV,
  &none           &none           &none           &none           &none           &none           &kp LC(LG(B))   &kp LC(LG(F))   &none           &none          
