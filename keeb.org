@@ -786,15 +786,15 @@ USB	&bootloader
 ³	&superscript_3
 *	&kp STAR
 	&kp LG(LS(N4))
-á	&kp accented_a
-é	&kp accented_e
-í	&kp accented_i
-ñ	&kp tilde_n
-ó	&kp accented_o
-ú	&kp accented_u
-ü	&kp umlat
-¿	&kp upsidedown_question
-¡	&kp upsidedown_bang
+á	&accented_a
+é	&accented_e
+í	&accented_i
+ñ	&tilde_n
+ó	&accented_o
+ú	&accented_u
+ü	&umlat
+¿	&upsidedown_question
+¡	&upsidedown_bang
 #+end_src
 
 ** Status Viewer
