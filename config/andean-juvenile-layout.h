@@ -29,11 +29,11 @@ ZMK_LAYER(NAV,
  &none           &none           &none           &none           &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &kp LG(B)       &kp LG(F)      
  &none           &none           &none           &none           &none           &none           &kp LA(LG(LEFT)) &kp LA(LG(RIGHT)) &none           &none          
  &none           &kp LCMD        &trans          &hmr RSHIFT SPACE &none           &none          )
-ZMK_LAYER(layer_5,
- &none &none &none &none &none &none &none &none &none &none
- &none &none &none &none &none &none &none &none &none &none
- &none &none &none &none &none &none &none &none &none &none
- &none &none &none &none &none &none)
+ZMK_LAYER(ACC,
+ &none           &kp umlat       &kp accented_e  &none           &none           &none           &kp accented_u  &kp accented_i  &kp accented_o  &none          
+ &kp accented_a  &none           &none           &none           &none           &none           &none           &none           &none           &none          
+ &none           &none           &none           &none           &none           &kp tilde_n     &none           &none           &kp upsidedown_bang &kp upsidedown_question
+ &none           &none           &none           &none           &none           &none          )
 ZMK_LAYER(layer_6,
  &none       &none       &none       &none       &none       &none       &none       &none       &none       &bootloader
  &none       &kp F       &kp R       &kp E       &kp E       &none       &none       &none       &none       &none      
