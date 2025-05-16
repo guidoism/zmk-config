@@ -160,7 +160,7 @@ NAV	&mo 4
 FUN	&mo 9
 M₅	&mo 5
 LIN	&mo 5
-SEL	&mo 5
+ACC	&mo 5
 NEW	&to 6
 MV	&mo 7
 	&tog 7
@@ -233,3 +233,12 @@ USB	&bootloader
 ³	&superscript_3
 *	&kp STAR
 	&kp LG(LS(N4))
+á	&kp accented_a
+é	&kp accented_e
+í	&kp accented_i
+ñ	&kp tilde_n
+ó	&kp accented_o
+ú	&kp accented_u
+ü	&kp umlat
+¿	&kp upsidedown_question
+¡	&kp upsidedown_bang

@@ -117,6 +117,15 @@ ZMK_UNICODE_SINGLE(ohm,                       N0, N3,  A, N9)   // Ω  GREEK CAP
 ZMK_UNICODE_SINGLE(micro,                     N0, N0,  B, N5)   // µ  MICRO SIGN
 ZMK_UNICODE_SINGLE(superscript_2,             N0, N0,  B, N2)   // ²  SUPERSCRIPT TWO
 ZMK_UNICODE_SINGLE(superscript_3,             N0, N0,  B, N3)   // ³  SUPERSCRIPT THREE
+ZMK_UNICODE_SINGLE(accented_a,                N0, N0,  E, N1)   // á  LATIN SMALL LETTER A WITH ACUTE
+ZMK_UNICODE_SINGLE(accented_e,                N0, N0,  E, N9)   // é  LATIN SMALL LETTER E WITH ACUTE
+ZMK_UNICODE_SINGLE(accented_i,                N0, N0,  E,  D)   // í  LATIN SMALL LETTER I WITH ACUTE
+ZMK_UNICODE_SINGLE(tilde_n,                   N0, N0,  F, N1)   // ñ  LATIN SMALL LETTER N WITH TILDE
+ZMK_UNICODE_SINGLE(accented_o,                N0, N0,  F, N3)   // ó  LATIN SMALL LETTER O WITH ACUTE
+ZMK_UNICODE_SINGLE(accented_u,                N0, N0,  F,  A)   // ú  LATIN SMALL LETTER U WITH ACUTE
+ZMK_UNICODE_SINGLE(umlat,                     N0, N0,  F,  C)   // ü  LATIN SMALL LETTER U WITH DIAERESIS
+ZMK_UNICODE_SINGLE(upsidedown_question,       N0, N0,  B,  F)   // ¿  INVERTED QUESTION MARK
+ZMK_UNICODE_SINGLE(upsidedown_bang,           N0, N0,  A, N1)   // ¡  INVERTED EXCLAMATION MARK
 
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5
@@ -232,7 +241,7 @@ ZMK_LAYER(layer_1, &kp TILDE &kp EXCL &kp AT &kp HASH &kp DLLR &kp PERCENT &kp C
 ZMK_LAYER(layer_2, &none &left_double_quote &right_double_quote &left_single_quote &right_single_quote &double_prime &micro &ohm &none &en_dash &none &kp BSPC &none &kp LBKT &kp RBKT &kp LPAR &kp RPAR &prime &kp TILDE &kp MINUS &kp EQUAL &em_dash &kp PIPE &kp BACKSLASH &none &kp LT &kp GT &kp LBRC &kp RBRC &kp GRAVE &none &none &none &none &kp BACKSLASH &none &none &none &none &none &none &mo 9 &none &none &none &hmr RSHIFT SPACE &trans &none)
 ZMK_LAYER(layer_3, &kp ESC &none &none &kp LG(LBRC) &kp LG(RBRC) &none &kp ESC &kp PGUP &kp UP &kp PGDN &none &none &none &none &none &kp LG(B) &kp LG(F) &ispell_word &kp BSPC &kp LEFT &kp DOWN &kp RIGHT &kp LG(M) &none &none &none &none &none &none &none &kp DEL &kp HOME &none &kp END &none &none &none &none &none &none &none &kp LCMD &mo 4 &trans &none &hmr RSHIFT SPACE &none &none)
 ZMK_LAYER(layer_4, &none &none &none &none &none &none &none &kp LC(LG(B)) &kp LC(LG(F)) &none &none &none &none &none &none &none &none &none &none &kp LG(LBRC) &kp LG(RBRC) &kp LG(B) &kp LG(F) &none &none &none &none &none &none &none &none &kp LA(LG(LEFT)) &kp LA(LG(RIGHT)) &none &none &none &none &none &none &none &none &kp LCMD &trans &trans &none &hmr RSHIFT SPACE &none &none)
-ZMK_LAYER(layer_5, &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none)
+ZMK_LAYER(layer_5, &none &none &kp umlat &kp accented_e &none &none &none &kp accented_u &kp accented_i &kp accented_o &none &none &none &kp accented_a &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &kp tilde_n &none &none &kp upsidedown_bang &kp upsidedown_question &none &none &none &none &none &none &none &none &none &none &none &none &none)
 ZMK_LAYER(layer_6, &none &none &none &none &none &none &none &none &none &none &bootloader &none &none &none &kp F &kp R &kp E &kp E &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none)
 ZMK_LAYER(layer_7, &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none)
 ZMK_LAYER(layer_8, &none &none &none &box_upperleft &box_upperright &none &none &none &none &none &none &none &none &box_horizontal &box_vertical &box_lowerleft &box_lowerright &none &tog 8 &none &none &none &none &none &none &box_middle &box_middlebottom &box_middletop &box_middleright &box_middleleft &none &none &none &none &none &none &none &none &none &none &none &kp LCMD &none &none &none &none &none &none)
