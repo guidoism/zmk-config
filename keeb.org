@@ -694,7 +694,7 @@ Bu3	&kp LC(LG(N3))
 OTH	&kp LG(O)
 FLP	&kp LS(LG(O))
 CLS	&clear_shell
-SPL	&ispell_word
+SPL	&none
 󰿦	&none
 󰆢	&none
 	&trans
