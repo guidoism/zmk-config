@@ -20,6 +20,8 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 - [X] En dash and Em dash
 - [X] Superscript 2 and 3
 - [X] Accented characters
+- [ ] Make macro for ``` and putting the cursor back in between them
+- [ ] I need a light to show me whether Shift is accidentally on, and ESC should end shift
 
 ** Other keyboards
 *** Hummingbird Layout Test
@@ -112,7 +114,7 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
  │CTL   a    s    d   󰘴f    g        h   󰘴j    k    l    :;  RET  │
 0│SFT   z    x    c    v    b        n    m    ,    .    /?   󰿦   │BASE
- │                     󰿦    󰿦        󰿦    󰿦                       │
+ │                    SFT   󰿦        󰿦    󰿦                       │
  │           󰿦   CMD  NUM  MOV      ACC  󰘶󱁐   SYM   󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
