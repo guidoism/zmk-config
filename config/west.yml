@@ -5,7 +5,9 @@ manifest:
     - name: guidoism
       url-base: https://github.com/guidoism
     - name: urob
-      url-base: https://github.com/urob      
+      url-base: https://github.com/urob
+    - name: ssbb
+      url-base: https://github.com/ssbb
   projects:
     - name: zmk
       remote: guidoism # zmkfirmware
@@ -14,5 +16,8 @@ manifest:
     - name: zmk-helpers
       remote: urob
       revision: main
+    - name: zmk-listeners
+      remote: ssbb
+      revision: v1
   self:
     path: config
