@@ -8,10 +8,12 @@ manifest:
       url-base: https://github.com/urob
     - name: ssbb
       url-base: https://github.com/ssbb
+    - name: zzeneg
+      url-base: https://github.com/zzeneg
   projects:
     - name: zmk
       remote: guidoism # zmkfirmware
-      revision: main
+      revision: feature/raw-hid-status # main
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
@@ -19,5 +21,8 @@ manifest:
     - name: zmk-listeners
       remote: ssbb
       revision: v1
+    - name: zmk-raw-hid
+      remote: zzeneg
+      revision: main
   self:
     path: config
