@@ -240,13 +240,14 @@ ZMK_COMBO(capsword_combo, &caps_word, 19 20 21, ALL, 50)
 // Uses KB2040 onboard NeoPixel via zmk-listeners
 // Green = default, colors below on layer activate, green on deactivate
 
-#define LED_GREEN RGB_COLOR_HSB(120,100,50)
-#define LED_RED   RGB_COLOR_HSB(0,100,50)
-#define LED_BLUE  RGB_COLOR_HSB(240,100,50)
-#define LED_YELLOW RGB_COLOR_HSB(60,100,50)
-#define LED_MAGENTA RGB_COLOR_HSB(300,100,50)
-#define LED_CYAN  RGB_COLOR_HSB(180,100,50)
-#define LED_WHITE RGB_COLOR_HSB(0,0,50)
+#define LED_BRT 10
+#define LED_GREEN RGB_COLOR_HSB(120,100,LED_BRT)
+#define LED_RED   RGB_COLOR_HSB(0,100,LED_BRT)
+#define LED_BLUE  RGB_COLOR_HSB(240,100,LED_BRT)
+#define LED_YELLOW RGB_COLOR_HSB(60,100,LED_BRT)
+#define LED_MAGENTA RGB_COLOR_HSB(300,100,LED_BRT)
+#define LED_CYAN  RGB_COLOR_HSB(180,100,LED_BRT)
+#define LED_WHITE RGB_COLOR_HSB(0,0,LED_BRT)
 
 / {
     layer_listeners {
