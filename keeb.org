@@ -1,4 +1,4 @@
-
+g
 To build:
  1. =C-c C-v t= to tangle
  2. make
@@ -22,6 +22,8 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 - [X] Accented characters
 - [ ] Make macro for ``` and putting the cursor back in between them
 - [ ] I need a light to show me whether Shift is accidentally on, and ESC should end shift
+- [ ] Add ←→↑↓↔↕
+- [ ] Shortcut for Paste and Match Style (shift-command-v)
 
 ** Other keyboards
 *** Hummingbird Layout Test
@@ -154,17 +156,17 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢   USB   󰿦   │
- │ 󰿦    󰆢    f    r    e    e        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
+ │ 󰿦    󰆢    󰆢    󰆢   GAM   󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
 6│ 󰿦    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
- │ 󰿦    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
- │ 󰿦    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
-7│ 󰿦    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
+ │GAM   q    󰆢    w    e    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
+ │ 󰿦   CTL   a    s    d    f        󰆢    󰆢    󰆢    󰆢    󰆢   RET  │
+7│ 󰿦    󰆢    3    2    1    󰆢        󰆢    󰆢    󰆢    󰆢    /    󰿦   │GAM
  │                     󰿦    󰿦        󰿦    󰿦                       │
- │           󰿦    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰿦             │
+ │           󰿦   SFT   󱁐   ESC       󰆢    󰆢    󰆢    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰆢    󰆢    󰆢    ╭    ╮    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
@@ -710,7 +712,7 @@ SYM	&sym_layer6
 M₃	&mo 3
 MOV	&mo 3
 M₄	&mo 4
-GAM	&tog 4
+GAM	&tog 7
 NAV	&mo 4
 FUN	&mo 9
 M₅	&mo 5
