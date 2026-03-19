@@ -216,6 +216,7 @@ for i, layer in enumerate(insides):
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
 #define HOST_OS 2
 #include "zmk-helpers/helper.h"
 
@@ -327,7 +328,61 @@ ZMK_COMBO(oneshot_shift_combo, &sk LSHIFT, 19 20, ALL, 50)
 // CAPSWORD = J + K + L
 ZMK_COMBO(capsword_combo, &caps_word, 19 20 21, ALL, 50)
 
+//////////////////////////////////////////////////////////
+// L A Y E R   I N D I C A T O R   L E D
+// Uses KB2040 onboard NeoPixel via zmk-listeners
+// Green = default, colors below on layer activate, green on deactivate
 
+#define LED_BRT 10
+#define LED_GREEN RGB_COLOR_HSB(120,100,LED_BRT)
+#define LED_RED   RGB_COLOR_HSB(0,100,LED_BRT)
+#define LED_BLUE  RGB_COLOR_HSB(240,100,LED_BRT)
+#define LED_YELLOW RGB_COLOR_HSB(60,100,LED_BRT)
+#define LED_MAGENTA RGB_COLOR_HSB(300,100,LED_BRT)
+#define LED_CYAN  RGB_COLOR_HSB(180,100,LED_BRT)
+#define LED_WHITE RGB_COLOR_HSB(0,0,LED_BRT)
+
+/ {
+    layer_listeners {
+        compatible = "zmk,layer-listeners";
+        ll_numsym {
+            layers = <1>;
+            bindings = <&rgb_ug LED_RED &rgb_ug LED_GREEN>;
+        };
+        ll_brackets {
+            layers = <2>;
+            bindings = <&rgb_ug LED_CYAN &rgb_ug LED_GREEN>;
+        };
+        ll_nav {
+            layers = <3>;
+            bindings = <&rgb_ug LED_BLUE &rgb_ug LED_GREEN>;
+        };
+        ll_winmgmt {
+            layers = <4>;
+            bindings = <&rgb_ug LED_BLUE &rgb_ug LED_GREEN>;
+        };
+        ll_spanish {
+            layers = <5>;
+            bindings = <&rgb_ug LED_YELLOW &rgb_ug LED_GREEN>;
+        };
+        ll_special {
+            layers = <6>;
+            bindings = <&rgb_ug LED_MAGENTA &rgb_ug LED_GREEN>;
+        };
+        ll_gaming {
+            layers = <7>;
+            bindings = <&rgb_ug LED_RED &rgb_ug LED_GREEN>;
+        };
+        ll_boxdraw {
+            layers = <8>;
+            bindings = <&rgb_ug LED_WHITE &rgb_ug LED_GREEN>;
+        };
+        ll_fkeys {
+            layers = <9>;
+            bindings = <&rgb_ug LED_MAGENTA &rgb_ug LED_GREEN>;
+        };
+    };
+};
 
 #+end_src
 
