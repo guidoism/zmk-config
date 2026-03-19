@@ -13,7 +13,7 @@ manifest:
   projects:
     - name: zmk
       remote: guidoism # zmkfirmware
-      revision: feature/raw-hid-status
+      revision: main
       import: app/west.yml
     - name: zmk-helpers
       remote: urob
@@ -21,8 +21,8 @@ manifest:
     - name: zmk-listeners
       remote: ssbb
       revision: v1
-    - name: zmk-raw-hid
-      remote: zzeneg
-      revision: main
+    #- name: zmk-raw-hid
+    #  remote: zzeneg
+    #  revision: main
   self:
     path: config
