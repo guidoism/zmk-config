@@ -1,0 +1,6 @@
+/* KB2040-specific: use onboard NeoPixel for RGB underglow */
+/ {
+    chosen {
+        zmk,underglow = &ws2812;
+    };
+};
