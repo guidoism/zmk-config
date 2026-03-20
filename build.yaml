@@ -16,6 +16,9 @@ include:
   - board: adafruit_kb2040//zmk
     shield: andean-condor
     snippet: zmk-usb-logging
+  - board: nice_nano_v2//zmk
+    shield: andean-condor
+    snippet: zmk-usb-logging
 #  - board: adafruit_kb2040//zmk
 #    shield: andean-juvenile
 #    snippet: zmk-usb-logging
