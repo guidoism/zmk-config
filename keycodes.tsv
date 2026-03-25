@@ -168,10 +168,9 @@ BOX	&tog 8
 NM	&mo 8
 FN	&mo 9
 BTC	&bt BT_CLR
-BT1	&bt BT_SEL 0
-BT2	&bt BT_SEL 1
-BT3	&bt BT_SEL 2
-BT4	&bt BT_SEL 3
+BT0	&bt BT_SEL 0
+BT1	&bt BT_SEL 1
+BT2	&bt BT_SEL 2
 RST	&sys_reset
 USB	&bootloader
 󰘵a	&hmlslow LALT A
