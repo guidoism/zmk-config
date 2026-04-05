@@ -1,32 +1,33 @@
 /*
- * nice_nano_v2 is mounted components-down (standard low-profile nice!nano
- * mount with Mill-Max sockets). This mirrors the Pro Micro pinout L/R
- * compared to the KB2040 which mounts components-up. Override kscan0's
- * col/row GPIOs with the mirrored pin assignments.
+ * nice_nano v1.1 PCB (2026-03-19 andean-condor with schematics):
+ *   - MCU mounted components-down (standard nice!nano Mill-Max socket mount),
+ *     mirroring Pro Micro pinout L/R vs the KB2040 on the original PCB.
+ *   - Diodes oriented row2col (not col2row like the original PCB).
  *
- * F key = index column, home row = col5 net × row2 net.
- * PCB pad 8 (col5) now reaches pro_micro 18 instead of 5.
- * PCB pad 17 (row2) now reaches pro_micro 5 instead of 18.
+ * Override kscan0's diode direction and col/row GPIOs accordingly.
+ * In row2col, rows drive HIGH and columns read with pull-down.
  */
 
 &kscan0 {
+    diode-direction = "row2col";
+
     col-gpios
-        = <&pro_micro  6 GPIO_ACTIVE_HIGH>  /* col1 farpinky */
-        , <&pro_micro 14 GPIO_ACTIVE_HIGH>  /* col2 pinky    */
-        , <&pro_micro 15 GPIO_ACTIVE_HIGH>  /* col3 ring     */
-        , <&pro_micro 19 GPIO_ACTIVE_HIGH>  /* col4 middle   */
-        , <&pro_micro 18 GPIO_ACTIVE_HIGH>  /* col5 index    */
-        , <&pro_micro  7 GPIO_ACTIVE_HIGH>  /* col6 inner    */
+        = <&pro_micro  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* col1 farpinky */
+        , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* col2 pinky    */
+        , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* col3 ring     */
+        , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* col4 middle   */
+        , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* col5 index    */
+        , <&pro_micro  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* col6 inner    */
         ;
 
     row-gpios
-        = <&pro_micro  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row1  top    */
-        , <&pro_micro  5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row2  home   */
-        , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row3  bottom */
-        , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row4  thumbs */
-        , <&pro_micro  2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row1r top (mirror)    */
-        , <&pro_micro  3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row2r home (mirror)   */
-        , <&pro_micro  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row3r bottom (mirror) */
-        , <&pro_micro  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row4r thumbs (mirror) */
+        = <&pro_micro  4 GPIO_ACTIVE_HIGH>  /* row1  top    */
+        , <&pro_micro  5 GPIO_ACTIVE_HIGH>  /* row2  home   */
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH>  /* row3  bottom */
+        , <&pro_micro 10 GPIO_ACTIVE_HIGH>  /* row4  thumbs */
+        , <&pro_micro  2 GPIO_ACTIVE_HIGH>  /* row1r top (mirror)    */
+        , <&pro_micro  3 GPIO_ACTIVE_HIGH>  /* row2r home (mirror)   */
+        , <&pro_micro  8 GPIO_ACTIVE_HIGH>  /* row3r bottom (mirror) */
+        , <&pro_micro  9 GPIO_ACTIVE_HIGH>  /* row4r thumbs (mirror) */
         ;
 };
