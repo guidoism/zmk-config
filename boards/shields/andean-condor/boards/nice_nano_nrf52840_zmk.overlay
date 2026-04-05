@@ -1,0 +1,32 @@
+/*
+ * nice_nano_v2 is mounted components-down (standard low-profile nice!nano
+ * mount with Mill-Max sockets). This mirrors the Pro Micro pinout L/R
+ * compared to the KB2040 which mounts components-up. Override kscan0's
+ * col/row GPIOs with the mirrored pin assignments.
+ *
+ * F key = index column, home row = col5 net × row2 net.
+ * PCB pad 8 (col5) now reaches pro_micro 18 instead of 5.
+ * PCB pad 17 (row2) now reaches pro_micro 5 instead of 18.
+ */
+
+&kscan0 {
+    col-gpios
+        = <&pro_micro  6 GPIO_ACTIVE_HIGH>  /* col1 farpinky */
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>  /* col2 pinky    */
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>  /* col3 ring     */
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>  /* col4 middle   */
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>  /* col5 index    */
+        , <&pro_micro  7 GPIO_ACTIVE_HIGH>  /* col6 inner    */
+        ;
+
+    row-gpios
+        = <&pro_micro  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row1  top    */
+        , <&pro_micro  5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row2  home   */
+        , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row3  bottom */
+        , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row4  thumbs */
+        , <&pro_micro  2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row1r top (mirror)    */
+        , <&pro_micro  3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row2r home (mirror)   */
+        , <&pro_micro  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row3r bottom (mirror) */
+        , <&pro_micro  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row4r thumbs (mirror) */
+        ;
+};
