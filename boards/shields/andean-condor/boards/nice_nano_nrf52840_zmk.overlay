@@ -1,30 +1,34 @@
 /*
- * nice_nano v1.1 PCB (2026-03-19 andean-condor with schematics):
- *   - MCU mounted components-down (standard nice!nano Mill-Max socket mount),
- *     mirroring Pro Micro pinout L/R vs the KB2040 on the original PCB.
+ * nice_nano on v1.1 PCB:
+ *   - MCU mounted components-down (back facing up, standard nice!nano mount)
+ *   - Pin mapping matches original KB2040 orientation (no mirroring needed)
+ *   - Diodes are row2col (anode on row, cathode on col/switch side)
  *
- * Override kscan0's col/row GPIOs with the mirrored pin assignments.
- * Uses col2row (same as shared overlay default).
+ * Override diode direction only; pin assignments match the shared overlay.
  */
 
 &kscan0 {
+    diode-direction = "row2col";
+
+    /* Same pins as shared overlay, but with swapped flags for row2col:
+     * cols are now inputs (readers), rows are outputs (drivers) */
     col-gpios
-        = <&pro_micro  6 GPIO_ACTIVE_HIGH>  /* col1 farpinky */
-        , <&pro_micro 14 GPIO_ACTIVE_HIGH>  /* col2 pinky    */
-        , <&pro_micro 15 GPIO_ACTIVE_HIGH>  /* col3 ring     */
-        , <&pro_micro 19 GPIO_ACTIVE_HIGH>  /* col4 middle   */
-        , <&pro_micro 18 GPIO_ACTIVE_HIGH>  /* col5 index    */
-        , <&pro_micro  7 GPIO_ACTIVE_HIGH>  /* col6 inner    */
+        = <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro  5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 
     row-gpios
-        = <&pro_micro  4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row1  top    */
-        , <&pro_micro  5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row2  home   */
-        , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row3  bottom */
-        , <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row4  thumbs */
-        , <&pro_micro  2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row1r top (mirror)    */
-        , <&pro_micro  3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row2r home (mirror)   */
-        , <&pro_micro  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row3r bottom (mirror) */
-        , <&pro_micro  9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  /* row4r thumbs (mirror) */
+        = <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro  8 GPIO_ACTIVE_HIGH>
+        , <&pro_micro  9 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 21 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 20 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 10 GPIO_ACTIVE_HIGH>
         ;
 };
