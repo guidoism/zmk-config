@@ -66,6 +66,7 @@ RET	&kp RET
 ESC	&kp ESC
 DEL	&kp DEL
 BS	&kp BSPC
+	&kp LC(LS(LA(V)))
 /	&kp SLASH
 /?	&kp SLASH
 ~	&kp TILDE
@@ -156,7 +157,7 @@ M₃	&mo 3
 MOV	&mo 3
 M₄	&mo 4
 GAM	&tog 7
-NAV	&mo 4
+HCI	&mo 4
 FUN	&mo 9
 M₅	&mo 5
 LIN	&mo 5

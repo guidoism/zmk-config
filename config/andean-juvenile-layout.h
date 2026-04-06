@@ -8,7 +8,7 @@ ZMK_LAYER(BASE,
  &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P          
  &kp A           &kp S           &kp D           &hml LCTRL F    &kp G           &kp H           &hmr RCTRL J    &kp K           &kp L           &colonsemi     
  &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH      
- &none           &kp LCMD        &mo 1           &hmr RSHIFT SPACE &sym_layer6     &none          )
+ &mo 4           &kp LCMD        &mo 1           &hmr RSHIFT SPACE &sym_layer6     &none          )
 ZMK_LAYER(NUM,
  &kp EXCL        &kp AT          &kp HASH        &kp DLLR        &kp PERCENT     &kp CARET       &kp N7          &kp N8          &kp N9          &degree_symbol 
  &kp DQT         &kp AMPS        &kp STAR        &kp UNDER       &kp N0          &kp PLUS        &kp N4          &kp N5          &kp N6          &kp SQT        
@@ -23,11 +23,11 @@ ZMK_LAYER(MOV,
  &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &none           &kp ESC         &kp PGUP        &kp UP          &kp PGDN        &none          
  &none           &none           &kp LG(B)       &kp LG(F)       &ispell_word    &kp BSPC        &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(M)      
  &none           &none           &none           &none           &none           &kp DEL         &kp HOME        &none           &kp END         &none          
- &none           &kp LCMD        &mo 4           &hmr RSHIFT SPACE &none           &none          )
-ZMK_LAYER(NAV,
- &none           &none           &none           &none           &none           &none           &kp LC(LG(B))   &kp LC(LG(F))   &none           &none          
- &none           &none           &none           &none           &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &kp LG(B)       &kp LG(F)      
- &none           &none           &none           &none           &none           &none           &kp LA(LG(LEFT)) &kp LA(LG(RIGHT)) &none           &none          
+ &none           &kp LCMD        &none           &hmr RSHIFT SPACE &none           &none          )
+ZMK_LAYER(HCI,
+ &none           &none           &none           &none           &none           &none           &none           &none           &none           &none          
+ &none           &none           &none           &none           &none           &none           &none           &none           &none           &none          
+ &none           &none           &none           &none           &none           &none           &none           &none           &none           &none          
  &none           &kp LCMD        &trans          &hmr RSHIFT SPACE &none           &none          )
 ZMK_LAYER(ACC,
  &none           &umlat          &accented_e     &none           &none           &none           &accented_u     &accented_i     &accented_o     &none          
