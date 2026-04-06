@@ -80,7 +80,7 @@ def extract_middle(s):
 
 def whittle_down(rows):
     "Remove rows and columns based on intended keyboard size"
-    del rows[3] # We've given up on this row of thumb keys, too many keys clanky!
+    # del rows[3] # We've given up on this row of thumb keys, too many keys clanky!
     if columnslen == 5:
         rows = [r[1:-1] for r in rows[:3]] + rows[3:]
     if thumbslen == 3:
