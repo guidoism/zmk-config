@@ -23,21 +23,21 @@ ZMK_LAYER(SYM,
  &none           &none           &none           &none          
  &none           &mo 9           &none           &none           &none           &hmr RSHIFT SPACE &trans          &none          )
 ZMK_LAYER(MOV,
- &kp ESC         &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &none           &kp ESC         &kp PGUP        &kp UP          &kp PGDN        &none           &none          
- &none           &none           &none           &kp LG(B)       &kp LG(F)       &ispell_word    &kp BSPC        &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(M)       &none          
+ &kp ESC         &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &none           &kp ESC         &kp PGUP        &up_arrow       &kp PGDN        &none           &none          
+ &none           &none           &none           &kp LG(B)       &kp LG(F)       &ispell_word    &kp BSPC        &left_arrow     &down_arrow     &right_arrow    &kp LG(M)       &none          
  &none           &none           &none           &none           &none           &none           &kp DEL         &kp HOME        &none           &kp END         &none           &none          
  &none           &none           &none           &none          
  &none           &kp LCMD        &none           &trans          &none           &hmr RSHIFT SPACE &none           &none          )
 ZMK_LAYER(HCI,
  &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none          
  &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none          
- &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none           &none          
- &kp LC(LS(LA(V))) &none           &none           &none          
+ &none           &none           &none           &none           &kp LC(LS(LA(V))) &none           &none           &none           &none           &none           &none           &none          
+ &none           &none           &none           &none          
  &none           &kp LCMD        &trans          &trans          &none           &hmr RSHIFT SPACE &none           &none          )
 ZMK_LAYER(ACC,
- &none           &none           &umlat          &accented_e     &none           &none           &none           &accented_u     &accented_i     &accented_o     &none           &none          
- &none           &accented_a     &none           &none           &none           &none           &none           &none           &none           &none           &none           &none          
- &none           &none           &none           &none           &none           &none           &tilde_n        &none           &none           &upsidedown_bang &upsidedown_question &none          
+ &none           &none           &umlat          &accented_e     &none           &none           &none           &accented_u     &accented_i     &accented_o     &pound_sign     &none          
+ &none           &accented_a     &section_sign   &euro_sign      &none           &none           &none           &none           &none           &none           &none           &none          
+ &none           &none           &pilcrow        &cent_sign      &none           &none           &tilde_n        &none           &none           &upsidedown_bang &upsidedown_question &none          
  &none           &none           &none           &none          
  &none           &none           &none           &none           &none           &none           &none           &none          )
 ZMK_LAYER(layer_6,
@@ -53,8 +53,8 @@ ZMK_LAYER(GAM,
  &none       &none       &none       &none      
  &none       &smart_shft &kp SPACE   &kp ESC     &none       &none       &none       &none      )
 ZMK_LAYER(BOX,
- &none           &none           &none           &box_upperleft  &box_upperright &none           &none           &none           &none           &none           &none           &none          
- &none           &box_horizontal &box_vertical   &box_lowerleft  &box_lowerright &none           &tog 8          &none           &none           &none           &none           &none          
+ &none           &none           &none           &box_upperleft  &box_upperright &none           &none           &none           &left_right_arrow &up_arrow       &up_down_arrow  &none          
+ &none           &box_horizontal &box_vertical   &box_lowerleft  &box_lowerright &none           &tog 8          &none           &left_arrow     &down_arrow     &right_arrow    &none          
  &none           &box_middle     &box_middlebottom &box_middletop  &box_middleright &box_middleleft &none           &none           &none           &none           &none           &none          
  &none           &none           &none           &none          
  &none           &kp LCMD        &none           &none           &none           &none           &none           &none          )

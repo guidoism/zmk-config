@@ -22,8 +22,109 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 - [X] Accented characters
 - [ ] Make macro for ``` and putting the cursor back in between them
 - [ ] I need a light to show me whether Shift is accidentally on, and ESC should end shift
-- [ ] Add ←→↑↓↔↕
 - [ ] Shortcut for Paste and Match Style (shift-command-v)
+- [ ] Add €¢£§¶←→↑↓↔↕
+
+** Layout
+#+name: layout
+#+begin_src keymap :tangle layout.txt
+ ╭────────────────────────────────────────────────────────────────╮
+ │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
+ │CTL   a    s    d   󰘴f    g        h   󰘴j    k    l    :;  RET  │
+0│SFT   z    x    c    v    b        n    m    ,    .    /?   󰿦   │BASE
+ │                    SFT   󰿦        󰿦    󰿦                       │
+ │          HCI  CMD  NUM  MOV      ACC  󰘶󱁐   SYM   󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ ~    !    @    #    $    %        ^    7    8    9    °    BS  │
+ │ ²    "    &    *    _    0        +    4    5    6    '    |   │
+1│ ³    ×    ÷    =    -    .        󰆢    1    2    3    /    󰆢   │NUM
+ │                     󰆢    󰆢        󰆢    󰆢                       │
+ │           󰿦   CMD       󰆢        󰆢   󰘶󱁐    󰆢    󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ 󰿦    “    ”    ‘    ’    ″        µ    Ω    󰆢    –    󰆢    BS  │
+ │ 󰿦    [    ]    (    )    ′        ~    -    =    —    |    \   │
+2│ 󰿦    <    >    {    }    `        󰆢    󰆢    󰆢    󰆢    \    󰿦   │SYM
+ │                     󰿦    󰿦        󰿦    󰿦                       │
+ │           󰿦   FN    󰆢    󰆢        󰆢   󰘶󱁐        󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ESC   󰆢    󰆢   ¶←   ¶→    󰆢       ESC  P↑    ↑   P↓    󰆢    󰆢   │
+ │ 󰆢    󰆢    󰆢   W←   W→   SPL      BS    ←    ↓    →    󰞷    󰆢   │
+3│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢       DEL  HME   󰆢   END   󰆢    󰆢   │MOV
+ │                     󰆢    󰆢        󰆢    󰆢                       │
+ │           󰿦   CMD   󰿦            󰿦   󰘶󱁐    󰆢    󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
+ │ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
+4│ 󰆢    󰆢    󰆢    󰆢        󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │HCI
+ │                     󰆢    󰆢        󰆢    󰆢                       │
+ │           󰿦   CMD               󰿦   󰘶󱁐    󰆢    󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ 󰿦    󰆢    ü    é    󰆢    󰆢        󰆢    ú    í    ó    £    󰿦   │
+ │ 󰿦    á    §    €    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
+5│ 󰿦    󰆢    ¶    ¢    󰆢    󰆢        ñ    󰆢    󰆢    ¡    ¿    󰿦   │ACC
+ │                     󰿦    󰿦        󰿦    󰿦                       │
+ │           󰿦    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │BT0   󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢   USB   󰿦   │
+ │BT1   󰆢    󰆢    󰆢   GAM   󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
+6│BT2   󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
+ │                     󰿦    󰿦        󰿦    󰿦                       │
+ │           󰿦    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │GAM   q    󰆢    w    e    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
+ │ 󰿦   CTL   a    s    d    f        󰆢    󰆢    󰆢    󰆢    󰆢   RET  │
+7│ 󰿦    󰆢    3    2    1    󰆢        󰆢    󰆢    󰆢    󰆢    /    󰿦   │GAM
+ │                     󰿦    󰿦        󰿦    󰿦                       │
+ │           󰿦   SFT   󱁐   ESC       󰆢    󰆢    󰆢    󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ 󰆢    󰆢    󰆢    ╭    ╮    󰆢        󰆢    󰆢    ↔    ↑    ↕    󰆢   │
+ │ 󰆢    ─    │    ╰    ╯    󰆢       BOX   󰆢    ←    ↓    →    󰆢   │
+8│ 󰆢    ┼    ┴    ┬    ┤    ├        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │BOX
+ │                     󰆢    󰆢        󰆢    󰆢                       │
+ │           󰿦   CMD   󰆢    󰆢        󰆢    󰆢    󰆢    󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+ ╭────────────────────────────────────────────────────────────────╮
+ │ 󰿦   ESC  F1   F2   F3   F4       F5   F6   F7   F8   F9    󰿦   │
+ │ 󰿦    󰆢    󱢍    󰅗    󰍵    󰆢       CLS   󰇽    󰿋    󱃗    󰆢    󰿦   │
+9│ 󰿦   F10  F11  F12  F13  F14      F15  F16  F17  F18       󰿦   │FN
+ │                     󰿦    󰿦        󰿦    󰿦                       │
+ │           󰿦        󰆢    󰆢        󰆢    󰆢        󰿦             │
+ ╰────────────────────────────────────────────────────────────────╯
+#+end_src
+
+*** Generate layer definitions
+#+name: layer-definitions
+#+begin_src python :var lines=layout :results output :var keycodes=keycodes-table[]
+import re, unicodedata, yaml
+splitup = re.findall(r'\n?(.╭─+╮.+?╰─+╯)\w*', lines, re.S)
+vmid = lambda t: t.split('\n')[1:-1]
+hmid = lambda s: s[2:66] # Or re.match(r'.*│(.+)│.*', s).group(1)
+insides = [' '.join([hmid(s) for s in vmid(t)]) for t in splitup]
+keycodes = dict(k.split('\t') for k in keycodes.splitlines())
+for i, layer in enumerate(insides):
+    codes = ' '.join([keycodes[k] for k in layer.split()])
+    print(f"ZMK_LAYER(layer_{i}, {codes})")
+####################################
+#draw = {
+#    'layout': {'qmk_keyboard': 'andean_condor'},
+#    'layers': {},
+#    'combos': {},
+#}
+#for i, t in enumerate(splitup):
+#    draw['layers'][f'layer{i}'] = [hmid(s) for s in vmid(t)]
+#with open('layout.yaml', 'w') as outfile:
+#    yaml.dump(draw, outfile)
+#+end_src
+
+
 
 ** Other keyboards
 *** Hummingbird Layout Test
@@ -107,105 +208,6 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 3│ 󰿦                                               BS   │MOV
  │ 󰿦                                                󰿦   │
  ╰────────────────────────────────────────────────────────────────╯
-#+end_src
-
-** Layout
-#+name: layout
-#+begin_src keymap :tangle layout.txt
- ╭────────────────────────────────────────────────────────────────╮
- │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
- │CTL   a    s    d   󰘴f    g        h   󰘴j    k    l    :;  RET  │
-0│SFT   z    x    c    v    b        n    m    ,    .    /?   󰿦   │BASE
- │                    SFT   󰿦        󰿦    󰿦                       │
- │          HCI  CMD  NUM  MOV      ACC  󰘶󱁐   SYM   󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
- ╭────────────────────────────────────────────────────────────────╮
- │ ~    !    @    #    $    %        ^    7    8    9    °    BS  │
- │ ²    "    &    *    _    0        +    4    5    6    '    |   │
-1│ ³    ×    ÷    =    -    .        󰆢    1    2    3    /    󰆢   │NUM
- │                     󰆢    󰆢        󰆢    󰆢                       │
- │           󰿦   CMD       󰆢        󰆢   󰘶󱁐    󰆢    󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
- ╭────────────────────────────────────────────────────────────────╮
- │ 󰿦    “    ”    ‘    ’    ″        µ    Ω    󰆢    –    󰆢    BS  │
- │ 󰿦    [    ]    (    )    ′        ~    -    =    —    |    \   │
-2│ 󰿦    <    >    {    }    `        󰆢    󰆢    󰆢    󰆢    \    󰿦   │SYM
- │                     󰿦    󰿦        󰿦    󰿦                       │
- │           󰿦   FN    󰆢    󰆢        󰆢   󰘶󱁐        󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
- ╭────────────────────────────────────────────────────────────────╮
- │ESC   󰆢    󰆢   ¶←   ¶→    󰆢       ESC  P↑    ↑   P↓    󰆢    󰆢   │
- │ 󰆢    󰆢    󰆢   W←   W→   SPL      BS    ←    ↓    →    󰞷    󰆢   │
-3│ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢       DEL  HME   󰆢   END   󰆢    󰆢   │MOV
- │                     󰆢    󰆢        󰆢    󰆢                       │
- │           󰿦   CMD   󰿦            󰿦   󰘶󱁐    󰆢    󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
- ╭────────────────────────────────────────────────────────────────╮
- │ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
- │ 󰆢    󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
-4│ 󰆢    󰆢    󰆢    󰆢        󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │HCI
- │                     󰆢    󰆢        󰆢    󰆢                       │
- │           󰿦   CMD               󰿦   󰘶󱁐    󰆢    󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
- ╭────────────────────────────────────────────────────────────────╮
- │ 󰿦    󰆢    ü    é    󰆢    󰆢        󰆢    ú    í    ó    󰆢    󰿦   │
- │ 󰿦    á    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
-5│ 󰿦    󰆢    󰆢    󰆢    󰆢    󰆢        ñ    󰆢    󰆢    ¡    ¿    󰿦   │ACC
- │                     󰿦    󰿦        󰿦    󰿦                       │
- │           󰿦    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
- ╭────────────────────────────────────────────────────────────────╮
- │BT0   󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢   USB   󰿦   │
- │BT1   󰆢    󰆢    󰆢   GAM   󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
-6│BT2   󰆢    󰆢    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
- │                     󰿦    󰿦        󰿦    󰿦                       │
- │           󰿦    󰆢    󰆢    󰆢        󰆢    󰆢    󰆢    󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
- ╭────────────────────────────────────────────────────────────────╮
- │GAM   q    󰆢    w    e    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰿦   │
- │ 󰿦   CTL   a    s    d    f        󰆢    󰆢    󰆢    󰆢    󰆢   RET  │
-7│ 󰿦    󰆢    3    2    1    󰆢        󰆢    󰆢    󰆢    󰆢    /    󰿦   │GAM
- │                     󰿦    󰿦        󰿦    󰿦                       │
- │           󰿦   SFT   󱁐   ESC       󰆢    󰆢    󰆢    󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
- ╭────────────────────────────────────────────────────────────────╮
- │ 󰆢    󰆢    󰆢    ╭    ╮    󰆢        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │
- │ 󰆢    ─    │    ╰    ╯    󰆢       BOX   󰆢    󰆢    󰆢    󰆢    󰆢   │
-8│ 󰆢    ┼    ┴    ┬    ┤    ├        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │BOX
- │                     󰆢    󰆢        󰆢    󰆢                       │
- │           󰿦   CMD   󰆢    󰆢        󰆢    󰆢    󰆢    󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
- ╭────────────────────────────────────────────────────────────────╮
- │ 󰿦   ESC  F1   F2   F3   F4       F5   F6   F7   F8   F9    󰿦   │
- │ 󰿦    󰆢    󱢍    󰅗    󰍵    󰆢       CLS   󰇽    󰿋    󱃗    󰆢    󰿦   │
-9│ 󰿦   F10  F11  F12  F13  F14      F15  F16  F17  F18       󰿦   │FN
- │                     󰿦    󰿦        󰿦    󰿦                       │
- │           󰿦        󰆢    󰆢        󰆢    󰆢        󰿦             │
- ╰────────────────────────────────────────────────────────────────╯
-#+end_src
-
-*** Generate layer definitions
-#+name: layer-definitions
-#+begin_src python :var lines=layout :results output :var keycodes=keycodes-table[]
-import re, unicodedata, yaml
-splitup = re.findall(r'\n?(.╭─+╮.+?╰─+╯)\w*', lines, re.S)
-vmid = lambda t: t.split('\n')[1:-1]
-hmid = lambda s: s[2:66] # Or re.match(r'.*│(.+)│.*', s).group(1)
-insides = [' '.join([hmid(s) for s in vmid(t)]) for t in splitup]
-keycodes = dict(k.split('\t') for k in keycodes.splitlines())
-for i, layer in enumerate(insides):
-    codes = ' '.join([keycodes[k] for k in layer.split()])
-    print(f"ZMK_LAYER(layer_{i}, {codes})")
-####################################
-#draw = {
-#    'layout': {'qmk_keyboard': 'andean_condor'},
-#    'layers': {},
-#    'combos': {},
-#}
-#for i, t in enumerate(splitup):
-#    draw['layers'][f'layer{i}'] = [hmid(s) for s in vmid(t)]
-#with open('layout.yaml', 'w') as outfile:
-#    yaml.dump(draw, outfile)
 #+end_src
 
 ** Keymap Template
@@ -605,6 +607,16 @@ for s in codes.splitlines():
 ü	umlat
 ¿	upsidedown_question
 ¡	upsidedown_bang
+¢	cent_sign
+£	pound_sign
+§	section_sign
+¶	pilcrow
+←	left_arrow
+→	right_arrow
+↑	up_arrow
+↓	down_arrow
+↔	left_right_arrow
+↕	up_down_arrow
 #+end_src
 
 ** Keycodes
@@ -857,6 +869,17 @@ USB	&bootloader
 ü	&umlat
 ¿	&upsidedown_question
 ¡	&upsidedown_bang
+€	&euro_sign
+¢	&cent_sign
+£	&pound_sign
+§	&section_sign
+¶	&pilcrow
+←	&left_arrow
+→	&right_arrow
+↑	&up_arrow
+↓	&down_arrow
+↔	&left_right_arrow
+↕	&up_down_arrow
 #+end_src
 
 ** Status Viewer
