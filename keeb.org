@@ -23,7 +23,7 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
 - [ ] Make macro for ``` and putting the cursor back in between them
 - [ ] I need a light to show me whether Shift is accidentally on, and ESC should end shift
 - [ ] Shortcut for Paste and Match Style (shift-command-v)
-- [ ] Add €¢£§¶←→↑↓↔↕
+- [X] Add €¢£§¶←→↑↓↔↕
 
 ** Layout
 #+name: layout
@@ -32,7 +32,7 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
  │TAB   q    w    e    r    t        y    u    i    o    p    BS  │
  │CTL   a    s    d   󰘴f    g        h   󰘴j    k    l    :;  RET  │
 0│SFT   z    x    c    v    b        n    m    ,    .    /?   󰿦   │BASE
- │                    SFT   󰿦        󰿦    󰿦                       │
+ │                    SFT   󰿦        󰿦   BOX                      │
  │          HCI  CMD  NUM  MOV      ACC  󰘶󱁐   SYM   󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
