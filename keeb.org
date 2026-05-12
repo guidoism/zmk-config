@@ -85,8 +85,8 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
  │           󰿦   SFT   󱁐   ESC       󰆢    󰆢    󰆢    󰿦             │
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
- │ 󰆢    󰆢    󰆢    ╭    ╮    󰆢        󰆢    󰆢    ↔    ↑    ↕    󰆢   │
- │ 󰆢    ─    │    ╰    ╯    󰆢       BOX   󰆢    ←    ↓    →    󰆢   │
+ │ 󰆢    󰆢    󰆢    ╭    ╮    󰆢        󰆢    󰆢    ↔   '↑    ↕    󰆢   │
+ │ 󰆢    ─    │    ╰    ╯    󰆢       BOX   󰆢   '←   '↓   '→    󰆢   │
 8│ 󰆢    ┼    ┴    ┬    ┤    ├        󰆢    󰆢    󰆢    󰆢    󰆢    󰆢   │BOX
  │                     󰆢    󰆢        󰆢    󰆢                       │
  │           󰿦   CMD   󰆢    󰆢        󰆢    󰆢    󰆢    󰿦             │
@@ -615,10 +615,10 @@ for s in codes.splitlines():
 £	pound_sign
 §	section_sign
 ¶	pilcrow
-←	left_arrow
-→	right_arrow
-↑	up_arrow
-↓	down_arrow
+'←	left_arrow
+'→	right_arrow
+'↑	up_arrow
+'↓	down_arrow
 ↔	left_right_arrow
 ↕	up_down_arrow
 #+end_src
@@ -878,10 +878,10 @@ USB	&bootloader
 £	&pound_sign
 §	&section_sign
 ¶	&pilcrow
-←	&left_arrow
-→	&right_arrow
-↑	&up_arrow
-↓	&down_arrow
+'←	&left_arrow
+'→	&right_arrow
+'↑	&up_arrow
+'↓	&down_arrow
 ↔	&left_right_arrow
 ↕	&up_down_arrow
 #+end_src

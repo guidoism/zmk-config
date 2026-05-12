@@ -23,8 +23,8 @@ ZMK_LAYER(SYM,
  &none           &none           &none           &none          
  &none           &mo 9           &none           &none           &none           &hmr RSHIFT SPACE &trans          &none          )
 ZMK_LAYER(MOV,
- &kp ESC         &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &none           &kp ESC         &kp PGUP        &up_arrow       &kp PGDN        &none           &none          
- &none           &none           &none           &kp LG(B)       &kp LG(F)       &ispell_word    &kp BSPC        &left_arrow     &down_arrow     &right_arrow    &kp LG(M)       &none          
+ &kp ESC         &none           &none           &kp LG(LBRC)    &kp LG(RBRC)    &none           &kp ESC         &kp PGUP        &kp UP          &kp PGDN        &none           &none          
+ &none           &none           &none           &kp LG(B)       &kp LG(F)       &ispell_word    &kp BSPC        &kp LEFT        &kp DOWN        &kp RIGHT       &kp LG(M)       &none          
  &none           &none           &none           &none           &none           &none           &kp DEL         &kp HOME        &none           &kp END         &none           &none          
  &none           &none           &none           &none          
  &none           &kp LCMD        &none           &trans          &none           &hmr RSHIFT SPACE &none           &none          )
