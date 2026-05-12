@@ -222,6 +222,10 @@ for i, layer in enumerate(insides):
 #define HOST_OS 2
 #include "zmk-helpers/helper.h"
 
+// urob/zmk-helpers removed `#define ALL 0xff` on 2026-04-20 (PR #106). Re-add
+// it locally so our existing 5-arg ZMK_COMBO(... ALL ...) calls keep working.
+#define ALL 0xff
+
 <<unicode()>>
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5

@@ -72,6 +72,10 @@
 #define HOST_OS 2
 #include "zmk-helpers/helper.h"
 
+// urob/zmk-helpers removed `#define ALL 0xff` on 2026-04-20 (PR #106). Re-add
+// it locally so our existing 5-arg ZMK_COMBO(... ALL ...) calls keep working.
+#define ALL 0xff
+
 ZMK_UNICODE_SINGLE(euro_sign,                 N2, N0,  A,  C)   // €  EURO SIGN
 ZMK_UNICODE_SINGLE(degree_symbol,             N0, N0,  B, N0)   // °  DEGREE SIGN
 ZMK_UNICODE_SINGLE(prime,                     N2, N0, N3, N2)   // ′  PRIME
