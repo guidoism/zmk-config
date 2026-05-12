@@ -135,6 +135,12 @@ ZMK_UNICODE_SINGLE(cent_sign,                 N0, N0,  A, N2)   // ¢  CENT SIGN
 ZMK_UNICODE_SINGLE(pound_sign,                N0, N0,  A, N3)   // £  POUND SIGN
 ZMK_UNICODE_SINGLE(section_sign,              N0, N0,  A, N7)   // §  SECTION SIGN
 ZMK_UNICODE_SINGLE(pilcrow,                   N0, N0,  B, N6)   // ¶  PILCROW SIGN
+ZMK_UNICODE_SINGLE(left_arrow,                N2, N1, N9, N0)   // ←  LEFTWARDS ARROW
+ZMK_UNICODE_SINGLE(right_arrow,               N2, N1, N9, N2)   // →  RIGHTWARDS ARROW
+ZMK_UNICODE_SINGLE(up_arrow,                  N2, N1, N9, N1)   // ↑  UPWARDS ARROW
+ZMK_UNICODE_SINGLE(down_arrow,                N2, N1, N9, N3)   // ↓  DOWNWARDS ARROW
+ZMK_UNICODE_SINGLE(left_right_arrow,          N2, N1, N9, N4)   // ↔  LEFT RIGHT ARROW
+ZMK_UNICODE_SINGLE(up_down_arrow,             N2, N1, N9, N5)   // ↕  UP DOWN ARROW
 
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5

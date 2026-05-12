@@ -615,10 +615,10 @@ for s in codes.splitlines():
 £	pound_sign
 §	section_sign
 ¶	pilcrow
-'←	left_arrow
-'→	right_arrow
-'↑	up_arrow
-'↓	down_arrow
+←	left_arrow
+→	right_arrow
+↑	up_arrow
+↓	down_arrow
 ↔	left_right_arrow
 ↕	up_down_arrow
 #+end_src
