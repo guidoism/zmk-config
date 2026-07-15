@@ -815,7 +815,7 @@ USB	&bootloader
 l	&hmr LS(LC(LALT)) L
 󰘵:;	&hmr RALT &colonsemi
 󰘶󱁐	&hmr RSHIFT SPACE
-☾       &kp LS(LA(LC(Q)))
+☾	&kp LS(LA(LC(Q)))
 °	&degree_symbol
 ′	&prime
 ″	&double_prime
