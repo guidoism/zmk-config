@@ -93,7 +93,7 @@ Remember that =x= is the *ring finger* and =c= is the middle finger.
  ╰────────────────────────────────────────────────────────────────╯
  ╭────────────────────────────────────────────────────────────────╮
  │ 󰿦   ESC  F1   F2   F3   F4       F5   F6   F7   F8   F9    󰿦   │
- │ 󰿦    󰆢    󱢍    󰅗    󰍵    󰆢       CLS   󰇽    󰿋    󱃗    ☾︎    󰿦   │
+ │ 󰿦    󰆢    󱢍    󰅗    󰍵    󰆢       CLS   󰇽    󰿋    󱃗   MON   󰿦   │
 9│ 󰿦   F10  F11  F12  F13  F14      F15  F16  F17  F18       󰿦   │FN
  │                     󰿦    󰿦        󰿦    󰿦                       │
  │           󰿦        󰆢    󰆢        󰆢    󰆢        󰿦             │
@@ -815,7 +815,7 @@ USB	&bootloader
 l	&hmr LS(LC(LALT)) L
 󰘵:;	&hmr RALT &colonsemi
 󰘶󱁐	&hmr RSHIFT SPACE
-☾	&kp LS(LA(LC(Q)))
+MON	&kp LS(LA(LC(Q)))
 °	&degree_symbol
 ′	&prime
 ″	&double_prime
