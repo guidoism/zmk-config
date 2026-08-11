@@ -6,7 +6,7 @@ ZMK_COMBO(sft_combo, &sk LSHIFT, 19 20, ALL, 50)
 ZMK_COMBO(caps_combo, &caps_word, 19 20 21, ALL, 50)
 ZMK_LAYER(BASE,
  &kp TAB         &kp Q           &kp W           &kp E           &kp R           &kp T           &kp Y           &kp U           &kp I           &kp O           &kp P           &kp BSPC       
- &kp LCTRL       &kp A           &kp S           &kp D           &kp F           &kp G           &kp H           &kp J           &kp K           &kp L           &colonsemi      &kp RET        
+ &kp LCTRL       &kp A           &kp S           &kp D           &kp F           &kp G           &kp H           &hmr RCTRL J    &kp K           &kp L           &colonsemi      &kp RET        
  &smart_shft     &kp Z           &kp X           &kp C           &kp V           &kp B           &kp N           &kp M           &kp COMMA       &kp DOT         &kp SLASH       &none          
  &smart_shft     &none           &none           &tog 8         
  &mo 4           &kp LCMD        &mo 1           &mo 3           &mo 5           &hmr RSHIFT SPACE &sym_layer6     &none          )
